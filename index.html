@@ -649,6 +649,26 @@ body.mob .cv-photo{width:20vw;height:20vw;max-width:110px;max-height:110px;borde
 .wbtn{align-self:flex-start;text-decoration:none;font-size:calc(30px*var(--s))}
 .wurl{font-size:calc(17px*var(--s));color:#8A8272;font-weight:700;word-break:break-all}
 .mob .wbx{flex-direction:column;align-items:stretch}.mob .wbx>*{flex:0 0 auto}
+.spk{display:flex;align-items:center;flex:1 1 auto;gap:calc(44px*var(--s))}
+.spk>*{min-width:0}.spk-ph{flex:0 0 auto}.spk-r{flex:1 1 0;display:flex;flex-direction:column;gap:calc(16px*var(--s))}
+.spk-ph img{display:block;width:calc(400px*var(--s));height:calc(400px*var(--s));object-fit:cover;object-position:62% 30%;
+  border-radius:32px;border:6px solid #fff;box-shadow:var(--shadow)}
+.spk-h{margin:0;font-size:calc(64px*var(--hs))}
+.spk-h span{font-size:.55em;color:#5D6E72;font-weight:800;margin-left:.2em}
+.spk-roles{list-style:none;display:flex;flex-direction:column;gap:calc(8px*var(--s))}
+.spk-roles li{font-size:calc(28px*var(--s));font-weight:800;color:#3B4F55;padding-left:1em;position:relative;line-height:1.35}
+.spk-roles li::before{content:"";position:absolute;left:0;top:.45em;width:.45em;height:.45em;border-radius:50%;background:var(--orange)}
+.spk-tags{display:flex;flex-wrap:wrap;gap:calc(10px*var(--s))}
+.spk-tags span{background:#EEF5FC;color:var(--sdg);border:2px solid #B9D3EC;border-radius:999px;font-weight:800;
+  font-size:calc(21px*var(--s));padding:.2em .8em}
+.spk-fb{display:flex;align-items:center;gap:calc(16px*var(--s));text-decoration:none;background:#fff;border:3px solid #1877F2;
+  border-radius:20px;padding:calc(14px*var(--s)) calc(20px*var(--s));box-shadow:var(--shadow);color:var(--ink)}
+.spk-fb .f{flex:0 0 auto;width:calc(58px*var(--s));height:calc(58px*var(--s));border-radius:50%;background:#1877F2;color:#fff;
+  display:grid;place-items:center;font-size:calc(38px*var(--s));font-weight:900;font-family:Arial,sans-serif}
+.spk-fb .tx{flex:1 1 auto;display:flex;flex-direction:column;gap:.15em;font-size:calc(21px*var(--s));font-weight:700;color:#5D6E72}
+.spk-fb .tx b{font-size:calc(27px*var(--s));color:var(--ink)}
+.spk-fb .go{flex:0 0 auto;background:#1877F2;color:#fff;font-weight:900;border-radius:999px;padding:.4em 1em;font-size:calc(22px*var(--s))}
+.mob .spk{flex-direction:column;align-items:stretch}.mob .spk-ph{align-self:center}.mob .spk-fb{flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -713,15 +733,12 @@ const DECK = {
   brand:"講師｜鍾孟修 職能治療師", design:"愛迪樂",
   note:"用台語開場：<b>「逐家午安！我是愛迪樂的孟修老師，做職能治療的。今仔日欲佮逐家講：目睭佮頭殼，是好朋友——目睭顧予好，頭殼才會靈活。」</b>預告流程：先聽大家講、認識長輩常見的目睭問題、做一套<b>坐咧就會使做的目睭操</b>、玩三个動腦遊戲、最後總複習。請各據點工作人員先確認<b>喇叭、麥克風</b>，等一下要請大家出聲、比手勢。"},
 
-/* 2 */ {t:"greet", tag:"打招呼", h:"各位據點的朋友，午安！",
-  lead:"老師點到哪一個據點，<b>請大家揮揮手、喊一聲「午安！」</b>",
-  sites:["大園 橫峰社區發展協會"],
-  gestures:[
-    {e:"⭕", k:"對", v:"雙手舉高<br>比一個大圓圈"},
-    {e:"❌", k:"不對", v:"雙手在胸前<br>打一個叉"},
-    {e:"☝️", k:"選答案", v:"比手指頭<br>1、2、3、4"},
-    {e:"👏", k:"讚！", v:"拍手三下<br>啪、啪、啪"}],
-  note:"逐一點據點名稱，請該據點長輩<b>揮手、開麥喊「午安」</b>，點過的會變綠色；其他自行報名的社區可在下方輸入框新增。接著<b>四個手勢全體練一次</b>：比圓圈、打叉、比 1 到 4、拍手三下——這本身就是暖身，手舉高也順便動肩膀。台語：<b>「著的，雙手比一个大圓箍仔；毋著，佇胸前拍一个叉。」</b>可以問一句破冰：<b>「今仔日有人戴目鏡來上課的，手攑懸予我看！」</b>"},
+/* 2 */ {t:"speaker", tag:"講師介紹", h:"鍾孟修", title:"職能治療師",
+  photo:"img/speaker.jpg", alt:"鍾孟修 職能治療師",
+  roles:["愛迪樂有限公司　執行長","愛迪樂居家職能治療所　所長","社團法人台灣生活復能健康促進協會　副理事長","中華高齡專業照護訓練協會　理事"],
+  tags:["復能","健康促進","教學","AI","失智症復健","中風復健","體智能","運動","身障","長照"],
+  fb:{url:"https://www.facebook.com/profile.php?id=100063748491881", t:"按讚・追蹤・分享臉書粉專", v:"每天都有教案、專業文章分享，留言即可取得！"},
+  note:"一分鐘就好，<b>不念頭銜</b>，挑一句講：<b>「我是佇恁厝邊咧走的職能治療師，專門陪長輩練身體、練頭殼，予日子過了較方便。」</b>順便請各據點<b>揮揮手、喊一聲「午安！」</b>，再教一次等一下要用的手勢：<b>對的雙手比圓圈 ⭕、毋著佇胸前打叉 ❌、選答案比手指頭 1～4</b>。最後邀請工作人員幫忙點「前往粉專」按讚追蹤：每天都有教案和專業文章，留言就能拿到。"},
 
 /* 3 */ {t:"points", tag:"先聽大家講", h:"這些話，您聽過嗎？",
   lead:"<b>先不分對錯</b>，您聽過哪一句？比手指頭告訴老師。",
@@ -1136,6 +1153,16 @@ function fbbox(t,idle){return `<div class="fb idle" data-idle="${idle}" data-ful
 const cardCls=i=>i%3===1?'teal':i%3===2?'amber':'';
 
 const R={
+speaker:s=>`<div class="body"><div class="spk">
+  <div class="spk-ph"><img src="${s.photo}" alt="${s.alt||""}"></div>
+  <div class="spk-r">
+    <div><span class="tag core">${s.tag}</span></div>
+    <h2 class="spk-h">${s.h} <span>${s.title}</span></h2>
+    <ul class="spk-roles">`+s.roles.map(r=>`<li>${r}</li>`).join("")+`</ul>
+    <div class="spk-tags">`+s.tags.map(t=>`<span>${t}</span>`).join("")+`</div>
+    <a class="spk-fb" href="${s.fb.url}" target="_blank" rel="noopener"><span class="f" aria-hidden="true">f</span>
+      <span class="tx"><b>${s.fb.t}</b><span>${s.fb.v}</span></span><span class="go">前往粉專 ↗</span></a>
+  </div></div></div>`,
 web:s=>head(s)+`<div class="body"><div class="wbx">
   <a class="wshot" href="${s.url}" target="_blank" rel="noopener"><img src="${s.img}" alt="${s.alt||""}"><span class="wgo">🔗 點我打開</span></a>
   <div class="wside"><div class="cues">`+s.steps.map((c,i)=>`<div class="cue"><span class="cn">${i+1}</span><span><b class="wk">${c.k}</b>${c.v}</span></div>`).join("")+`</div>
