@@ -669,6 +669,39 @@ body.mob .cv-photo{width:20vw;height:20vw;max-width:110px;max-height:110px;borde
 .spk-fb .tx b{font-size:calc(27px*var(--s));color:var(--ink)}
 .spk-fb .go{flex:0 0 auto;background:#1877F2;color:#fff;font-weight:900;border-radius:999px;padding:.4em 1em;font-size:calc(22px*var(--s))}
 .mob .spk{flex-direction:column;align-items:stretch}.mob .spk-ph{align-self:center}.mob .spk-fb{flex-wrap:wrap}
+/* 手機版字級補強 */
+.mob .cover{justify-content:center}
+.mob .cover .body{margin:auto 0}
+.mob .cover h1{font-size:min(12.5vw,15vh)}
+.mob .cover .sub{font-size:min(6.2vw,7.5vh)}
+.mob .cover .kick{font-size:max(14px,3.8vw)}
+.mob .cover .meta{font-size:max(15px,min(4.2vw,5vh));margin-top:1em}
+.mob .cover .brand{font-size:max(17px,min(4.8vw,6vh));margin-top:.8em}
+.mob .cv-design{font-size:max(14px,3.8vw)}
+.mob .cover .num{font-size:min(52vw,60vh);top:auto;bottom:4vh;transform:none}
+.mob .src{font-size:13px!important}
+.mob .wurl{font-size:14px!important}
+.mob .cue .cn,.mob .stp2 .sn{font-size:max(.8em,14px)}
+.mob .slide .acts{position:sticky;bottom:calc(var(--ch,64px) + var(--nh,0px) - 6px);z-index:6;
+  background:linear-gradient(rgba(251,247,240,0),var(--bg) 14px);padding:16px 0 8px;margin-top:4px;gap:8px}
+.mob .slide .acts .btn{font-size:16px;padding:.55em .95em}
+.mob .slide .acts .cnt{font-size:16px}
+.mob .spk-ph img{width:min(60vw,280px);height:min(60vw,280px)}
+.mob .dfx{flex-direction:row!important;align-items:flex-start;gap:8px}
+.mob .dfx>*{flex:1 1 0!important;min-width:0}
+.mob .dgrid{grid-template-columns:repeat(4,1fr);gap:4px;padding:6px;border-radius:14px}
+.mob .drn{display:none}
+.mob .dc{font-size:min(7vw,34px);border-width:3px;border-radius:9px;padding:2px 0;min-height:36px}
+.mob .dlab{font-size:17px}
+.mob .mq.hide{display:none}
+.mob .stt .w{font-size:min(19vw,104px)}
+.mob .stt .a{font-size:18px}
+.mob .strow{gap:10px}
+.mob .stmode{font-size:22px}
+@media (max-height:500px){.mob .swipe-tip{display:none}.mob .cover .kick{font-size:13px}.mob .cover .meta{margin-top:.5em}.mob .cv-design{margin-top:.3em}}
+.eyx .cues{flex-direction:row!important;flex-wrap:wrap}
+.eyx .cues .cue{flex:1 1 calc(50% - 8px*var(--s));min-width:0}
+.mob .eyx .cues .cue{flex-basis:100%}
 </style>
 </head>
 <body>
@@ -738,7 +771,7 @@ const DECK = {
   roles:["愛迪樂有限公司　執行長","愛迪樂居家職能治療所　所長","社團法人台灣生活復能健康促進協會　副理事長","中華高齡專業照護訓練協會　理事"],
   tags:["復能","健康促進","教學","AI","失智症復健","中風復健","體智能","運動","身障","長照"],
   fb:{url:"https://www.facebook.com/profile.php?id=100063748491881", t:"按讚・追蹤・分享臉書粉專", v:"每天都有教案、專業文章分享，留言即可取得！"},
-  note:"一分鐘就好，<b>不念頭銜</b>，挑一句講：<b>「我是佇恁厝邊咧走的職能治療師，專門陪長輩練身體、練頭殼，予日子過了較方便。」</b>順便請各據點<b>揮揮手、喊一聲「午安！」</b>，再教一次等一下要用的手勢：<b>對的雙手比圓圈 ⭕、毋著佇胸前打叉 ❌、選答案比手指頭 1～4</b>。最後邀請工作人員幫忙點「前往粉專」按讚追蹤：每天都有教案和專業文章，留言就能拿到。"},
+  note:"一分鐘就好，<b>不念頭銜</b>，挑一句講：<b>「我是佇恁厝邊咧走的職能治療師，專門陪長輩練身體、練頭殼，予日子過了較方便。」</b>接著教一次等一下要用的手勢：<b>對的雙手比圓圈 ⭕、毋著佇胸前打叉 ❌、選答案比手指頭 1～4</b>。最後邀請工作人員幫忙點「前往粉專」按讚追蹤：每天都有教案和專業文章，留言就能拿到。"},
 
 /* 3 */ {t:"points", tag:"先聽大家講", h:"這些話，您聽過嗎？",
   lead:"<b>先不分對錯</b>，您聽過哪一句？比手指頭告訴老師。",
@@ -1472,7 +1505,7 @@ function bind(d,s,i){
     const stop=()=>{clearInterval(tm);tm=null;cd.classList.remove("on")};
     $(".m-go",d).onclick=()=>{ stop(); cv.classList.add("off"); let n=s.sec; cd.textContent=n; cd.classList.add("on"); q.classList.add("hide");
       tm=setInterval(()=>{ n--; cd.textContent=n; tick();
-        if(n<=0){ stop(); cover("蓋起來了！"); q.classList.remove("hide"); $(".m-again",d).classList.remove("off"); ding(1); } },1000); };
+        if(n<=0){ stop(); cover("蓋起來了！"); q.classList.remove("hide"); $(".m-again",d).classList.remove("off"); ding(1); if(document.body.classList.contains("mob"))setTimeout(()=>q.scrollIntoView({behavior:"smooth",block:"center"}),60); } },1000); };
     $(".m-again",d).onclick=()=>{ stop(); if(cv.classList.contains("off"))cover("蓋起來了！"); else cv.classList.add("off") };
     $$(".opt",d).forEach(b=>b.onclick=()=>{
       if(d.dataset.done||q.classList.contains("hide"))return; d.dataset.done=1;
