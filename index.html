@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="長者線上社區課程互動簡報（台語）：眼睛和頭腦的關係、長輩常見眼睛問題、方格表自我檢查、坐著做的目睭操、顏色字與記憶動腦遊戲、護眼六件事。愛迪樂 鍾孟修 職能治療師。">
+<title>目睭大腦作伙動｜台語互動衛教</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%80%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --orange:#E8552D; --amber:#F4A93C; --teal:#028090; --ink:#12343B;
+  --sdg:#2F6FB0; --ex:#3E8E5A;
+  --bg:#FBF7F0; --card:#FFFFFF; --line:#E3D9C8;
+  --good:#2E7D4F; --bad:#C0392B;
+  --shadow:0 6px 22px rgba(18,52,59,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;
+  background:var(--ink); color:var(--ink); overflow:hidden;
+}
+button{font-family:inherit}
+#stage{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column}
+#bar{height:8px;background:#EFE6D6;flex:0 0 auto}
+#barfill{height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--orange));transition:width .3s}
+#slides{flex:1 1 auto;position:relative;overflow:hidden}
+
+/* --s 由自動縮放引擎設定：每頁把內容撐到剛好填滿畫面 */
+.slide{--s:1;--hs:min(var(--s),1.16);position:absolute;inset:0;display:none;flex-direction:column;
+  padding:calc(28px*var(--s)) calc(50px*var(--s)) calc(var(--ch,64px) + 14px + var(--nh,0px));overflow:auto}
+.slide.on{display:flex;animation:in .32s ease}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- typography ---------- */
+.tag{display:inline-block;background:var(--sdg);color:#fff;font-weight:800;
+  font-size:calc(22px*var(--hs));padding:.28em .9em;border-radius:999px;letter-spacing:.05em}
+.tag.q{background:var(--orange)}
+.tag.core{background:var(--teal)}
+.tag.ex{background:var(--ex)}
+h2{font-size:calc(54px*var(--hs));line-height:1.22;font-weight:900;margin:.2em 0 .06em}
+.lead{font-size:calc(28px*var(--hs));line-height:1.5;font-weight:600;color:#3B4F55}
+.lead b{color:var(--orange)}
+.hd{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;margin-bottom:calc(16px*var(--s))}
+.body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:calc(18px*var(--s))}
+.src{flex:0 0 auto;padding-top:.8em;font-size:calc(15px*var(--hs));color:#8A8272;font-weight:600}
+.body>.grid{flex:1 1 auto;align-content:stretch;grid-auto-rows:minmax(0,1fr)}
+.body>.opts{flex:1 1 auto;grid-auto-rows:minmax(0,1fr)}
+
+/* ---------- cover ---------- */
+.cover{background:linear-gradient(135deg,var(--ink),#0C5A63 55%,var(--teal));color:#fff;
+  justify-content:center;overflow:hidden}
+.cover .numwrap{position:absolute;inset:0;overflow:hidden;z-index:0}
+.cover h1{color:#fff;font-size:min(14vh,9.4vw);line-height:1.04;font-weight:900;letter-spacing:-.01em}
+.cover .sub{font-size:min(5.4vh,4.2vw);font-weight:700;color:#FFDCA8;margin-top:.45em}
+.cover .num{position:absolute;right:-1.5vw;top:50%;transform:translateY(-50%);
+  font-size:min(62vh,38vw);font-weight:900;color:rgba(244,169,60,.15);line-height:.78;
+  letter-spacing:-.05em;pointer-events:none;z-index:0}
+.cover .body{position:relative;z-index:1;max-width:78%}
+.cover .meta{margin-top:min(4.5vh,3.4vw);font-size:min(2.6vh,1.9vw);color:#BFE3E6;font-weight:700;line-height:1.7}
+.cover .kick{font-size:min(2.8vh,2.1vw);font-weight:800;color:#FFDCA8;letter-spacing:.06em}
+.cover .brand{display:inline-flex;align-items:center;margin-top:min(3vh,2.2vw);background:rgba(255,255,255,.16);border-radius:999px;
+  padding:.35em 1.2em;font-size:min(3.8vh,2.7vw);font-weight:900;color:#fff}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:calc(20px*var(--s))}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g1{grid-template-columns:1fr}
+.card{background:var(--card);border:3px solid var(--line);border-radius:20px;
+  padding:calc(24px*var(--s));box-shadow:var(--shadow);
+  display:flex;flex-direction:column;justify-content:center;gap:.4em}
+.card .k{font-size:calc(30px*var(--s));font-weight:900;color:var(--orange);line-height:1.25}
+.card .v{font-size:calc(24px*var(--s));font-weight:600;line-height:1.55;color:#3B4F55}
+.card .v b{color:var(--ink)}
+.card.teal{border-color:#9ED2D6}.card.teal .k{color:var(--teal)}
+.card.amber{border-color:#F6D8A0}.card.amber .k{color:#B9741C}
+.card.tl-g{border-color:#8CCB9F;background:#F3FBF5}.card.tl-g .k{color:#2E7D4F}
+.card.tl-y{border-color:#F2C14E;background:#FFFAEB}.card.tl-y .k{color:#946300}
+.card.tl-r{border-color:#E8A08C;background:#FFF5F1}.card.tl-r .k{color:#C0392B}
+.card.tl-x{border-color:#C0392B;background:#FDECE9}.card.tl-x .k{color:#A5281B}
+
+/* ---------- interactive（選擇題） ---------- */
+.qtext{font-size:calc(42px*var(--hs));font-weight:900;line-height:1.32;margin-bottom:.25em}
+.opts{display:grid;gap:calc(13px*var(--s));align-content:center}
+.opt{display:flex;align-items:center;gap:.7em;background:var(--card);border:4px solid var(--line);
+  border-radius:18px;padding:calc(20px*var(--s)) calc(28px*var(--s));cursor:pointer;
+  font-size:calc(33px*var(--s));font-weight:800;line-height:1.35;text-align:left;color:var(--ink);
+  transition:border-color .15s,background .15s;box-shadow:var(--shadow)}
+.opt:hover{border-color:var(--amber)}
+.opt .ltr{flex:0 0 auto;width:1.7em;height:1.7em;border-radius:50%;background:var(--teal);color:#fff;
+  display:grid;place-items:center;font-weight:900;font-size:.85em}
+.opt.right{border-color:var(--good);background:#E8F6ED}.opt.right .ltr{background:var(--good)}
+.opt.wrong{border-color:var(--bad);background:#FBEBE9;opacity:.75}.opt.wrong .ltr{background:var(--bad)}
+.opt.lock{cursor:default}
+.ch2{flex:1 1 auto;gap:calc(26px*var(--s))}
+.ch2 .rt{display:flex;flex-direction:column;gap:calc(14px*var(--s))}
+.mon-wrap{display:flex;justify-content:center}
+.mon{display:block;width:100%;max-width:100%}
+
+.fb{background:#FFF6E4;border:3px dashed var(--amber);border-radius:18px;
+  padding:calc(20px*var(--s));font-size:calc(26px*var(--s));font-weight:700;line-height:1.55;color:#5A4415}
+.fb.idle{background:transparent;border-color:#E7DDCB;color:#A99C86;font-weight:600;
+  display:flex;align-items:center;justify-content:center;text-align:center}
+.fb b{color:var(--orange)}
+
+/* ---------- 答案彈窗 ---------- */
+#ans{position:fixed;inset:0;z-index:55;background:rgba(8,24,28,.82);display:none;
+  place-items:center;padding:4vh 4vw}
+#ans.on{display:grid}
+.ans-card{background:var(--bg);border-radius:28px;box-shadow:0 24px 80px rgba(0,0,0,.45);
+  max-width:min(1400px,94vw);max-height:92vh;overflow:auto;width:100%;
+  padding:clamp(26px,4vh,52px) clamp(26px,4vw,60px);text-align:center;
+  display:flex;flex-direction:column;gap:clamp(12px,2vh,24px);animation:pop .28s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9) translateY(24px)}to{opacity:1;transform:none}}
+.ans-ico{font-size:clamp(56px,12vh,130px);line-height:1}
+#ans.num .ans-ico{font-weight:900;color:var(--orange);font-size:clamp(70px,17vh,180px);letter-spacing:.03em}
+.ans-t{font-size:clamp(30px,min(7vh,5vw),84px);font-weight:900;color:var(--ink);line-height:1.25}
+.ans-b{font-size:clamp(22px,min(5.4vh,3.5vw),56px);font-weight:700;line-height:1.55;color:#3B4F55;text-align:left;
+  background:#FFF6E4;border:3px dashed var(--amber);border-radius:20px;
+  padding:clamp(16px,2.4vh,30px) clamp(18px,2.4vw,34px)}
+.ans-b b{color:var(--orange)}
+.ans-ok{align-self:center;font-size:clamp(22px,min(4.2vh,2.7vw),42px)!important;padding:.45em 1.4em!important}
+
+.acts{display:flex;flex-wrap:wrap;gap:calc(14px*var(--s));align-items:center}
+.btn{background:var(--teal);color:#fff;border:none;border-radius:999px;cursor:pointer;
+  padding:.5em 1.4em;font-size:calc(25px*var(--s));font-weight:900;box-shadow:var(--shadow)}
+.btn.gh{background:#fff;color:var(--teal);border:3px solid var(--teal)}
+.btn.or{background:var(--orange)}
+.btn.on{background:var(--amber);color:var(--ink)}
+.btn:active{transform:translateY(2px)}
+.cnt{font-size:calc(26px*var(--s));font-weight:900;color:var(--orange)}
+.off{display:none!important}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* ---------- 數字卡、填空、排序、分類、找錯卡 ---------- */
+.stat{background:var(--card);border-radius:22px;border:3px solid var(--line);padding:calc(26px*var(--s));text-align:center;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
+.stat .n{font-size:calc(100px*var(--s));font-weight:900;color:var(--orange);line-height:1;letter-spacing:-.02em}
+.stat .u{font-size:calc(28px*var(--s));font-weight:800;color:var(--ink);margin-top:.22em}
+.stat .d{font-size:calc(23px*var(--s));font-weight:600;color:#5D6E72;margin-top:.4em;line-height:1.45}
+.tiles{display:flex;flex-wrap:wrap;gap:calc(15px*var(--s))}
+.body>.tiles{flex:1 1 auto;align-content:center}
+.tile{background:var(--card);border:4px solid var(--line);border-radius:16px;cursor:pointer;color:var(--ink);
+  padding:calc(16px*var(--s)) calc(24px*var(--s));font-size:calc(28px*var(--s));font-weight:800;
+  transition:border-color .15s,background .15s;box-shadow:var(--shadow);position:relative}
+.tile:hover{border-color:var(--amber)}
+.tile.pick{border-color:var(--teal);background:#E3F3F4}
+.tile.used{opacity:.32;cursor:default}
+.tile.right{border-color:var(--good);background:#E8F6ED}
+.tile.wrong{border-color:var(--bad);background:#FBEBE9}
+.tile .ord{position:absolute;top:-.55em;left:-.5em;width:1.9em;height:1.9em;border-radius:50%;
+  background:var(--orange);color:#fff;display:grid;place-items:center;font-size:.62em;font-weight:900}
+.tiles.ord{row-gap:calc(30px*var(--s))}
+.tiles.ord .tile{font-size:calc(30px*var(--s));padding:calc(22px*var(--s)) calc(30px*var(--s))}
+.bins{display:grid;gap:calc(18px*var(--s))}
+.bin{background:#fff;border:4px dashed var(--line);border-radius:20px;padding:calc(16px*var(--s));
+  cursor:pointer;display:flex;flex-direction:column;gap:.45em;transition:border-color .15s,background .15s;min-height:calc(150px*var(--s))}
+.bin:hover{border-color:var(--teal);background:#EEF8F8}
+.bin .bt{font-size:calc(28px*var(--s));font-weight:900;color:var(--teal)}
+.bin .items{display:flex;flex-wrap:wrap;gap:calc(8px*var(--s));align-content:flex-start;flex:1 1 auto}
+.chip{background:#FFF1DE;border:2px solid var(--amber);border-radius:12px;padding:.3em .7em;font-size:calc(27px*var(--s));
+  font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:.45em}
+.chip .x{font-style:normal;width:1.5em;height:1.5em;border-radius:50%;background:rgba(18,52,59,.14);display:grid;place-items:center;font-size:.8em}
+.chip.right{background:#E8F6ED;border-color:var(--good)}
+.chip.wrong{background:#FBEBE9;border-color:var(--bad);text-decoration:line-through}
+.chip.right .x,.chip.wrong .x{display:none}
+.scard{position:relative;background:var(--card);border:4px solid var(--line);border-radius:20px;cursor:pointer;
+  padding:calc(22px*var(--s)) calc(20px*var(--s));font-family:inherit;font-size:calc(32px*var(--s));font-weight:800;line-height:1.4;
+  text-align:center;color:var(--ink);box-shadow:var(--shadow);transition:border-color .15s,background .15s,transform .15s;
+  display:flex;align-items:center;justify-content:center}
+.scard:hover{border-color:var(--amber);transform:translateY(-3px)}
+.scard .no{position:absolute;top:-.5em;left:-.4em;width:1.8em;height:1.8em;border-radius:50%;background:var(--teal);color:#fff;
+  display:grid;place-items:center;font-size:.66em;font-weight:900}
+.scard::after{position:absolute;right:.4em;bottom:.3em;font-size:.74em;font-weight:900}
+.scard.found{border-color:var(--bad);background:#FBEBE9}.scard.found::after{content:"⚠ 有問題";color:var(--bad)}.scard.found .no{background:var(--bad)}
+.scard.safe{border-color:var(--teal);background:#E6F4F5}.scard.safe::after{content:"👍 做得很好";color:var(--teal)}
+.scard.miss{animation:shake .35s}
+.scard.show{border-color:var(--amber);background:#FFF3D6}.scard.show::after{content:"⚠ 有問題";color:#B9741C}.scard.show .no{background:var(--amber)}
+.blanks{background:var(--card);border:3px solid var(--line);border-radius:22px;padding:calc(26px*var(--s));
+  font-size:calc(32px*var(--s));font-weight:700;line-height:2.3;box-shadow:var(--shadow)}
+.bk{display:inline-block;min-width:4.6em;border-bottom:5px solid var(--orange);text-align:center;cursor:pointer;color:var(--orange);font-weight:900;padding:0 .2em}
+.bk.right{color:var(--good);border-bottom-color:var(--good)}
+.bk.wrong{color:var(--bad);border-bottom-color:var(--bad)}
+.card.tl-a{border-color:#F6D8A0}.card.tl-a .k{color:#9A6B00}
+.card.tl-b{border-color:#9ED2D6}.card.tl-b .k{color:var(--teal)}
+.cv-design{display:block;margin-top:.7em;font-size:min(2vh,1.5vw);color:#BFE3E6;font-weight:700}
+.cv-photo{width:min(14vh,10vw);height:min(14vh,10vw);border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.3);vertical-align:middle;margin-right:.6em}
+body.mob .cv-photo{width:20vw;height:20vw;max-width:110px;max-height:110px;border-width:3px}
+
+/* ---------- 開場：據點打招呼 ---------- */
+.gr-box{background:#fff;border:3px solid var(--line);border-radius:22px;padding:calc(20px*var(--s)) calc(24px*var(--s));
+  box-shadow:var(--shadow);display:flex;flex-direction:column;gap:calc(14px*var(--s))}
+.gr-t{font-size:calc(24px*var(--s));font-weight:900;color:var(--teal)}
+.sites{display:flex;flex-wrap:wrap;gap:calc(14px*var(--s))}
+.site{background:#FFF6E4;border:4px solid var(--amber);border-radius:16px;cursor:pointer;
+  padding:calc(14px*var(--s)) calc(22px*var(--s));font-size:calc(30px*var(--s));font-weight:900;color:var(--ink);
+  box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:.4em}
+.site .hi{font-size:.9em;opacity:.35}
+.site.on{background:#E8F6ED;border-color:var(--good)}
+.site.on .hi{opacity:1}
+.site .del{font-style:normal;font-size:.6em;color:#A99C86;margin-left:.2em}
+.site-add{display:flex;gap:calc(10px*var(--s));flex-wrap:wrap;align-items:center}
+.site-add input{font-family:inherit;font-size:calc(22px*var(--s));font-weight:700;border:3px solid var(--line);
+  border-radius:12px;padding:.35em .7em;min-width:12em;background:#FFFDF8}
+.site-add .btn{font-size:calc(20px*var(--s))}
+.gest{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(16px*var(--s))}
+.gc{background:#fff;border:3px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+  padding:calc(16px*var(--s));text-align:center;display:flex;flex-direction:column;gap:.2em;justify-content:center}
+.gc .e{font-size:calc(64px*var(--s));line-height:1.1}
+.gc .k{font-size:calc(30px*var(--s));font-weight:900;color:var(--orange)}
+.gc .v{font-size:calc(21px*var(--s));font-weight:700;color:#5D6E72;line-height:1.4}
+
+/* ---------- 圈叉題 ---------- */
+.ox-prog{display:flex;gap:calc(10px*var(--s));justify-content:center}
+.ox-prog i{width:calc(18px*var(--s));height:calc(18px*var(--s));border-radius:50%;background:#E3D9C8}
+.ox-prog i.cur{background:var(--orange)}
+.ox-prog i.ok{background:var(--good)}.ox-prog i.ng{background:var(--bad)}
+.ox-stack{display:grid}
+.ox-q{grid-area:1/1;background:#fff;border:4px solid var(--line);border-radius:24px;box-shadow:var(--shadow);
+  padding:calc(30px*var(--s)) calc(36px*var(--s));font-size:calc(48px*var(--s));font-weight:900;line-height:1.4;
+  text-align:center;display:flex;align-items:center;justify-content:center}
+.ox-q:not(.cur){visibility:hidden}
+.ox-q .qn{color:var(--orange);margin-right:.3em}
+.ox-btns{flex:1 1 auto;display:grid;grid-template-columns:1fr 1fr;gap:calc(22px*var(--s))}
+.oxb{background:#fff;border:5px solid var(--line);border-radius:26px;cursor:pointer;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15em;
+  padding:calc(14px*var(--s));font-size:calc(32px*var(--s));font-weight:900;color:var(--ink);transition:border-color .15s,background .15s,transform .15s,opacity .15s}
+.oxb:hover{border-color:var(--amber)}
+.oxb .big{font-size:calc(110px*var(--s));line-height:1}
+.oxb .gs{font-size:calc(21px*var(--s));font-weight:700;color:#7A8A8E}
+.oxb.right{border-color:var(--good);background:#E8F6ED}
+.oxb.wrong{border-color:var(--bad);background:#FBEBE9}
+.oxb.lock{cursor:default}
+
+/* ---------- 血壓機三個數字 ---------- */
+.mt{flex:1 1 auto;gap:calc(28px*var(--s))}
+.mcards{display:flex;flex-direction:column;gap:calc(16px*var(--s))}
+.mc{position:relative;background:#fff;border:4px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+  padding:calc(16px*var(--s)) calc(22px*var(--s));cursor:pointer;transition:border-color .2s,background .2s,transform .2s,opacity .2s}
+.mc .k{font-size:calc(31px*var(--s));font-weight:900;color:var(--sdg)}
+.mc .tw{font-size:calc(22px*var(--s));font-weight:800;color:var(--teal);margin:.1em 0 .2em}
+.mc .v{font-size:calc(23px*var(--s));font-weight:600;line-height:1.5;color:#3B4F55}
+.mc .v b{color:var(--orange)}
+.mc .qm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:calc(30px*var(--s));font-weight:900;color:#A99C86;background:#FBF7F0;border-radius:16px}
+.mc.on{border-color:var(--sdg)}
+.mc.on .qm{display:none}
+.mc:not(.on) .k,.mc:not(.on) .tw,.mc:not(.on) .v{visibility:hidden}
+.mon .mrow{fill:transparent;cursor:pointer;transition:fill .2s}
+.mon .mrow:hover{fill:rgba(244,169,60,.22)}
+.mon .mrow.hl{fill:rgba(244,169,60,.38)}
+.mon .mrow.glow{fill:rgba(232,85,45,.42);animation:glow 1s ease-in-out infinite alternate}
+@keyframes glow{from{fill:rgba(232,85,45,.18)}to{fill:rgba(232,85,45,.5)}}
+.mon .mtag{opacity:0;transition:opacity .3s}
+.mon .mtag.on{opacity:1}
+
+/* ---------- 看圖找錯 ---------- */
+.pic{flex:1 1 auto;gap:calc(22px*var(--s))}
+.pic-svg{display:block;width:100%;background:#fff;border:3px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.pic-side{display:flex;flex-direction:column;gap:calc(14px*var(--s))}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:calc(10px*var(--s))}
+.slot{background:#fff;border:3px solid var(--line);border-radius:14px;padding:.35em .55em;
+  font-size:calc(21px*var(--s));font-weight:800;color:#A99C86;line-height:1.3;display:flex;gap:.4em;align-items:center}
+.slot .sn{flex:0 0 auto;width:1.6em;height:1.6em;border-radius:50%;background:#D8CEBB;color:#fff;
+  display:grid;place-items:center;font-size:.85em}
+.slot.bad{border-color:var(--bad);background:#FBEBE9;color:#8E2B20}.slot.bad .sn{background:var(--bad)}
+.slot.good{border-color:var(--teal);background:#E6F4F5;color:#0A5A62}.slot.good .sn{background:var(--teal)}
+.slot.show{border-color:var(--amber);background:#FFF3D6;color:#8A5A00}.slot.show .sn{background:var(--amber)}
+.hs{cursor:pointer}
+.hs .ring{fill:none;stroke:var(--amber);stroke-width:4;transform-box:fill-box;transform-origin:center;animation:ring 1.6s ease-out infinite}
+@keyframes ring{from{transform:scale(.8);opacity:1}to{transform:scale(1.8);opacity:0}}
+.hs .bdg{fill:var(--teal);stroke:#fff;stroke-width:3}
+.hs text{fill:#fff;font-weight:900;font-size:20px;pointer-events:none}
+.hs.found .bdg{fill:var(--bad)}.hs.safe .bdg{fill:var(--good)}.hs.show .bdg{fill:var(--amber)}
+.hs.found .ring,.hs.safe .ring,.hs.show .ring{display:none}
+.hs.miss{animation:shake .35s}
+
+/* ---------- 正確姿勢（跟我做） ---------- */
+.pose{flex:1 1 auto;gap:calc(24px*var(--s))}
+.steps{display:flex;flex-direction:column;gap:calc(12px*var(--s))}
+.stp{background:#fff;border:4px solid var(--line);border-radius:18px;cursor:pointer;box-shadow:var(--shadow);
+  padding:calc(12px*var(--s)) calc(18px*var(--s));display:flex;align-items:center;gap:.6em;text-align:left;color:var(--ink);transition:border-color .15s,background .15s,transform .15s,opacity .15s}
+.stp .sn{flex:0 0 auto;width:1.7em;height:1.7em;border-radius:50%;background:var(--teal);color:#fff;
+  display:grid;place-items:center;font-size:calc(26px*var(--s));font-weight:900}
+.stp .tx{display:block}
+.stp .k{display:block;font-size:calc(32px*var(--s));font-weight:900;color:var(--orange)}
+.stp .v{display:block;font-size:calc(21px*var(--s));font-weight:700;color:#5D6E72;line-height:1.4}
+.stp:hover{border-color:var(--amber)}
+.stp.on{border-color:var(--orange);background:#FFF1DE}
+.stp.on .sn{background:var(--orange)}
+.pbd .bdg{fill:var(--teal);stroke:#fff;stroke-width:3}
+.pbd text{fill:#fff;font-weight:900;font-size:20px}
+.pbd.on .bdg{fill:var(--orange)}
+.pbd .ring{fill:none;stroke:var(--orange);stroke-width:5;opacity:0;transform-box:fill-box;transform-origin:center}
+.pbd.on .ring{animation:ring 1.2s ease-out infinite}
+
+/* ---------- 722 紀錄 ---------- */
+.rec{flex:1 1 auto;gap:calc(26px*var(--s))}
+.r722{display:flex;flex-direction:column;gap:calc(12px*var(--s))}
+.rd{background:#fff;border:3px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+  padding:calc(10px*var(--s)) calc(18px*var(--s));display:flex;align-items:center;gap:calc(16px*var(--s))}
+.rd .dg{flex:0 0 auto;font-size:calc(84px*var(--s));font-weight:900;color:var(--orange);line-height:1;width:1em;text-align:center}
+.rd .dt{display:block}
+.rd .dk{display:block;font-size:calc(29px*var(--s));font-weight:900;color:var(--ink)}
+.rd .dv{display:block;font-size:calc(20px*var(--s));font-weight:700;color:#5D6E72;line-height:1.45}
+.sheet{background:#FFFEF8;border:3px solid #D9CDB4;border-radius:18px;box-shadow:var(--shadow);
+  padding:calc(16px*var(--s)) calc(18px*var(--s));
+  background-image:repeating-linear-gradient(#FFFEF8 0 calc(46px*var(--s)),#EEF3F8 calc(46px*var(--s)) calc(48px*var(--s)))}
+.sheet .st{font-size:calc(26px*var(--s));font-weight:900;color:var(--teal);margin-bottom:.3em}
+.rtab{width:100%;border-collapse:collapse;font-size:calc(25px*var(--s));font-weight:800}
+.rtab th{background:#E6F4F5;color:var(--teal);padding:.35em .3em;border:2px solid #C9DEE0;font-size:.85em}
+.rtab td{padding:.4em .3em;border:2px solid #E3D9C8;text-align:center;color:#1F4E8C}
+.rtab td.nt{color:#8A5A00;font-size:.85em}
+.rtab .p{font-size:.75em;color:#B23A48}
+
+/* ---------- 電影法（默片＋辯士） ---------- */
+.fm{flex:1 1 auto;display:flex;flex-direction:column;gap:calc(14px*var(--s));min-height:0}
+.vbox{display:flex;justify-content:center}
+.fvid{display:block;height:calc(600px*var(--s));aspect-ratio:16/9;max-width:100%;border-radius:18px;background:#000;box-shadow:var(--shadow)}
+.btn.pulse{animation:bp 1s ease-in-out infinite}
+@keyframes bp{50%{transform:scale(1.08)}}
+.tasks{flex:1 1 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(18px*var(--s))}
+.film{position:relative;background:#18120C;border-radius:18px;box-shadow:var(--shadow);
+  padding:calc(14px*var(--s)) calc(48px*var(--s))}
+.film::before,.film::after{content:"";position:absolute;top:8px;bottom:8px;width:calc(22px*var(--s));
+  background:repeating-linear-gradient(to bottom,transparent 0 calc(9px*var(--s)),#E9DFC8 calc(9px*var(--s)) calc(23px*var(--s)),transparent calc(23px*var(--s)) calc(32px*var(--s)));
+  border-radius:4px;opacity:.85}
+.film::before{left:calc(13px*var(--s))}.film::after{right:calc(13px*var(--s))}
+.fstage{position:relative;height:calc(290px*var(--s));border-radius:10px;overflow:hidden;
+  background:radial-gradient(ellipse at center,#F6E7C8 0%,#E2C597 62%,#B8935F 100%);animation:flick 3s infinite}
+@keyframes flick{0%,100%{filter:brightness(1)}47%{filter:brightness(1)}50%{filter:brightness(.92)}53%{filter:brightness(1.03)}}
+.fstage::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background-image:radial-gradient(rgba(60,40,20,.55) 1px,transparent 1.4px),radial-gradient(rgba(60,40,20,.4) 1px,transparent 1.2px);
+  background-size:7px 7px,11px 11px;animation:grain .4s steps(3) infinite}
+@keyframes grain{0%{background-position:0 0,3px 5px}33%{background-position:4px 2px,0 1px}66%{background-position:1px 5px,6px 2px}}
+.fstage .it{position:absolute;transform:translate(-50%,-50%);line-height:1;white-space:nowrap;font-size:calc(var(--fz)*1px*var(--s));
+  filter:sepia(.55) saturate(.8) contrast(1.05);animation:fin .6s ease}
+.fstage .it.num{font-weight:900;color:#5A2A1A;filter:none;font-family:"Courier New",monospace;letter-spacing:-.04em}
+@keyframes fin{from{opacity:0;transform:translate(-50%,-40%)}to{opacity:1;transform:translate(-50%,-50%)}}
+.ftitle{margin-top:calc(10px*var(--s));background:#0E0B08;color:#F3E9D2;border:4px double #CDB88E;border-radius:8px;
+  text-align:center;font-family:"PMingLiU","MingLiU","Songti TC","Noto Serif TC",serif;font-weight:900;
+  font-size:calc(36px*var(--s));line-height:1.45;padding:.35em .8em;display:flex;align-items:center;justify-content:center}
+.fscn{font-size:calc(20px*var(--s));font-weight:800;color:#CDB88E;text-align:center;margin-top:.3em}
+.slide[data-mode="f"] .lead,.slide[data-mode="v"] .lead{display:none}
+.vote-q{font-size:calc(38px*var(--hs));font-weight:900;line-height:1.32}
+.vote-opts{flex:1 1 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(16px*var(--s))}
+.vo{background:var(--card);border:4px solid var(--line);border-radius:20px;cursor:pointer;color:var(--ink);
+  padding:calc(22px*var(--s));font-size:calc(30px*var(--s));font-weight:800;line-height:1.45;
+  box-shadow:var(--shadow);transition:border-color .15s,background .15s;position:relative;
+  display:flex;flex-direction:column;justify-content:center;gap:.4em;text-align:left}
+.vo:hover{border-color:var(--amber)}
+.vo.on{background:linear-gradient(135deg,#FFF1DE,#FFE1B8);border-color:var(--orange)}
+.vo .ltr2{font-size:.8em;color:var(--teal)}
+.vo .cntn{font-size:calc(44px*var(--s));font-weight:900;color:var(--orange)}
+
+/* ---------- 運動頁 ---------- */
+.mvx{flex:1 1 auto;gap:calc(24px*var(--s))}
+.figbox{position:relative;background:linear-gradient(#FFF8EC,#F4E6CF);border:3px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.figbox svg{display:block;width:100%}
+.beat{position:absolute;top:calc(12px*var(--s));right:calc(12px*var(--s));background:var(--orange);color:#fff;
+  border-radius:20px;padding:.25em .7em;text-align:center;min-width:3.6em;box-shadow:var(--shadow)}
+.beat .bn{display:block;font-size:calc(60px*var(--s));font-weight:900;line-height:1}
+.beat .bl{display:block;font-size:calc(22px*var(--s));font-weight:900;line-height:1.3;min-height:1.3em}
+.beat.pop{animation:bpop .3s}
+@keyframes bpop{50%{transform:scale(1.15)}}
+.mr{display:flex;flex-direction:column;gap:calc(13px*var(--s))}
+.cue{display:flex;gap:.55em;align-items:center;background:#fff;border:4px solid var(--line);border-radius:18px;
+  padding:calc(12px*var(--s)) calc(18px*var(--s));font-size:calc(31px*var(--s));font-weight:900;line-height:1.35;box-shadow:var(--shadow);transition:border-color .2s,background .2s,transform .2s,opacity .2s}
+.cue .cn{flex:0 0 auto;width:1.55em;height:1.55em;border-radius:50%;background:#C9BFAE;color:#fff;display:grid;place-items:center;font-size:.8em}
+.cue.on{border-color:var(--orange);background:#FFF1DE}
+.cue.on .cn{background:var(--orange)}
+.mchips{display:flex;flex-wrap:wrap;gap:calc(10px*var(--s))}
+.mchip{background:#E6F4F5;color:#0A5A62;border-radius:14px;padding:.3em .7em;font-size:calc(22px*var(--s));font-weight:800;line-height:1.35}
+.mchip.r{background:#FFF1DE;color:#9A4A12}
+.lvs{display:grid;grid-template-columns:1fr 1fr;gap:calc(12px*var(--s))}
+.lv{border-radius:16px;padding:calc(10px*var(--s)) calc(14px*var(--s));font-size:calc(21px*var(--s));font-weight:700;line-height:1.45}
+.lv b{display:block;font-size:1.1em}
+.lv.e{background:#EAF6EE;border:3px solid #A6D6B6;color:#245E3B}
+.lv.h{background:#FFF3E2;border:3px solid #F3CE91;color:#7A4A0E}
+.safe{background:#FBEBE9;border-left:8px solid var(--bad);border-radius:12px;padding:calc(10px*var(--s)) calc(14px*var(--s));
+  font-size:calc(21px*var(--s));font-weight:800;color:#8E2B20;line-height:1.45}
+
+/* 腦力遊戲 */
+.gm{flex:1 1 auto;gap:calc(26px*var(--s))}
+.gr-side{display:flex;flex-direction:column;gap:calc(14px*var(--s))}
+.gcall{background:#fff;border:4px solid var(--orange);border-radius:24px;box-shadow:var(--shadow);text-align:center;
+  font-size:calc(84px*var(--s));font-weight:900;color:var(--orange);line-height:1.2;padding:.15em .3em}
+.gcall.pop{animation:bpop .35s}
+.grules{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(14px*var(--s))}
+.gr{background:#fff;border:4px solid var(--line);border-radius:20px;box-shadow:var(--shadow);text-align:center;
+  padding:calc(12px*var(--s));display:flex;flex-direction:column;gap:.15em;justify-content:center;transition:border-color .2s,background .2s,transform .2s,opacity .2s}
+.gr .e{font-size:calc(56px*var(--s));line-height:1.15}
+.gr .k{font-size:calc(28px*var(--s));font-weight:900;color:var(--sdg)}
+.gr .a{font-size:calc(23px*var(--s));font-weight:800;color:#3B4F55;line-height:1.35}
+.gr.hit{border-color:var(--orange);background:#FFF1DE;transform:scale(1.05)}
+.rev-note{font-size:calc(22px*var(--s));font-weight:800;color:var(--bad);text-align:center;min-height:1.4em}
+
+/* 呼吸 */
+.br{flex:1 1 auto;gap:calc(26px*var(--s))}
+.bwrap{display:grid;place-items:center;height:calc(400px*var(--s))}
+.bcirc{width:calc(380px*var(--s));height:calc(380px*var(--s));border-radius:50%;
+  background:radial-gradient(circle at 40% 35%,#D9F0F1,#5BB5BC 55%,#028090);display:grid;place-items:center;
+  color:#fff;transform:scale(.55);box-shadow:0 0 0 calc(10px*var(--s)) rgba(2,128,144,.12)}
+.bcirc .bt{font-size:calc(60px*var(--s));font-weight:900;text-align:center;line-height:1.15;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.bcirc .bt small{display:block;font-size:.55em}
+
+/* 兩欄版面：用 flex（grid 的 fr 欄會把右欄算高，縮放引擎就縮得太小） */
+.ch2,.mt,.pic,.pose,.rec,.mvx,.gm,.br{display:flex;align-items:center}
+.ch2>*,.mt>*,.pic>*,.pose>*,.rec>*,.mvx>*,.gm>*,.br>*{min-width:0}
+.ch2>:first-child{flex:.85 1 0}.ch2>:last-child{flex:1.25 1 0}
+.mt>:first-child{flex:.9 1 0}.mt>:last-child{flex:1.2 1 0}
+.pic>:first-child{flex:1.7 1 0}.pic>:last-child{flex:1 1 0}
+.pose>:first-child{flex:1.25 1 0}.pose>:last-child{flex:1 1 0}
+.pose.has-img>:first-child{flex:1.75 1 0}
+.rec>:first-child{flex:.95 1 0}.rec>:last-child{flex:1.25 1 0}
+.mvx>:first-child{flex:1 1 0}.mvx>:last-child{flex:1.12 1 0}
+.gm>:first-child{flex:.85 1 0}.gm>:last-child{flex:1.2 1 0}
+.br>:first-child{flex:1 1 0}.br>:last-child{flex:1 1 0}
+
+/* ---------- 承諾、成績 ---------- */
+.sec-lead{font-size:calc(38px*var(--hs));font-weight:700;line-height:1.6;color:#3B4F55}
+.sec-lead b{color:var(--orange)}
+.sec-h{font-size:calc(84px*var(--hs));font-weight:900;line-height:1.12;color:var(--ink)}
+.pl{background:var(--card);border:4px solid var(--line);border-radius:20px;cursor:pointer;
+  padding:calc(22px*var(--s));font-size:calc(29px*var(--s));font-weight:800;line-height:1.4;
+  box-shadow:var(--shadow);transition:border-color .15s,background .15s;position:relative;
+  display:flex;align-items:center}
+.pl:hover{border-color:var(--amber)}
+.pl.on{background:linear-gradient(135deg,#FFF1DE,#FFE1B8);border-color:var(--orange)}
+.pl.on::after{content:"✓";position:absolute;top:-.4em;right:-.25em;width:1.5em;height:1.5em;border-radius:50%;
+  background:var(--orange);color:#fff;display:grid;place-items:center;font-size:.9em}
+.plc-line{font-size:calc(30px*var(--s));font-weight:900;color:var(--orange);text-align:center}
+.sc-em{font-size:calc(130px*var(--s));line-height:1}
+.sc-big{font-size:calc(72px*var(--s));font-weight:900;color:var(--orange)}
+.sc-t{font-size:calc(38px*var(--s));font-weight:800;color:#3B4F55}
+.sc-p{font-size:calc(30px*var(--s));font-weight:700;color:#5D6E72;line-height:1.7;margin-top:.4em}
+.sc-p b{color:var(--orange)}
+
+/* ---------- chrome（固定尺寸，不隨頁面縮放） ---------- */
+#chrome{position:fixed;left:0;right:0;bottom:0;height:clamp(48px,5.6vh,64px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(14px,2vw,32px);background:rgba(18,52,59,.94);color:#fff;z-index:40}
+#chrome .l,#chrome .r{display:flex;align-items:center;gap:clamp(6px,.9vw,14px)}
+.cbtn{background:rgba(255,255,255,.14);color:#fff;border:none;border-radius:12px;cursor:pointer;
+  padding:.45em .9em;font-size:clamp(13px,1.15vw,18px);font-weight:800}
+.cbtn:hover{background:rgba(255,255,255,.3)}
+.cbtn.on{background:var(--amber);color:var(--ink)}
+#pg{font-size:clamp(13px,1.15vw,18px);font-weight:800;color:#BFE3E6}
+#star{font-size:clamp(14px,1.25vw,20px);font-weight:900;color:var(--amber)}
+#note{position:fixed;left:0;right:0;bottom:clamp(48px,5.6vh,64px);z-index:39;display:none;
+  background:#FFF6E4;border-top:5px solid var(--amber);padding:clamp(10px,1.3vw,22px) clamp(16px,2.4vw,44px);
+  font-size:clamp(14px,1.35vw,22px);font-weight:700;line-height:1.55;color:#5A4415;max-height:36vh;overflow:auto}
+#note.on{display:block}
+#note b{color:var(--orange)}
+#note .say{display:block;margin-bottom:.4em;padding:.4em .7em;background:#12343B;color:#FFE9C2;border-radius:10px}
+#note .say b{color:#F4A93C}
+#timer{position:fixed;top:clamp(16px,2vh,28px);right:clamp(16px,2vw,32px);z-index:41;display:none;
+  background:var(--orange);color:#fff;border-radius:20px;padding:.3em .9em;font-size:clamp(26px,3.4vw,58px);
+  font-weight:900;box-shadow:var(--shadow)}
+#timer.on{display:block}
+#timer.low{background:var(--bad);animation:pulse .5s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+#toc{position:fixed;inset:0;z-index:57;background:rgba(8,24,28,.88);display:none;place-items:center;padding:4vh 4vw}
+#toc.on{display:grid}
+.toc-card{background:var(--bg);border-radius:24px;width:min(1180px,94vw);max-height:88vh;overflow:auto;
+  padding:clamp(18px,3vh,36px) clamp(18px,3vw,40px);box-shadow:0 24px 80px rgba(0,0,0,.45)}
+.toc-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8em;
+  font-size:clamp(20px,2.4vw,32px);font-weight:900}
+.toc-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.toc-it{background:#fff;border:3px solid var(--line);border-radius:14px;cursor:pointer;text-align:left;color:var(--ink);
+  padding:.55em .8em;font-size:clamp(14px,1.3vw,19px);font-weight:800;line-height:1.35}
+.toc-it:hover{border-color:var(--amber)}
+.toc-it.cur{border-color:var(--orange);background:#FFF1DE}
+.toc-it i{font-style:normal;color:var(--teal);margin-right:.4em}
+.toc-sec{grid-column:1/-1;font-size:clamp(15px,1.4vw,20px);font-weight:900;color:var(--sdg);margin-top:.4em}
+
+/* ---------- 放大特寫（看圖找錯） ---------- */
+#zoom{position:fixed;inset:0;z-index:56;background:rgba(8,24,28,.86);display:none;place-items:center;padding:3vh 3vw}
+#zoom.on{display:grid}
+.zm-card{background:var(--bg);border-radius:26px;box-shadow:0 24px 80px rgba(0,0,0,.45);width:min(1560px,95vw);max-height:93vh;overflow:auto;
+  display:flex;gap:clamp(14px,2vw,30px);padding:clamp(14px,2.2vw,30px);align-items:center;animation:pop .25s ease}
+.zm-view{position:relative;flex:1.15 1 0;min-width:0;aspect-ratio:4/3;border-radius:18px;background-color:#fff;background-repeat:no-repeat;
+  border:4px solid var(--line);overflow:hidden}
+.zm-ring{position:absolute;width:26%;aspect-ratio:1;border-radius:50%;border:7px solid var(--amber);transform:translate(-50%,-50%);
+  animation:zr 1.4s ease-in-out infinite;pointer-events:none}
+@keyframes zr{50%{border-color:rgba(244,169,60,.25)}}
+.zm-side{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(10px,1.6vh,18px)}
+.zm-no{font-size:clamp(22px,min(2.7vw,4.4vh),40px);font-weight:900;color:var(--teal)}
+.zm-q{font-size:clamp(32px,min(4.6vw,7.6vh),70px);font-weight:900;line-height:1.22;color:var(--ink)}
+.zm-hint{font-size:clamp(20px,min(2.5vw,4.2vh),38px);font-weight:800;color:#7A8A8E}
+.zm-ans{border-radius:18px;padding:clamp(12px,1.6vw,22px);font-weight:700;line-height:1.5;font-size:clamp(22px,min(3vw,5vh),48px)}
+.zm-ans b{color:inherit;text-decoration:underline;text-underline-offset:.15em}
+.zm-ans.bad{background:#FBEBE9;border:3px solid var(--bad);color:#6E2219}
+.zm-ans.good{background:#E8F6ED;border:3px solid var(--good);color:#1C5B39}
+.zm-t{font-size:1.18em;font-weight:900;margin-bottom:.2em;line-height:1.3}
+.zm-acts{display:flex;gap:12px;flex-wrap:wrap}
+.zm-acts .btn{font-size:clamp(20px,min(2.3vw,3.8vh),36px)}
+@media(max-width:820px){.zm-card{flex-direction:column;align-items:stretch}.zm-view{flex:none;width:100%}}
+
+/* ---------- 插圖 ---------- */
+.cv-img{position:absolute;right:4vw;top:50%;transform:translateY(-50%);z-index:1;
+  width:min(40vw,60vh*1.5);aspect-ratio:3/2;object-fit:cover;border-radius:26px;
+  box-shadow:0 18px 50px rgba(0,0,0,.35);border:6px solid rgba(255,255,255,.9)}
+.cover.has-img .body{max-width:52%}
+.cover.has-img h1{font-size:min(11.5vh,6.4vw)}
+.cover.has-img .sub{font-size:min(4.6vh,3vw)}
+.poster{flex:0 0 auto;display:block;height:calc(360px*var(--s));aspect-ratio:3/4;object-fit:cover;
+  border-radius:14px;border:6px solid #2A2117;box-shadow:var(--shadow);background:#2A2117}
+.fm-tasks.has-poster{display:flex;gap:calc(20px*var(--s));align-items:stretch}
+.fm-tasks.has-poster .tasks{flex:1 1 auto}
+.pimg{flex:0 0 auto;display:block;height:calc(340px*var(--s));aspect-ratio:3/2;object-fit:cover;
+  border-radius:20px;box-shadow:var(--shadow);border:4px solid #fff}
+.pts-img{flex:1 1 auto;display:flex;gap:calc(22px*var(--s));align-items:center}
+.pts-img>.grid{flex:1 1 0;min-width:0;align-self:stretch;grid-auto-rows:minmax(0,1fr)}
+.gr-top{display:flex;gap:calc(18px*var(--s));align-items:center}
+.gr-top>.gr-box{flex:1 1 auto;min-width:0}
+.gimg{flex:0 0 auto;display:block;height:calc(210px*var(--s));aspect-ratio:3/2;object-fit:cover;border-radius:18px;box-shadow:var(--shadow);border:4px solid #fff}
+
+/* ---------- 手機／小螢幕：改成可上下捲動，不硬塞進一個畫面 ---------- */
+#chrome{padding-bottom:env(safe-area-inset-bottom)}
+.mob .slide{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  padding-left:calc(18px*var(--s));padding-right:calc(18px*var(--s))}
+.mob .body{justify-content:flex-start}
+.mob .body>.grid,.mob .body>.opts{grid-auto-rows:auto}
+.mob #tbtn,.mob #fbtn,.mob .lg{display:none}
+.mob #chrome{height:auto;min-height:52px;flex-wrap:nowrap;padding-left:10px;padding-right:10px;gap:6px}
+.mob #chrome .l,.mob #chrome .r{gap:6px}
+.mob .cbtn{padding:.5em .8em;font-size:16px}
+.mob #pg,.mob #star{font-size:15px}
+.mob .fstage{height:auto;aspect-ratio:1000/360;container-type:inline-size}
+.mob .fstage .it{font-size:calc(var(--fz)*.1cqw)}
+.mob .film{padding-left:calc(40px*var(--s));padding-right:calc(40px*var(--s))}
+.mob .cover .body{max-width:100%}
+.mob .cover{justify-content:flex-start}
+.mob .cv-img{position:static;transform:none;width:100%;margin-top:18px;order:2}
+.mob .cover.has-img .body{max-width:100%}
+.mob .cover.has-img h1{font-size:min(14vh,9.4vw)}
+.mob .cover.has-img .sub{font-size:min(5.4vh,4.6vw)}
+.mob .fm{flex:0 0 auto}
+.mob .fvid{height:auto;width:100%}
+.mob .fm-tasks.has-poster,.mob .pts-img,.mob .gr-top{flex-direction:column;align-items:stretch}
+.mob .poster{height:auto;width:62%;align-self:center}
+.mob .pimg,.mob .gimg{height:auto;width:100%}
+.mob .pic-svg{height:auto!important;width:100%!important}
+.swipe-tip{display:none}
+.mob .swipe-tip{display:block;margin-top:1.2em;font-size:15px;color:#BFE3E6;font-weight:700}
+@media(max-width:820px){
+  .g2,.g3{grid-template-columns:1fr}
+  .g4,.gest{grid-template-columns:repeat(2,1fr)}
+  .mt,.pic,.pose,.rec,.mvx,.gm,.br,.ch2{flex-direction:column;align-items:stretch}
+  .ch2>*,.mt>*,.pic>*,.pose>*,.rec>*,.mvx>*,.gm>*,.br>*{flex:none!important;width:100%}
+  .tasks,.vote-opts{grid-template-columns:1fr}
+}
+/* ---------- 護眼課新版型 ---------- */
+.eyx,.ams,.mem,.dfx{display:flex;align-items:center;flex:1 1 auto;gap:calc(24px*var(--s))}
+.eyx>*,.ams>*,.mem>*,.dfx>*{min-width:0}
+.eyx>:first-child{flex:1.35 1 0}.eyx>:last-child{flex:1 1 0}
+.eybox{background:linear-gradient(#EEF5FC,#DCEAF7);border:3px solid #B9D3EC;border-radius:24px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.eybox svg{display:block;width:100%}
+.eyside{display:flex;flex-direction:column;gap:calc(12px*var(--s))}
+.eytop{display:flex;align-items:center;gap:calc(14px*var(--s))}
+.eyface{flex:0 0 auto;height:calc(130px*var(--s));width:auto}
+.eylab{flex:1 1 auto;font-size:calc(40px*var(--s));font-weight:900;color:var(--sdg);line-height:1.2}
+.eyx .cue{font-size:calc(25px*var(--s));font-weight:800;padding:calc(8px*var(--s)) calc(14px*var(--s));margin:0}
+.eyx .cue .ct{margin-left:auto;font-size:.85em;color:var(--orange);font-weight:900}
+.eyx .cue.done{opacity:.55}
+.eyx .safe{font-size:calc(20px*var(--s))}
+.eyx .cues{display:flex;flex-direction:column;gap:calc(8px*var(--s))}
+
+.ams>:first-child{flex:0 0 auto}.ams>:last-child{flex:1 1 0}
+.amsbox{background:#fff;border:3px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:calc(14px*var(--s))}
+.amsbox svg{display:block;height:calc(470px*var(--s));width:auto}
+.amsbox .bad{display:none}.ams.bad .amsbox .bad{display:inline}.ams.bad .amsbox .good{display:none}
+.amscap{text-align:center;font-size:calc(24px*var(--s));font-weight:900;color:var(--good);margin-top:.2em}
+.ams.bad .amscap{color:var(--bad)}
+.ams .cues{display:flex;flex-direction:column;gap:calc(10px*var(--s))}
+.ams .stp2{display:flex;gap:.55em;align-items:center;background:#fff;border:4px solid var(--line);border-radius:18px;cursor:pointer;
+  padding:calc(10px*var(--s)) calc(16px*var(--s));font-size:calc(26px*var(--s));font-weight:700;text-align:left;color:var(--ink);line-height:1.4}
+.ams .stp2 .sn{flex:0 0 auto;width:1.55em;height:1.55em;border-radius:50%;background:#C9BFAE;color:#fff;display:grid;place-items:center;font-size:.8em;font-weight:900}
+.ams .stp2 .k{font-weight:900;color:var(--sdg);margin-right:.4em}
+.ams .stp2 b{color:var(--orange)}
+.ams .stp2.on{border-color:var(--sdg);background:#EEF5FC}.ams .stp2.on .sn{background:var(--sdg)}
+
+.stw{flex:1 1 auto;display:flex;flex-direction:column;gap:calc(16px*var(--s));justify-content:center}
+.stmode{align-self:center;font-size:calc(40px*var(--s));font-weight:900;background:var(--ink);color:#fff;border-radius:999px;padding:.2em 1.2em}
+.strow{display:flex;gap:calc(22px*var(--s));justify-content:center}
+.stt{flex:1 1 0;background:#fff;border:4px solid var(--line);border-radius:26px;box-shadow:var(--shadow);text-align:center;
+  padding:calc(10px*var(--s)) 0 calc(14px*var(--s))}
+.stt .w{font-size:calc(170px*var(--s));font-weight:900;line-height:1.1}
+.stt .a{font-size:calc(30px*var(--s));font-weight:900;color:#5D6E72;visibility:hidden;line-height:1.3}
+.stw.rev .stt .a{visibility:visible}
+.stt .n{display:block;font-size:calc(22px*var(--s));color:#A99C86;font-weight:800}
+
+.mem>:first-child{flex:1.15 1 0}.mem>:last-child{flex:1 1 0}
+.mboard{position:relative;background:#FFF8EC;border:3px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:calc(16px*var(--s))}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(12px*var(--s))}
+.mi{background:#fff;border:3px solid var(--line);border-radius:16px;text-align:center;padding:calc(6px*var(--s));
+  font-size:calc(24px*var(--s));font-weight:800;color:#3B4F55;line-height:1.25}
+.mi .e{display:block;font-size:calc(64px*var(--s));line-height:1.15}
+.mcover{position:absolute;inset:0;border-radius:21px;background:var(--sdg);color:#fff;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;font-size:calc(40px*var(--s));font-weight:900;gap:.2em;text-align:center}
+.mcover .big{font-size:calc(110px*var(--s));line-height:1}
+.mcover.off{display:none}
+.mcd{position:absolute;top:calc(-14px*var(--s));right:calc(-14px*var(--s));width:calc(90px*var(--s));height:calc(90px*var(--s));
+  border-radius:50%;background:var(--orange);color:#fff;display:none;place-items:center;font-size:calc(46px*var(--s));font-weight:900;box-shadow:var(--shadow)}
+.mcd.on{display:grid}
+.mq{display:flex;flex-direction:column;gap:calc(12px*var(--s))}
+.mq.hide{visibility:hidden}
+.mq .qtext{font-size:calc(36px*var(--hs))}
+.mq .opt{font-size:calc(30px*var(--s));padding:calc(14px*var(--s)) calc(22px*var(--s))}
+
+.dfx{justify-content:center;gap:calc(36px*var(--s))}
+.dfx>*{flex:1 1 0;max-width:calc(560px*var(--s))}
+.dlab{text-align:center;font-size:calc(28px*var(--s));font-weight:900;color:var(--sdg);margin-bottom:.2em}
+.dgrid{display:grid;grid-template-columns:auto repeat(4,1fr);gap:calc(8px*var(--s));background:#fff;border:3px solid var(--line);
+  border-radius:22px;box-shadow:var(--shadow);padding:calc(14px*var(--s));align-items:center}
+.drn{font-size:calc(22px*var(--s));font-weight:900;color:#A99C86;padding-right:.2em}
+.dc{background:#F8F4EC;border:4px solid transparent;border-radius:14px;cursor:pointer;font-size:calc(66px*var(--s));line-height:1.2;
+  padding:calc(4px*var(--s)) 0;text-align:center}
+.dc.found{border-color:var(--good);background:#E8F6ED}
+.dc.show{border-color:var(--amber);background:#FFF6E4}
+.dc.no{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+.slv:not(.on){background:#fff;color:var(--orange);border:3px solid var(--orange)}
+.mob .eyx,.mob .ams,.mob .mem,.mob .dfx{flex-direction:column;align-items:stretch}
+.mob .eyx>*,.mob .ams>*,.mob .mem>*,.mob .dfx>*{flex:0 0 auto;max-width:none}
+.mob .eybox svg{height:auto!important}
+.mob .amsbox svg{height:auto;width:100%}
+.mob .strow{flex-wrap:wrap}.mob .stt{flex:1 1 40%}
+
+.wbx{display:flex;align-items:center;flex:1 1 auto;gap:calc(26px*var(--s))}
+.wbx>*{min-width:0}.wbx>:first-child{flex:1.25 1 0}.wbx>:last-child{flex:1 1 0}
+.wshot{position:relative;display:block;border:4px solid var(--sdg);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;background:#fff}
+.wshot img{display:block;width:100%;max-height:calc(500px*var(--s));object-fit:cover;object-position:top}
+.wgo{position:absolute;right:calc(14px*var(--s));bottom:calc(14px*var(--s));background:var(--orange);color:#fff;font-weight:900;
+  font-size:calc(24px*var(--s));padding:.3em .9em;border-radius:999px;box-shadow:var(--shadow)}
+.wshot:hover{border-color:var(--orange)}
+.wside{display:flex;flex-direction:column;gap:calc(12px*var(--s))}
+.wside .cues{display:flex;flex-direction:column;gap:calc(10px*var(--s))}
+.wside .cue{font-size:calc(24px*var(--s));font-weight:700;line-height:1.4;margin:0;padding:calc(9px*var(--s)) calc(14px*var(--s))}
+.wside .cue .wk{color:var(--sdg);margin-right:.4em}
+.wside .cue b:not(.wk){color:var(--orange)}
+.wside .safe{font-size:calc(20px*var(--s))}
+.wside .safe b{color:var(--bad)}
+.wbtn{align-self:flex-start;text-decoration:none;font-size:calc(30px*var(--s))}
+.wurl{font-size:calc(17px*var(--s));color:#8A8272;font-weight:700;word-break:break-all}
+.mob .wbx{flex-direction:column;align-items:stretch}.mob .wbx>*{flex:0 0 auto}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bar"><div id="barfill"></div></div>
+  <div id="slides"></div>
+</div>
+<div id="timer">30</div>
+<div id="ans">
+  <div class="ans-card">
+    <div class="ans-ico">🎉</div>
+    <div class="ans-t"></div>
+    <div class="ans-b"></div>
+    <button class="btn or ans-ok">知道了，繼續 ▶</button>
+  </div>
+</div>
+<div id="zoom" role="dialog" aria-modal="true">
+  <div class="zm-card">
+    <div class="zm-view"><i class="zm-ring"></i></div>
+    <div class="zm-side">
+      <div class="zm-no"></div>
+      <div class="zm-q">這樣做，可以嗎？</div>
+      <div class="zm-hint">請大家比 ⭕ 可以，或 ❌ 不行</div>
+      <div class="zm-ans off"><div class="zm-t"></div><div class="zm-b"></div></div>
+      <div class="zm-acts"><button class="btn or zm-go">揭曉答案 ▶</button><button class="btn gh zm-x">關閉 ✕</button></div>
+    </div>
+  </div>
+</div>
+<div id="toc">
+  <div class="toc-card">
+    <div class="toc-h"><span>📑 跳到哪一頁？</span><span><a class="btn gh" href="#notes" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;font-size:18px">📄 講師手冊</a> <button class="btn gh toc-x" style="font-size:18px">✕ 關閉</button></span></div>
+    <div class="toc-list"></div>
+  </div>
+</div>
+<div id="note"></div>
+<div id="chrome">
+  <div class="l">
+    <button class="cbtn" id="prev" aria-label="上一頁">‹<span class="lg"> 上一頁</span></button>
+    <button class="cbtn" id="next" aria-label="下一頁"><span class="lg">下一頁 </span>›</button>
+    <span id="pg">1 / 1</span>
+  </div>
+  <div class="r">
+    <span id="star">⭐ 0</span>
+    <button class="cbtn" id="tbtn">⏱ 搶答 30 秒</button>
+    <button class="cbtn" id="nbtn">講師提示<span class="lg"> (N)</span></button>
+    <button class="cbtn" id="fbtn">全螢幕 (F)</button>
+    <button class="cbtn" id="hbtn">目錄</button>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   教案資料 — 目睭大腦作伙動：動腦護眼好眼力（台語線上課）
+   ========================================================================= */
+const DECK = {
+  title:"目睭大腦作伙動",
+  slides:[
+
+/* 1 */ {sec:"開場", t:"cover", num:"3010", kicker:"WaCare 線上社區健康課程｜台語開講",
+  h:"目睭大腦作伙動", sub:"動腦護眼好眼力",
+  meta:"看清楚・顧目睭・動頭腦・早發現",
+  brand:"講師｜鍾孟修 職能治療師", design:"愛迪樂",
+  note:"用台語開場：<b>「逐家午安！我是愛迪樂的孟修老師，做職能治療的。今仔日欲佮逐家講：目睭佮頭殼，是好朋友——目睭顧予好，頭殼才會靈活。」</b>預告流程：先聽大家講、認識長輩常見的目睭問題、做一套<b>坐咧就會使做的目睭操</b>、玩三个動腦遊戲、最後總複習。請各據點工作人員先確認<b>喇叭、麥克風</b>，等一下要請大家出聲、比手勢。"},
+
+/* 2 */ {t:"greet", tag:"打招呼", h:"各位據點的朋友，午安！",
+  lead:"老師點到哪一個據點，<b>請大家揮揮手、喊一聲「午安！」</b>",
+  sites:["大園 橫峰社區發展協會"],
+  gestures:[
+    {e:"⭕", k:"對", v:"雙手舉高<br>比一個大圓圈"},
+    {e:"❌", k:"不對", v:"雙手在胸前<br>打一個叉"},
+    {e:"☝️", k:"選答案", v:"比手指頭<br>1、2、3、4"},
+    {e:"👏", k:"讚！", v:"拍手三下<br>啪、啪、啪"}],
+  note:"逐一點據點名稱，請該據點長輩<b>揮手、開麥喊「午安」</b>，點過的會變綠色；其他自行報名的社區可在下方輸入框新增。接著<b>四個手勢全體練一次</b>：比圓圈、打叉、比 1 到 4、拍手三下——這本身就是暖身，手舉高也順便動肩膀。台語：<b>「著的，雙手比一个大圓箍仔；毋著，佇胸前拍一个叉。」</b>可以問一句破冰：<b>「今仔日有人戴目鏡來上課的，手攑懸予我看！」</b>"},
+
+/* 3 */ {t:"points", tag:"先聽大家講", h:"這些話，您聽過嗎？",
+  lead:"<b>先不分對錯</b>，您聽過哪一句？比手指頭告訴老師。",
+  cols:2, items:[
+    {k:"① 老了本來就這樣", v:"「年紀大，目睭霧霧是正常的，免看啦。」"},
+    {k:"② 要等它熟", v:"「白內障要等到『熟』了，才可以開刀。」"},
+    {k:"③ 吃了就好", v:"「葉黃素有在吃，眼睛就不用檢查。」"},
+    {k:"④ 跟頭腦無關", v:"「眼睛是眼睛，頭腦是頭腦，兩回事。」"}],
+  note:"請各據點<b>比手指頭</b>：聽過第幾句？也可以請一位長輩開麥說說看。<b>先不要糾正</b>，台語這樣接：<b>「這四句，咱今仔日一句一句來看，聽煞你家己判斷。」</b>對應頁面：①→常見眼睛問題（有的會惡化，要看醫師）；②→下一頁圈叉題；③→承諾前的總複習；④→「目睭佮頭殼是好朋友」那頁。"},
+
+/* 4 */ {t:"ox", tag:"互動・圈叉題", h:"暖身：猜猜看，對還是不對？",
+  items:[
+    {q:"白內障一定要等到「熟」了，才可以開刀。", a:false,
+     fb:"<b>不對！</b>現在的做法是：<b>看不清楚、已經影響生活</b>（看報、走路、認人、騎車），就可以跟眼科醫師討論手術。拖到太熟，手術反而比較困難。"},
+    {q:"眼睛看不清楚，也會影響頭腦和記憶。", a:true,
+     fb:"<b>對！</b>看不清楚，就比較少出門、少看報、少跟人互動，頭腦用得少。國際研究已經把<b>「視力變差沒處理」列為失智的風險之一</b>。"}],
+  src:"資料來源：Lancet 失智症預防委員會 2024 年報告（14 項可改變的風險）",
+  note:"一題一題唸，請長輩比 ⭕ 或 ❌，請各據點工作人員回報「大部分比哪個」再點答案。第一題回應開場第②句，台語：<b>「白內障毋免等伊熟，看袂清楚、影響生活，就會使去問醫生。」</b>第二題是今天的主軸，帶到下一頁：<b>「目睭佮頭殼，是好朋友。」</b>"},
+
+/* 5 */ {sec:"目睭佮頭殼", t:"points", tag:"提問①・眼睛和頭腦有什麼關係", core:true, h:"眼睛負責「看」，頭腦負責「看懂」",
+  lead:"眼睛像<b>相機</b>，頭腦像<b>洗相片的師傅</b>。眼睛看不清楚，會連帶這四件事：",
+  cols:2, items:[
+    {k:"🏠 少出門", v:"怕看不清楚跌倒，就不想出門，朋友越來越少。"},
+    {k:"📰 少動腦", v:"報紙不讀、電視看不清，頭腦<b>每天收到的東西變少</b>。"},
+    {k:"🚶 容易跌倒", v:"樓梯、門檻、地上的水看不清楚，<b>跌一次影響很大</b>。"},
+    {k:"💊 容易拿錯", v:"藥袋的字太小，<b>吃錯藥、認錯人</b>，自己也很挫折。"}],
+  note:"用台語比喻：<b>「目睭是相機，頭殼是洗相片的師傅——相機若霧霧，師傅閣較厲害嘛洗袂清楚。」</b>每一格問一句：「您有因為看無清楚，較少出門無？」「藥袋仔的字，看會清楚無？」讓長輩自己說出生活中的例子。重點不是嚇人，是讓長輩知道：<b>顧目睭，就是顧頭殼、顧跤步。</b>"},
+
+/* 6 */ {t:"stats", tag:"提問①・全世界的數字", core:true, h:"看不清楚，是很多人的事",
+  items:[
+    {n:"22", u:"億人", d:"全世界有視力問題的人"},
+    {n:"10", u:"億人", d:"其中本來可以預防、或還沒有處理的"},
+    {n:"14", u:"項", d:"國際報告列出可改變的失智風險，<b>視力變差</b>是其中一項"},
+    {n:"3", u:"成以上", d:"台灣 65 歲以上有白內障的比例"}],
+  src:"資料來源：WHO《世界視力報告》2019；Lancet 失智症預防委員會 2024；國家衛生研究院、國健署（2013 年 65 歲以上白內障盛行率超過 30%）",
+  note:"<b>不要嚇人</b>，這頁的重點是第二個數字：<b>十億人的問題，本來是可以預防或改善的</b>——配一副合適的眼鏡、開白內障，就能改善。台語：<b>「目睭的問題，真濟是會使改善的，只是無人去處理。」</b>白內障的數字是 2013 年的調查，實際上年紀越大比例越高，用「超過三成」帶過即可。"},
+
+/* 7 */ {t:"choice", tag:"互動・選擇題", h:"考考您：失智的新風險",
+  q:"2024 年國際失智研究，<b>新加入</b>的風險是下面哪一個？",
+  opts:["看不清楚沒處理","每天看電視","喜歡吃甜點心","中午睡午覺"], ans:0,
+  fb:"答案是<b>看不清楚沒處理</b>。研究估計，全世界大約 <b>2%</b> 的失智跟視力沒處理有關。<br>好消息是：<b>配眼鏡、開白內障，都是處理</b>——這一項，咱改得動！",
+  src:"資料來源：Lancet 失智症預防委員會 2024 年報告（新增視力喪失與中年壞膽固醇過高兩項）",
+  note:"請長輩<b>比手指頭</b>（1～4），各據點回報後再點。揭曉後強調「<b>改得動</b>」：台語<b>「目睭看無清楚，去配目鏡、去開白內障，就是咧顧頭殼。」</b>看電視、甜點、午睡都不是這份報告列的風險，長輩選了也不用糾正太多，帶過即可。"},
+
+/* 8 */ {sec:"認識目睭", t:"points", tag:"提問②・長輩常見的眼睛問題", core:true, h:"六種常見的眼睛問題",
+  lead:"看看哪一種的「感覺」，您有遇過？",
+  cols:3, items:[
+    {k:"👓 老花眼", v:"近的看不清、要拿遠遠的。<b>配一副合適的老花眼鏡。</b>"},
+    {k:"🌫️ 白內障", v:"像隔一層霧玻璃、怕光。<b>影響生活就找醫師討論。</b>"},
+    {k:"🌀 青光眼", v:"從旁邊慢慢看不到，<b>常常沒感覺</b>。定期量眼壓。"},
+    {k:"🎯 黃斑部病變", v:"中間看東西<b>變歪、有黑影</b>。每月用方格表自我檢查。"},
+    {k:"🩸 糖尿病眼", v:"血糖高傷到眼底血管。<b>每年檢查一次眼底。</b>"},
+    {k:"💧 乾眼", v:"澀、癢、刺、一直流目屎。多眨眼，不舒服就看醫師。"}],
+  src:"參考資料：衛福部國民健康署護眼衛教、台灣眼科醫學會衛教資料",
+  note:"一格一格念，問：「這種感覺，有人遇過無？」請遇過的舉手。台語：老花＝<b>「老花」</b>；白內障＝<b>「目睭霧霧，親像霧玻璃」</b>；青光眼要特別強調<b>「伊恬恬仔來，無感覺」</b>，跟高血壓很像，所以要<b>定期檢查</b>。回應開場第①句：<b>「老矣，目睭霧霧，毋是攏正常的——有的會愈來愈嚴重，愛予醫生看。」</b>"},
+
+/* 9 */ {t:"web", tag:"互動・視力體驗", h:"視力檢測活動：E 的開口朝哪邊？",
+  lead:"點畫面或按鈕，打開<b>視力檢測活動動畫</b>，大家一起用手比方向！",
+  img:"img/visual234.jpg", alt:"視力檢測活動動畫畫面：三個大小不同方向的 E 字",
+  url:"https://mattsue1003.github.io/visual234/",
+  steps:[
+    {k:"選長輩版", v:"對象選「🌿 長輩版」，再按「開始活動」"},
+    {k:"用手比方向", v:"E 的開口朝哪邊，<b>手就往哪邊伸</b>"},
+    {k:"越來越小", v:"字越來越小，看到哪一級就記下來"},
+    {k:"還有更多", v:"句子閱讀、色盲、顏色色差，一樣好玩"}],
+  safe:"這是活動體驗，<b>不能當作視力檢查</b>；覺得看不清楚，請找眼科。",
+  note:"按圖片或「🔗 開啟網頁」會開新分頁。<b>線上上課請分享「整個螢幕」</b>，切換分頁大家才看得到（只分享簡報分頁的話，要改分享新分頁）。進去後對象選<b>長輩版</b>、比例選 <b>16:9</b>，按「開始活動」。帶法：E 的開口朝哪邊，請長輩<b>把手往那個方向伸出去</b>（朝上舉手、朝下放手、朝左朝右伸手），等於順便動肩膀；可以先<b>遮一眼</b>做，再換另一眼。台語：<b>「E 的喙開佇佗位，手就伸對佗位去。」</b>提醒：螢幕大小、坐的遠近都不一樣，<b>結果只是好玩，不是診斷</b>；平常看不清楚，就去看眼科。做完回到這個分頁，按 → 繼續。"},
+
+/* 9b */ {t:"amsler", tag:"跟老師做・自我檢查", h:"黃斑部自我檢查：方格表",
+  lead:"一次檢查<b>一隻眼睛</b>，眼睛盯著<b>中間的黑點</b>。",
+  steps:[
+    {k:"戴上眼鏡", v:"平常看近要戴老花眼鏡的，戴上"},
+    {k:"遮住一眼", v:"用手掌輕輕遮住左眼，不要壓"},
+    {k:"盯中間黑點", v:"眼睛不要亂跑，只看中間"},
+    {k:"看四周格子", v:"線有沒有<b>歪、斷、缺一塊、有黑影</b>？"},
+    {k:"換另一眼", v:"遮右眼再看一次；有異狀，盡快看眼科"}],
+  note:"這頁<b>全體一起做</b>（線上看螢幕就可以，大約坐在離螢幕一般看電視的距離）。正式的自我檢查是把方格表印出來，<b>放在眼前約 30 公分</b>，每個月做一次。按「<b>看看異常的樣子</b>」給大家看黃斑部病變可能看到的畫面：線條彎曲、中間有黑影。台語：<b>「一擺看一蕊，金金看中央彼點；線若彎去、有烏影，緊去看目科。」</b>家裡沒有方格表，也可以看<b>門框、窗框、磁磚縫</b>這種直線來檢查。<b>提醒：這是自我篩檢，不能取代眼科檢查。</b>"},
+
+/* 10 */ {t:"spot", tag:"互動・找錯題", h:"這樣做，可以嗎？",
+  lead:"八張卡片，有 <b>4 張有問題</b>。一張一張看，比 ⭕ 或 ❌。",
+  need:4,
+  cards:[
+    {x:"眼睛紅痛又想吐，先睡一覺", w:1, why:"眼睛紅、痛，加上頭痛、想吐，可能是<b>急性青光眼</b>，要<b>馬上去急診</b>，拖延可能失明。"},
+    {x:"出門戴帽子、太陽眼鏡", d:1, ok:"擋住太陽的紫外線，對白內障、黃斑部都有保護。"},
+    {x:"跟朋友借老花眼鏡來戴", w:1, why:"每個人的度數、兩眼距離都不一樣，戴不合的眼鏡會頭暈、更累。<b>去驗光配自己的。</b>"},
+    {x:"每年給眼科檢查一次", d:1, ok:"青光眼、黃斑部常常沒感覺，<b>定期檢查</b>才能早發現。"},
+    {x:"自己買眼藥水長期點", w:1, why:"有些眼藥水含類固醇，<b>長期點可能引起青光眼、白內障</b>。眼藥水要問醫師或藥師。"},
+    {x:"看書時把燈開亮一點", d:1, ok:"年紀大眼睛需要更多光線，燈亮一點，看得清楚也比較不累。"},
+    {x:"突然很多飛蚊又閃光，等回診", w:1, why:"突然飛蚊變多、有閃光，可能是<b>視網膜剝離</b>的警訊，<b>要當天就去看眼科</b>。"},
+    {x:"有糖尿病，每年查眼底", d:1, ok:"糖尿病會傷到眼底血管，早期常沒感覺，<b>每年檢查</b>最安心。"}],
+  fb:"四個要改：<b>眼睛紅痛想吐要急診、不借別人的眼鏡、眼藥水要問過、飛蚊閃光當天就醫</b>。<br>記住一句：<b>眼睛突然變了，就是要趕快看。</b>",
+  note:"帶法：一張一張唸，問全班<b>「這樣做，可以嗎？」</b>請大家比 ⭕ 或 ❌，再點卡片揭曉。四張好習慣點到會亮起來，要大力稱讚。兩張急症卡片要停下來講清楚，台語：<b>「目睭紅、疼，閣頭殼疼、想欲吐——緊去急診。」「飛蚊忽然變濟、閣有閃光——當工就去看目科。」</b>不是要嚇人，是要記得<b>「突然」</b>這兩個字。"},
+
+/* 11 */ {sec:"目睭操", t:"section", tag:"動一動", h:"坐著就能做的目睭操",
+  lead:"<b>不用道具，坐在椅子上就好。</b><br>屁股坐穩、背靠椅背，<b>頭不動，只動眼睛</b>。<br>有戴眼鏡的可以先拿下來。",
+  note:"轉換節奏，請大家坐好、背靠椅背、兩腳踩平。台語：<b>「頭殼莫振動，干焦目睭咧行。」</b>提醒安全：<b>眼睛剛開過刀、正在發炎的人，今天聽就好、不用做</b>；做的時候會頭暈就停下來、閉眼休息。"},
+
+/* 12 */ {t:"eyes", tag:"跟老師做・目睭操", h:"跟著小球看：頭不動，眼睛動",
+  lead:"球跑到哪，<b>眼睛就看到哪</b>。慢慢來，不用比快。",
+  steps:[
+    {k:"上下看", m:"ud", n:5},
+    {k:"左右看", m:"lr", n:5},
+    {k:"斜斜看", m:"dg", n:4},
+    {k:"順時鐘畫圓", m:"cw", n:3},
+    {k:"逆時鐘畫圓", m:"ccw", n:3},
+    {k:"看遠看近", m:"nf", n:5}],
+  safe:"頭不動、慢慢看；會頭暈、眼睛痠就閉眼休息。剛開刀或發炎的人，今天先不做。",
+  note:"按「▶ 開始」小球會自動帶完六節，每節中間會停下來「眨眨眼」休息。老師一邊帶一邊用台語喊：<b>「頂懸——下跤——」「倒爿——正爿——」</b>，請長輩<b>一起數數</b>。最後一節「看遠看近」：請長輩<b>伸出大拇指放在眼前</b>，球變大時看大拇指，球變小時看遠遠的窗外或門口，這是放鬆看近久了的眼睛。速度可以按「🐢 放慢」。這套操是讓眼睛放鬆、活動，<b>不能治療近視、老花或眼疾</b>，有問題還是要看眼科。"},
+
+/* 13 */ {t:"breathe", tag:"跟老師做・眼睛休息", h:"搓熱手心，讓眼睛休息一下",
+  cues:["搓熱雙手，輕輕蓋住眼睛（手心空空的，不要壓眼球）","在手心裡慢慢吸氣——慢慢吐氣，眼睛在黑暗裡放鬆"],
+  reps:"做 3 回", gain:"放鬆眼睛和肩頸",
+  safe:"不要壓眼球；眼睛紅腫發炎、剛開過刀的人不要蓋。",
+  note:"先帶大家<b>搓手心 10 下</b>（可以一起數：一、二、三……），搓熱了，手心成碗狀<b>輕輕蓋在眼睛上</b>，手肘可以靠在桌上。按「▶ 開始」，跟著圓圈<b>吸 4 秒、吐 6 秒</b>，做 3 回。台語：<b>「手心搓予燒，輕輕仔掩目睭，莫硩著目睭仁。」</b>做完慢慢放開手、眨眨眼，再看看遠方。這也是平常看電視、做手工 30 分鐘後，可以讓眼睛休息的方法。"},
+
+/* 15 */ {sec:"動腦遊戲", t:"web", tag:"互動・動腦遊戲", h:"視界猜謎：從最模糊開始，猜猜看是什麼？",
+  lead:"畫面一開始<b>霧霧的</b>，老師每給一次提示就清楚一點——<b>誰先猜到</b>？",
+  img:"img/seniorvision.jpg", alt:"視界猜謎遊戲畫面：模糊的老虎圖片，左下角標示黃斑部病變視野中心空白",
+  url:"https://mattsue1003.github.io/seniorvision/",
+  steps:[
+    {k:"選主題", v:"點「🦁 動物」或「🍢 台灣小吃」，直接開始"},
+    {k:"大家先猜", v:"最模糊的時候就請大家開麥猜"},
+    {k:"給提示", v:"按「給提示」變清楚一級，再猜一次"},
+    {k:"公佈答案", v:"看左下角：這是<b>哪一種眼疾</b>看到的樣子？"}],
+  safe:"每張圖會隨機模擬<b>白內障、青光眼、黃斑部病變、視網膜病變</b>的看法。",
+  note:"按圖片或「🔗 開啟網頁」開新分頁（<b>要連網</b>，內建圖片是網路連結），記得分享整個螢幕。選主題後直接到「② 開始猜謎」，可以按右上「全螢幕播放」。帶法：<b>最模糊就先請各據點開麥猜</b>，猜不到再按「給提示」，猜對的據點按「答對加分」。公佈答案時一定要指<b>左下角的眼疾名稱</b>，回扣第 8 頁：「白內障看出去霧霧、青光眼旁邊暗暗、黃斑部中間空一塊」——<b>讓長輩體會，為什麼看不清楚會影響頭腦和生活</b>。台語：<b>「目睭霧霧，頭殼就愛加真拚咧猜。」</b>玩 4～5 題就好，回到簡報按 → 繼續。"},
+
+/* 14 */ {t:"stroop", tag:"互動・動腦遊戲", h:"顏色字：嘴巴和眼睛打架了！",
+  lead:"第一關<b>唸出字</b>，第二關<b>講出顏色</b>——越講越靈活！",
+  words:["紅","黃","藍","綠"],
+  colors:["#D93A2B","#E0A100","#2F6FB0","#2E8B4F"],
+  tw:["紅（âng）","黃（n̂g）","藍（nâ）","青（tshenn）"],
+  note:"這是有名的<b>「顏色字」遊戲</b>，要眼睛看、頭腦轉、嘴巴講。<b>第一關</b>：照著字唸，用台語唸——紅、黃、藍、青（綠色台語講「青」）。<b>第二關</b>按「講顏色」：不管寫什麼字，<b>講出字的顏色</b>——這時候嘴巴和眼睛會打架，大家一定會笑出來，正好！每組請各據點<b>一起大聲講</b>，講完按「揭曉」對答案，再按「換一組」。可以用國語、也可以用台語，<b>講錯就笑一笑</b>，重點是頭腦有在轉。進階：第三關請長輩<b>看到紅色就拍手</b>，其他顏色不拍。"},
+
+/* 15 */ {t:"memo", tag:"互動・記憶遊戲", h:"看一眼，記起來！",
+  lead:"出門前，桌上有這些東西。<b>看 15 秒</b>，等一下考您！",
+  sec:15,
+  items:["👓 眼鏡","🔑 鑰匙","💊 藥袋","📱 手機","🧢 帽子","☂️ 雨傘","👛 錢包","🥤 水壺","📰 報紙"],
+  q:"剛剛桌上，<b>哪一樣東西沒有出現</b>？",
+  opts:["👛 錢包","🧤 手套","☂️ 雨傘","🔑 鑰匙"], ans:1,
+  fb:"答案是<b>🧤 手套</b>！剛剛有：眼鏡、鑰匙、藥袋、手機、帽子、雨傘、錢包、水壺、報紙，一共九樣。<br>記東西的小撇步：<b>把東西編成一個故事</b>——「戴帽子、拿雨傘、帶錢包去買報紙……」",
+  note:"按「▶ 開始看」會出現九樣東西，倒數 15 秒後蓋起來。看的時候<b>請大家一起把東西唸出來</b>（用台語也可以：目鏡、鎖匙、藥仔、手機仔、帽仔、雨傘、錢袋仔、水罐仔、報紙），唸出來比較記得住。蓋起來後出題，請比手指頭回答。答完可以按「再看一次」讓大家核對。延伸問：<b>「您出門前，會檢查哪幾樣？」</b>帶出生活應用：出門前用口訣檢查，比較不會忘東忘西。"},
+
+/* 16 */ {t:"diff", tag:"互動・眼力遊戲", h:"找不同：左右兩張，哪裡不一樣？",
+  lead:"兩張圖有 <b>3 個地方不一樣</b>，看到了就喊出「第幾排、第幾個」！",
+  left:["🍎","🍌","🍇","🍊","🌸","🌻","🌷","🌼","🐟","🐢","🐔","🐶","☕","🍵","🥛","🍶"],
+  right:["🍎","🍌","🍇","🍋","🌸","🌻","🌷","🌼","🐟","🐱","🐔","🐶","☕","🍵","🥛","🍷"],
+  need:3,
+  fb:"三個不一樣：<b>第 1 排橘子變檸檬、第 3 排烏龜變貓咪、第 4 排酒瓶變成紅酒杯</b>。<br>找不同要<b>一排一排、從左到右</b>慢慢比，這就是頭腦的「專注力」在工作。",
+  note:"請各據點長輩<b>開麥喊出「第幾排、第幾個」</b>，老師點右邊的圖確認，點對了會亮綠圈加星星。可以讓各據點<b>比賽誰先找到</b>。找完說：<b>「一排一排看，是咧練專心；平常看藥袋仔、看月曆，嘛是仝款的功夫。」</b>眼睛不舒服的長輩可以休息、聽別人講。"},
+
+/* 17 */ {sec:"顧目睭的方法", t:"points", tag:"提問③・我做得到的", core:true, h:"我做得到的護眼六件事",
+  lead:"不用一次做完，<b>先挑一件從今天開始</b>。",
+  cols:3, items:[
+    {k:"① 3010", v:"看電視、做手工 <b>30 分鐘</b>，就讓眼睛休息 <b>10 分鐘</b>。"},
+    {k:"② 擋太陽", v:"出門戴<b>帽子、太陽眼鏡</b>，擋住紫外線。"},
+    {k:"③ 燈要亮", v:"看書、看藥袋把燈打亮；夜裡走廊留一盞小燈。"},
+    {k:"④ 顧三高", v:"血壓、血糖顧好、<b>不抽菸</b>，眼底血管也跟著好。"},
+    {k:"⑤ 定期看", v:"<b>每年看一次眼科</b>；有糖尿病的，每年查眼底。"},
+    {k:"⑥ 傳下去", v:"帶孫子出去外面走走、少盯手機——<b>這件只有您做得到</b>。"}],
+  src:"資料來源：衛福部國民健康署「護眼 123」與 3010 原則；台灣眼科醫學會衛教資料",
+  note:"請各據點<b>比手指頭</b>選一件「明天就做」的。回應開場第③句：<b>葉黃素等保健食品不能代替眼科檢查</b>，想吃先問醫師藥師，平常多吃深綠色蔬菜就很好。第⑥件是只有長輩做得到的：<b>「孫仔若一直看手機，阿公阿嬤招伊去外口行行，是顧伊的目睭。」</b>國健署建議孩子每天戶外活動 2 小時，阿公阿嬤正好是最好的陪伴者。"},
+
+/* 18 */ {t:"points", tag:"提問④・我能得到的", core:true, h:"可以找誰幫忙？",
+  lead:"這些是您的權益，<b>不是給人添麻煩</b>。",
+  cols:3, items:[
+    {k:"🏥 眼科門診", v:"帶<b>健保卡</b>就能看；有問題先看眼科，再決定怎麼治療。"},
+    {k:"👓 白內障手術", v:"健保有給付；<b>要不要自費</b>功能型水晶體，跟醫師討論。"},
+    {k:"🩸 糖尿病照護", v:"看糖尿病的醫院、診所，<b>每年會安排眼底檢查</b>。"},
+    {k:"🔍 輔具中心", v:"放大鏡、檯燈等<b>看得更清楚的輔具</b>，可以去問、去試。"},
+    {k:"☎️ 長照專線 1966", v:"問照顧、問服務、問補助，都可以打。"},
+    {k:"🏘️ 社區據點", v:"一起上課、一起動，<b>有人作伴</b>，頭腦和眼睛都在用。"}],
+  src:"資料來源：衛福部中央健康保險署、衛福部長照專線 1966；各縣市輔具資源中心",
+  note:"<b>課前可換成在地資訊</b>：大園區附近的眼科診所、衛生所、<b>桃園市輔具資源中心</b>的電話與地址、據點上課時間。長輩最想知道的是「明天去哪裡、帶什麼」——答案通常是<b>健保卡和現在戴的眼鏡</b>。白內障自費項目、輔具補助資格每年都會調整，<b>以醫院與縣市公告為準</b>。"},
+
+/* 19 */ {sec:"總複習與承諾", t:"sort", tag:"互動・分類題", h:"九件事，各歸各位",
+  lead:"先點一張卡片，再點下面的籃子。",
+  bins:[{id:"a",t:"👁️ 護眼好習慣"},{id:"b",t:"🧠 動腦好習慣"},{id:"c",t:"🚑 要趕快看醫師"}],
+  items:[
+    {x:"出門戴帽子太陽眼鏡",b:"a"},{x:"看 30 分鐘休息 10 分",b:"a"},{x:"看書把燈打亮一點",b:"a"},
+    {x:"學一首新的歌",b:"b"},{x:"跟朋友下棋聊天",b:"b"},{x:"讀報再講給人聽",b:"b"},
+    {x:"看東西突然變歪",b:"c"},{x:"眼睛紅痛又想吐",b:"c"},{x:"突然一大片黑影",b:"c"}],
+  fb:"<b>護眼好習慣</b>：擋太陽、3010、燈打亮。<b>動腦好習慣</b>：學新東西、跟人互動、讀了再講。<b>要趕快看醫師的</b>：突然變歪、紅痛想吐、一大片黑影——<b>眼睛突然變了，不要等</b>。",
+  note:"請各據點<b>喊出籃子號碼</b>（1、2、3），老師點卡片放進去。「動腦好習慣」可以順便問：<b>「您最近有學啥物新的物件無？」</b>讓長輩分享。第三籃的三張都有「突然」兩個字，台語：<b>「目睭忽然變款，莫等，緊去看。」</b>"},
+
+/* 20 */ {t:"fill", tag:"互動・填空題", h:"帶回去：把今天的重點填起來",
+  lead:"點下面的詞，再點空格。填完請大家<b>大聲念一次</b>。",
+  bank:["方格表","視力表","急診","藥局","眼底","耳朵"],
+  lines:[
+    {pre:"看東西中間會歪、有黑影，每個月用「", ans:"方格表", post:"」一次看一隻眼。"},
+    {pre:"眼睛紅、痛，又頭痛想吐，要馬上去", ans:"急診", post:"。"},
+    {pre:"有糖尿病的人，每年至少檢查一次", ans:"眼底", post:"。"}],
+  fb:"三句帶回家：<b>方格表看一眼、紅痛想吐去急診、糖尿病查眼底</b>。念出來的，最記得住！",
+  note:"誘答詞：視力表（量看多遠，不是看歪斜）、藥局（急症不能先去買藥）、耳朵（聽力也很重要，但不是這一句）——長輩選錯時順勢說明差別。可以補一句：<b>聽力變差沒處理，也是失智風險之一</b>，耳朵也要顧。填完請全體<b>大聲念三遍</b>。"},
+
+/* 21 */ {t:"pledge", tag:"行動承諾", h:"回家以後，我要做的那一件事",
+  lead:"請舉手！老師幫您點亮。可以選很多個，至少選一個。",
+  items:["看 30 分鐘，休息 10 分鐘","出門戴帽子或太陽眼鏡","每天做一次目睭操","每個月用方格表看一次","今年去看一次眼科","看書看藥袋把燈打亮","每天學一樣新東西","帶孫子去外面走走"],
+  note:"請各據點長輩<b>舉手表態</b>，工作人員回報，老師點亮。最後數一數全部點亮幾項。下次上課開場可以問：<b>「頂擺承諾的代誌，有做著的請手攑懸！」</b>時間夠的話問一兩位長輩：今天最記得哪一句？回去先做哪一件？"},
+
+/* 22 */ {t:"section", tag:"結語", h:"您這雙眼睛，看過好多事",
+  lead:"認得每個孫子的臉、看天色知道要落雨、穿針引線一次就過——<br>這雙眼睛和頭腦，陪您走了幾十年。<br><br><b>今天只是多給它們三件事：<br>休息一下、動一動、定期給醫師看。</b>",
+  note:"結語要慢、要停頓。這堂課不是教長輩新東西，是<b>肯定他們本來就有的眼力和智慧</b>，再補上照顧的方法。台語：<b>「恁這雙目睭，看過真濟代誌；今仔日咱只是予伊歇睏一下、動一動、定期予醫生看。」</b>"},
+
+/* 23 */ {t:"score", tag:"成果", h:"今天的成績單",
+  note:"成績不重要，重點是最後一句話。台語收尾：<b>「目睭顧予好，頭殼就靈活。三十分鐘歇十分，目睭忽然變款緊去看！」</b>最後跟各據點說再見、感謝工作人員協助，請大家揮手說再見。"}
+]};
+
+/* =========================================================================
+   引擎
+   ========================================================================= */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+let idx=0, star=0, maxStar=0, noteOn=false;
+const wrap=$("#slides");
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
+let AC=null;
+function ding(ok){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const c=AC;const o=c.createOscillator(),g=c.createGain();
+o.connect(g);g.connect(c.destination);o.frequency.value=ok?880:200;g.gain.value=.08;o.start();
+o.frequency.exponentialRampToValueAtTime(ok?1320:150,c.currentTime+.12);
+g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.25);o.stop(c.currentTime+.26)}catch(e){}}
+function tick(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const c=AC;const o=c.createOscillator(),g=c.createGain();
+o.connect(g);g.connect(c.destination);o.frequency.value=660;g.gain.value=.05;o.start();
+g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.09);o.stop(c.currentTime+.1)}catch(e){}}
+function addStar(n){star+=n;$("#star").textContent="⭐ "+star}
+const strip=h=>String(h||"").replace(/<br\s*\/?>/g," ").replace(/<[^>]+>/g,"");
+
+/* ---------- 圖：血壓機 ---------- */
+function monitorSVG(r,o={}){
+  const rows=[["SYS","mmHg",r.sys,150,80,[88,160],"收縮壓"],["DIA","mmHg",r.dia,218,66,[164,226],"舒張壓"],["PUL","/min",r.pul,266,42,[230,276],"脈搏"]];
+  let g=`<svg class="mon" viewBox="0 0 420 372" style="height:calc(${o.h||400}px*var(--s))" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="404" height="356" rx="30" fill="#F6F3ED" stroke="#CFC6B4" stroke-width="4"/>
+  <text x="34" y="40" font-size="17" font-weight="800" fill="#9A8F7C">血壓計</text>
+  <rect x="28" y="52" width="364" height="230" rx="14" fill="#D5E6D2" stroke="#9DB59A" stroke-width="3"/>
+  <text x="44" y="80" font-size="20" font-weight="800" fill="#3E5A40">${r.time||""}</text>`;
+  rows.forEach((w,i)=>{
+    g+=`<rect class="mrow" data-k="${i}" x="32" y="${w[5][0]}" width="356" height="${w[5][1]-w[5][0]}" rx="10"/>
+    <text x="44" y="${w[3]-(i==2?14:30)}" font-size="${i==2?17:21}" font-weight="900" fill="#2F4A31" pointer-events="none">${w[0]}</text>
+    <text x="44" y="${w[3]-(i==2?-2:10)}" font-size="${i==2?13:14}" font-weight="700" fill="#4E6A50" pointer-events="none">${w[1]}</text>
+    ${i==2?`<text x="94" y="${w[3]-4}" font-size="22" fill="#B23A48" pointer-events="none">♥</text>`:""}
+    <text x="378" y="${w[3]}" text-anchor="end" font-size="${w[4]}" font-weight="900" fill="#1D2B1E" font-family="'Courier New',monospace" pointer-events="none">${w[2]}</text>
+    <g class="mtag" data-k="${i}" pointer-events="none"><rect x="${i==2?124:104}" y="${w[3]-(i==2?30:44)}" width="${i==2?72:92}" height="30" rx="8" fill="#B23A48"/>
+    <text x="${i==2?160:150}" y="${w[3]-(i==2?9:23)}" text-anchor="middle" font-size="19" font-weight="900" fill="#fff">${w[6]}</text></g>`;
+  });
+  g+=`<circle cx="210" cy="322" r="24" fill="#2F6FB0"/><text x="210" y="329" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">開始</text>
+  <rect x="70" y="312" width="64" height="20" rx="10" fill="#D8D1C2"/><rect x="286" y="312" width="64" height="20" rx="10" fill="#D8D1C2"/></svg>`;
+  return g;
+}
+
+/* ---------- 圖：人物（側面，面向右） ---------- */
+const C={skin:"#F2C9A5",skinD:"#DDB08A",shirt:"#028090",shirtD:"#016470",coat:"#C9822F",coatD:"#9C6223",
+  pants:"#3A4A57",pantsD:"#29353F",shoe:"#2A2A2A",hair:"#E6E6E6",wood:"#B8875A",woodD:"#8E6440"};
+const rad=d=>d*Math.PI/180;
+const f1=n=>n.toFixed(1);
+function ln(a,b,w,c,cap){return `<line x1="${f1(a[0])}" y1="${f1(a[1])}" x2="${f1(b[0])}" y2="${f1(b[1])}" stroke="${c}" stroke-width="${w}" stroke-linecap="${cap||"round"}"/>`}
+const mix=(a,b,u)=>[a[0]+(b[0]-a[0])*u,a[1]+(b[1]-a[1])*u];
+function ik(a,b,l1,l2,bend){
+  const dx=b[0]-a[0],dy=b[1]-a[1],D=Math.hypot(dx,dy)||.001;
+  const Dc=Math.min(l1+l2-.5,Math.max(Math.abs(l1-l2)+.5,D));
+  const A=Math.acos(Math.max(-1,Math.min(1,(l1*l1+Dc*Dc-l2*l2)/(2*l1*Dc))));
+  const ang=Math.atan2(dy,dx)+bend*A;
+  return [a[0]+l1*Math.cos(ang),a[1]+l1*Math.sin(ang)];
+}
+function reach(j,tg,l){const dx=tg[0]-j[0],dy=tg[1]-j[1],d=Math.hypot(dx,dy)||1;return [j[0]+dx/d*l,j[1]+dy/d*l]}
+const BASE={H:[130,222],t:0,hd:0,nh:[198,214],fh:[190,212],na:[214,306],fa:[206,306],nf:0,ff:0};
+const P=o=>Object.assign({},BASE,o||{});
+function lerpPose(a,b,u){const o={};for(const k in BASE){const x=a[k],y=b[k];
+  o[k]=Array.isArray(x)?[x[0]+(y[0]-x[0])*u,x[1]+(y[1]-x[1])*u]:x+(y-x)*u}return o}
+function solve(p){
+  const H=p.H,t=p.t,S=[H[0]+100*Math.sin(rad(t)),H[1]-100*Math.cos(rad(t))];
+  const hc=[S[0]+40*Math.sin(rad(t+p.hd)),S[1]-40*Math.cos(rad(t+p.hd))];
+  const nE=ik(S,p.nh,62,58,1),fE=ik(S,p.fh,62,58,1),nK=ik(H,p.na,84,84,-1),fK=ik(H,p.fa,84,84,-1);
+  return {H,S,hc,nE,nW:reach(nE,p.nh,58),fE,fW:reach(fE,p.fh,58),nK,nA:reach(nK,p.na,84),fK,fA:reach(fK,p.fa,84)};
+}
+function legSVG(H,K,A,f,far){
+  const c=far?C.pantsD:C.pants, sh=Math.atan2(A[0]-K[0],A[1]-K[1])*180/Math.PI, ph=rad(sh+90-f);
+  const d=[Math.sin(ph),Math.cos(ph)], heel=[A[0]-d[0]*8,A[1]-d[1]*8], toe=[A[0]+d[0]*26,A[1]+d[1]*26];
+  return ln(H,K,30,c)+ln(K,A,24,c)+ln(heel,toe,15,far?"#161616":C.shoe);
+}
+function armSVG(S,E,W,far,o){
+  const sc=far?(o.coat?C.coatD:C.shirtD):(o.coat?C.coat:C.shirt), sk=far?C.skinD:C.skin;
+  let g="";
+  if(o.short){const m=mix(S,E,.5);g+=ln(S,m,far?20:24,sc)+ln(m,E,17,sk)}
+  else g+=ln(S,E,(o.coat&&!far)?34:21,sc);
+  return g+ln(E,W,16,sk)+`<circle cx="${f1(W[0])}" cy="${f1(W[1])}" r="9.5" fill="${sk}"/>`;
+}
+function headSVG(c,o){
+  const [x,y]=c;
+  let g=`<circle cx="${f1(x-5)}" cy="${f1(y-4)}" r="28" fill="${C.hair}"/>
+  <circle cx="${f1(x-30)}" cy="${f1(y-15)}" r="11.5" fill="${C.hair}"/>
+  <circle cx="${f1(x+2)}" cy="${f1(y+2)}" r="25" fill="${C.skin}"/>
+  <path d="M${f1(x-22)} ${f1(y-5)} Q ${f1(x-6)} ${f1(y-31)} ${f1(x+23)} ${f1(y-13)}" stroke="${C.hair}" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <circle cx="${f1(x+14)}" cy="${f1(y-1)}" r="3.2" fill="#2A2A2A"/>
+  <circle cx="${f1(x+14)}" cy="${f1(y-1)}" r="8.5" fill="none" stroke="#7A6450" stroke-width="2.4"/>
+  ${ln([x+5.5,y-2],[x-6,y-4],2.4,"#7A6450")}
+  <circle cx="${f1(x+9)}" cy="${f1(y+10)}" r="5" fill="#F0A58A" opacity=".55"/>
+  <path d="M${f1(x+25)} ${f1(y)} q 5 5 -1 8" stroke="#D49A78" stroke-width="2.6" fill="none" stroke-linecap="round"/>`;
+  g+=o.talk?`<ellipse cx="${f1(x+18)}" cy="${f1(y+15)}" rx="4.5" ry="5.5" fill="#7A2B2B"/>`
+           :`<path d="M${f1(x+12)} ${f1(y+14)} Q ${f1(x+17)} ${f1(y+18)} ${f1(x+22)} ${f1(y+13)}" stroke="#7A2B2B" stroke-width="2.6" fill="none" stroke-linecap="round"/>`;
+  return g;
+}
+function chairSVG(){
+  return `<ellipse cx="170" cy="320" rx="120" ry="7" fill="rgba(0,0,0,.08)"/>
+  <rect x="86" y="102" width="14" height="136" rx="6" fill="${C.woodD}"/>
+  <rect x="90" y="240" width="9" height="78" fill="${C.woodD}"/><rect x="196" y="240" width="9" height="78" fill="${C.woodD}"/>
+  <rect x="82" y="230" width="130" height="13" rx="6" fill="${C.wood}"/>`;
+}
+function figure(p,o={}){
+  const J=solve(p); let g="";
+  if(o.chair!==false) g+=chairSVG();
+  if(o.pre) g+=o.pre;
+  g+=armSVG(J.S,J.fE,J.fW,true,o);
+  g+=legSVG(J.H,J.fK,J.fA,p.ff,true);
+  g+=ln(J.S,mix(J.S,J.hc,.6),16,C.skin);
+  g+=ln(J.H,J.S,46,o.coat?C.coat:C.shirt);
+  g+=legSVG(J.H,J.nK,J.nA,p.nf,false);
+  g+=headSVG(J.hc,o);
+  if(o.phone){const W=J.fW;g+=`<rect x="${f1(W[0]-9)}" y="${f1(W[1]-18)}" width="17" height="32" rx="4" fill="#333" transform="rotate(-18 ${f1(W[0])} ${f1(W[1])})"/>`}
+  g+=armSVG(J.S,J.nE,J.nW,false,o);
+  if(o.cuff){const a=mix(J.S,J.nE,.3),b=mix(J.S,J.nE,.8),m=mix(J.S,J.nE,.55);
+    g+=ln(a,b,o.coat?42:30,"#2F3E4E","butt")+ln(mix(a,b,.15),mix(a,b,.85),3,"#4F6378","butt");
+    if(o.tube)g+=`<path d="M${f1(m[0])} ${f1(m[1]-8)} C ${f1(m[0]+30)} ${f1(m[1]-70)} ${o.tube[0]-40} ${o.tube[1]-60} ${o.tube[0]} ${o.tube[1]}" stroke="#55606B" stroke-width="4" fill="none"/>`}
+  if(o.post) g+=o.post;
+  return g;
+}
+function tableSVG(){
+  return `<polygon points="214,190 520,190 500,150 236,150" fill="#E2C497"/>
+  <rect x="214" y="190" width="306" height="11" fill="#B8875A"/>
+  <rect x="488" y="201" width="12" height="118" fill="#8E6440"/><rect x="232" y="201" width="10" height="20" fill="#8E6440" opacity=".0"/>`;
+}
+function tableProps(){
+  return `<rect x="300" y="110" width="74" height="54" rx="9" fill="#F6F3ED" stroke="#B9AE98" stroke-width="3"/>
+  <rect x="309" y="118" width="56" height="28" rx="4" fill="#D5E6D2"/>
+  <text x="337" y="138" text-anchor="middle" font-size="15" font-weight="900" fill="#1D2B1E">---</text>
+  <circle cx="337" cy="154" r="5" fill="#2F6FB0"/>
+  <polygon points="384,182 434,182 428,160 382,160" fill="#fff" stroke="#8AA0B0" stroke-width="2"/>
+  ${ln([388,167],[426,167],2,"#9FB3C2")}${ln([389,174],[428,174],2,"#9FB3C2")}
+  ${ln([414,186],[440,160],4,"#E8552D")}
+  <rect x="448" y="164" width="56" height="18" rx="4" fill="#F4A93C" stroke="#B9741C" stroke-width="2"/>
+  ${[0,1,2,3,4,5].map(i=>ln([456+i*8,166],[456+i*8,180],1.6,"#B9741C")).join("")}`;
+}
+function sceneBad(){
+  const p=P({H:[134,220],t:20,nh:[268,166],fh:[180,92],na:[240,288],nf:30});
+  return `<svg class="pic-svg" viewBox="60 28 470 302" style="height:calc(440px*var(--s))" xmlns="http://www.w3.org/2000/svg">
+  <rect x="60" y="28" width="470" height="302" fill="#FFF8EC"/><rect x="60" y="300" width="470" height="30" fill="#EADBC4"/>
+  <rect x="420" y="44" width="80" height="62" rx="6" fill="#DDEEF3" stroke="#B9CED6" stroke-width="4"/>${ln([460,46],[460,104],3,"#B9CED6")}
+  ${tableSVG()}
+  ${figure(p,{coat:1,cuff:1,phone:1,talk:1,tube:[312,150],post:tableProps()+
+   `<g><rect x="190" y="36" width="104" height="34" rx="14" fill="#fff" stroke="#9AA" stroke-width="2"/><polygon points="204,68 214,68 200,80" fill="#fff" stroke="#9AA" stroke-width="2"/>
+    <text x="242" y="59" text-anchor="middle" font-size="17" font-weight="900" fill="#12343B">喂～阿珠喔</text></g>`})}
+  </svg>`;
+}
+function sceneGood(){
+  const p=P({H:[124,222],t:-2,nh:[262,166],fh:[254,170]});
+  return `<svg class="pic-svg" viewBox="60 28 470 302" style="height:calc(420px*var(--s))" xmlns="http://www.w3.org/2000/svg">
+  <rect x="60" y="28" width="470" height="302" fill="#FFF8EC"/><rect x="60" y="300" width="470" height="30" fill="#EADBC4"/>
+  ${tableSVG()}
+  ${figure(p,{short:1,cuff:1,tube:[312,150],post:tableProps()})}
+  </svg>`;
+}
+
+/* 插畫（點陣圖）＋號碼：號碼用原本 470 寬的尺寸設計，依圖寬等比放大。
+   x,y＝物件位置（放大特寫的中心）；bx,by＝號碼擺放位置（放在物件旁，不蓋住細節） */
+function photoScene(s,marks,cls){
+  const k=(s.iw/470).toFixed(3);
+  return `<svg class="pic-svg" viewBox="0 0 ${s.iw} ${s.ih}" style="height:calc(${s.ph||470}px*var(--s));width:auto;max-width:100%;aspect-ratio:${s.iw}/${s.ih};margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+  <image href="${s.img}" width="${s.iw}" height="${s.ih}"/>`+
+  marks.map((m,i)=>`<g class="${cls}" data-i="${i}" transform="translate(${m.bx??m.x} ${m.by??m.y}) scale(${k})">
+    <circle class="ring" r="17"/><circle r="26" fill="transparent"/><circle class="bdg" r="17"/><text text-anchor="middle" y="7">${i+1}</text></g>`).join("")+`</svg>`;
+}
+
+/* ---------- 放大特寫 ---------- */
+const ZM=$("#zoom"); let zmCtx=null;
+function zmShowAns(on){
+  const c=zmCtx; if(!c)return;
+  $(".zm-q",ZM).classList.toggle("off",on&&!c.keepQ); $(".zm-hint",ZM).classList.toggle("off",on||!c.hint);
+  $(".zm-go",ZM).classList.toggle("off",on);
+  const a=$(".zm-ans",ZM); a.classList.toggle("off",!on);
+  if(on){ a.className="zm-ans "+c.cls; $(".zm-t",a).innerHTML=c.t; $(".zm-b",a).innerHTML=c.b; }
+}
+function openZoom(c){
+  zmCtx=c; ZM.classList.add("on");
+  $(".zm-no",ZM).textContent=c.no; $(".zm-q",ZM).innerHTML=c.q||"這樣做，可以嗎？"; $(".zm-hint",ZM).textContent=c.hint||"";
+  zmShowAns(!!c.revealed);
+  const v=$(".zm-view",ZM);
+  requestAnimationFrame(()=>{
+    const W=v.clientWidth,H=v.clientHeight,z=c.z||2.6,cw=c.iw/z,chh=Math.min(c.ih,cw*H/W),sc=W/cw;
+    const x0=Math.max(0,Math.min(c.iw-cw,c.x-cw/2)), y0=Math.max(0,Math.min(c.ih-chh,c.y-chh/2));
+    v.style.backgroundImage=`url(${c.img})`;
+    v.style.backgroundSize=(c.iw*sc)+"px "+(c.ih*sc)+"px";
+    v.style.backgroundPosition=(-x0*sc)+"px "+(-y0*sc)+"px";
+    const r=$(".zm-ring",v); r.style.left=((c.x-x0)*sc)+"px"; r.style.top=((c.y-y0)*sc)+"px";
+  });
+}
+function closeZoom(){ if(!ZM.classList.contains("on"))return; ZM.classList.remove("on"); const c=zmCtx; zmCtx=null; if(c&&c.onClose)c.onClose(); }
+$(".zm-go",ZM).onclick=()=>{ if(zmCtx&&zmCtx.onReveal)zmCtx.onReveal(); zmShowAns(true); };
+$(".zm-x",ZM).onclick=closeZoom;
+ZM.addEventListener("click",e=>{ if(e.target===ZM)closeZoom() });
+
+/* ---------- 版型 ---------- */
+function head(s){
+  let t="";
+  if(s.tag) t+=`<span class="tag ${s.core?'core':''} ${/互動/.test(s.tag)?'q':''} ${/運動|收操/.test(s.tag)?'ex':''}">${s.tag}</span>`;
+  t+=`<h2>${s.h||""}</h2>`;
+  if(s.lead) t+=`<p class="lead">${s.lead}</p>`;
+  return `<div class="hd">${t}</div>`;
+}
+function srcline(s){return s.src?`<div class="src">${s.src}</div>`:""}
+function acts(html){return `<div class="acts">${html}</div>`}
+const IDLE2="👆 點號碼作答，這裡會告訴你為什麼";
+function fbbox(t,idle){return `<div class="fb idle" data-idle="${idle}" data-full="${String(t).replace(/"/g,"&quot;")}">${idle}</div>`}
+const cardCls=i=>i%3===1?'teal':i%3===2?'amber':'';
+
+const R={
+web:s=>head(s)+`<div class="body"><div class="wbx">
+  <a class="wshot" href="${s.url}" target="_blank" rel="noopener"><img src="${s.img}" alt="${s.alt||""}"><span class="wgo">🔗 點我打開</span></a>
+  <div class="wside"><div class="cues">`+s.steps.map((c,i)=>`<div class="cue"><span class="cn">${i+1}</span><span><b class="wk">${c.k}</b>${c.v}</span></div>`).join("")+`</div>
+    <div class="safe">💡 ${s.safe}</div>
+    <a class="btn or wbtn" href="${s.url}" target="_blank" rel="noopener">🔗 開啟網頁</a>
+    <div class="wurl">${s.url.replace(/^https:\/\//,"")}</div></div>
+  </div></div>`,
+eyes:s=>head(s)+`<div class="body"><div class="eyx">
+  <div class="eybox"><svg class="eysvg" viewBox="0 0 800 480" style="height:calc(470px*var(--s))" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="240" r="6" fill="#B9D3EC"/>
+    <circle class="ball" cx="400" cy="240" r="38" fill="#E8552D" stroke="#fff" stroke-width="6"/>
+    <circle class="ballhi" cx="388" cy="228" r="10" fill="#fff" opacity=".55"/></svg></div>
+  <div class="eyside">
+    <div class="eytop"><svg class="eyface" viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="112" r="88" fill="#F6D3B3" stroke="#D9A97F" stroke-width="4"/>
+      <path d="M38 96 Q50 22 120 22 Q190 22 202 96 Q178 52 120 50 Q62 52 38 96Z" fill="#D8D4CE"/>
+      <ellipse cx="86" cy="106" rx="27" ry="20" fill="#fff" stroke="#8A6A50" stroke-width="3"/>
+      <ellipse cx="154" cy="106" rx="27" ry="20" fill="#fff" stroke="#8A6A50" stroke-width="3"/>
+      <circle class="pl" cx="86" cy="106" r="11" fill="#3A2A20"/><circle class="pr" cx="154" cy="106" r="11" fill="#3A2A20"/>
+      <path d="M92 156 Q120 176 148 156" stroke="#B05A45" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+      <div class="eylab">按「▶ 開始」</div></div>
+    <div class="cues">`+s.steps.map((c,i)=>`<div class="cue" data-i="${i}"><span class="cn">${i+1}</span><span>${c.k}</span><span class="ct">× ${c.n}</span></div>`).join("")+`</div>
+    <div class="safe">⚠️ ${s.safe}</div>
+  </div></div>`+acts(`<button class="btn or e-go">▶ 開始</button><button class="btn gh e-slow">🐢 放慢</button><button class="btn gh e-skip">下一節 ⏭</button><button class="btn gh e-rs">↺ 從頭</button>`)+`</div>`,
+
+amsler:s=>{
+  let g="",b="";
+  for(let k=0;k<=20;k++){ const p=10+k*20; g+=`<line x1="${p}" y1="10" x2="${p}" y2="410"/><line x1="10" y1="${p}" x2="410" y2="${p}"/>`;
+    let v="",hz="";
+    for(let t=10;t<=410;t+=5){
+      const dv=12*Math.exp(-((p-222)**2+(t-200)**2)/2600)*Math.sin((t-200)/16);
+      const dh=12*Math.exp(-((t-222)**2+(p-200)**2)/2600)*Math.sin((t-222)/16);
+      v+=`${(p+dv).toFixed(1)},${t} `; hz+=`${t},${(p+dh).toFixed(1)} `; }
+    b+=`<polyline points="${v}"/><polyline points="${hz}"/>`; }
+  return head(s)+`<div class="body"><div class="ams">
+  <div><div class="amsbox"><svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+    <defs><filter id="amb"><feGaussianBlur stdDeviation="14"/></filter></defs>
+    <rect x="10" y="10" width="400" height="400" fill="#fff"/>
+    <g class="good" stroke="#222" stroke-width="1.6">${g}</g>
+    <g class="bad" stroke="#222" stroke-width="1.6" fill="none">${b}</g>
+    <circle class="bad" cx="250" cy="182" r="46" fill="#333" opacity=".62" filter="url(#amb)"/>
+    <circle cx="210" cy="210" r="7" fill="#111"/></svg></div>
+    <div class="amscap">✅ 正常：每條線都是直的</div></div>
+  <div class="cues">`+s.steps.map((c,i)=>`<button class="stp2" data-i="${i}"><span class="sn">${i+1}</span><span><span class="k">${c.k}</span>${c.v}</span></button>`).join("")+`</div>
+  </div>`+acts(`<button class="btn or a-tg">👀 看看異常的樣子</button>`)+`</div>`},
+
+stroop:s=>head(s)+`<div class="body"><div class="stw">
+  <div class="stmode">第一關：唸出字！</div>
+  <div class="strow">`+[0,1,2,3].map(k=>`<div class="stt"><div class="w">紅</div><div class="a">答案</div></div>`).join("")+`</div>
+  </div>`+acts(`<button class="btn or slv s-l1 on">第一關：唸字</button><button class="btn or slv s-l2">第二關：講顏色</button><button class="btn s-nx">🔀 換一組</button><button class="btn gh s-rv">👀 揭曉</button>`)+`</div>`,
+
+memo:s=>head(s)+`<div class="body"><div class="mem">
+  <div class="mboard"><div class="mgrid">`+s.items.map(x=>{const p=x.split(" ");return `<div class="mi"><span class="e">${p[0]}</span>${p[1]}</div>`}).join("")+`</div>
+    <div class="mcover"><span class="big">🧺</span><span>按「▶ 開始看」</span></div><div class="mcd">15</div></div>
+  <div class="mq hide"><div class="qtext">${s.q}</div><div class="opts">`+
+  s.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="ltr">${"1234"[i]}</span><span>${o}</span></button>`).join("")+`</div></div>
+  </div>`+acts(`<button class="btn or m-go">▶ 開始看</button><button class="btn gh m-again off">👀 再看一次</button>`)+`</div>`,
+
+diff:s=>{
+  const grid=(arr,side)=>`<div class="dgrid">`+[0,1,2,3].map(r=>`<span class="drn">第${r+1}排</span>`+[0,1,2,3].map(c=>{const k=r*4+c;return `<button class="dc" data-k="${k}" data-side="${side}">${arr[k]}</button>`}).join("")).join("")+`</div>`;
+  return head(s)+`<div class="body"><div class="dfx">
+  <div><div class="dlab">左圖</div>${grid(s.left,"l")}</div>
+  <div><div class="dlab">右圖</div>${grid(s.right,"r")}</div>
+  </div>`+acts(`<span class="cnt">找到 <b class="c0">0</b> / ${s.need}</span><button class="btn gh sw">顯示答案</button>`)+`</div>`},
+
+cover:s=>`<div class="numwrap"><div class="num">${s.num}</div></div>
+  <div class="body" style="gap:.2em">
+  <div class="kick">${s.kicker}</div>
+  <h1>${s.h}</h1><div class="sub">${s.sub}</div><div class="meta">${s.meta}</div>
+  <div><span class="brand">${s.photo?`<img class="cv-photo" src="${s.photo}" alt="${s.brand}">`:""}${s.brand}</span>${s.design?`<span class="cv-design">${s.design}</span>`:""}</div>
+  <div class="swipe-tip">👉 手機上：左右滑動換頁，上下滑動看完整內容</div></div>
+  ${s.img?`<img class="cv-img" src="${s.img}" alt="${s.alt||""}">`:""}`,
+
+section:s=>`<div class="body" style="justify-content:center">
+  ${s.tag?`<div><span class="tag ${s.core?'core':''}">${s.tag}</span></div>`:""}
+  <h1 class="sec-h">${s.h}</h1>
+  <p class="sec-lead">${s.lead||""}</p></div>`,
+
+points:s=>head(s)+`<div class="body">${s.img?'<div class="pts-img">':''}<div class="grid g${s.cols||3}">`+
+  s.items.map((it,i)=>`<div class="card ${it.c?'tl-'+it.c:cardCls(i)}">
+    <div class="k">${it.k}</div><div class="v">${it.v}</div></div>`).join("")+
+  `</div>${s.img?`<img class="pimg" src="${s.img}" alt="${s.alt||""}"></div>`:''}</div>`+srcline(s),
+
+greet:s=>head(s)+`<div class="body"><div class="gr-top">
+  <div class="gr-box"><div class="gr-t">👋 今天上線的據點（點一下＝已經打過招呼）</div>
+    <div class="sites"></div>
+    <div class="site-add"><input type="text" placeholder="輸入其他據點名稱" aria-label="新增據點名稱"><button class="btn gh add">＋ 新增</button></div></div>
+  ${s.img?`<img class="gimg" src="${s.img}" alt="${s.alt||""}">`:""}</div>
+  <div class="gest">`+s.gestures.map(g=>`<div class="gc"><div class="e">${g.e}</div><div class="k">${g.k}</div><div class="v">${g.v}</div></div>`).join("")+
+  `</div></div>`,
+
+ox:s=>head(s)+`<div class="body">
+  <div class="ox-prog">`+s.items.map((_,i)=>`<i data-i="${i}"></i>`).join("")+`</div>
+  <div class="ox-stack">`+s.items.map((it,i)=>`<div class="ox-q" data-i="${i}"><span class="qn">${s.items.length>1?(i+1)+".":""}</span><span>${it.q}</span></div>`).join("")+`</div>
+  <div class="ox-btns">
+    <button class="oxb" data-v="1"><span class="big">⭕</span><span>對</span><span class="gs">雙手舉高比圓圈</span></button>
+    <button class="oxb" data-v="0"><span class="big">❌</span><span>不對</span><span class="gs">雙手在胸前打叉</span></button>
+  </div>
+  `+acts(`<button class="btn or nx off">下一題 ▶</button><button class="btn gh rs">重來</button>`)+`</div>`,
+
+meter:s=>head(s)+`<div class="body"><div class="mt">
+  <div class="mon-wrap">${monitorSVG(s.read,{h:430})}</div>
+  <div class="mcards">`+s.items.map((it,i)=>`<div class="mc" data-k="${i}">
+    <div class="k">${it.k}</div><div class="tw">${it.tw}</div><div class="v">${it.v}</div>
+    <div class="qm">❓ 第 ${i+1} 個數字叫什麼？</div></div>`).join("")+`</div>
+  </div>`+acts(`<button class="btn gh all">全部打開</button><button class="btn gh rs">蓋回去</button>`)+`</div>`,
+
+choice:s=>head(s)+`<div class="body">`+(s.mon
+  ? `<div class="ch2"><div class="mon-wrap">${monitorSVG(s.mon,{h:400})}</div><div class="rt"><div class="qtext">${s.q}</div><div class="opts">`
+  : `<div class="qtext">${s.q}</div><div class="opts">`)+
+  s.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="ltr">${"1234"[i]}</span><span>${o}</span></button>`).join("")+
+  (s.mon?`</div></div></div>`:`</div>`)+`</div>`+srcline(s),
+
+pic:s=>head(s)+`<div class="body"><div class="pic">
+  <div class="pic-l">${s.img?photoScene(s,s.hs,"hs"):sceneBad().replace("</svg>",s.hs.map((h,i)=>`<g class="hs" data-i="${i}" transform="translate(${h.x} ${h.y})">
+    <circle class="ring" r="17"/><circle r="26" fill="transparent"/><circle class="bdg" r="17"/><text text-anchor="middle" y="7">${i+1}</text></g>`).join("")+"</svg>")}</div>
+  <div class="pic-side">
+    <div class="slots">`+s.hs.map((h,i)=>`<div class="slot" data-i="${i}"><span class="sn">${i+1}</span><span class="sl">？</span></div>`).join("")+`</div>
+    ${fbbox("",IDLE2).replace("fb idle","fb why idle")}
+    ${acts(`<span class="cnt">找到 <b class="c0">0</b> / ${s.need}</span><button class="btn gh sw">顯示答案</button>`)}
+  </div></div></div>`,
+
+pose:s=>head(s)+`<div class="body"><div class="pose${s.img?' has-img':''}">
+  <div>${s.img?photoScene(s,s.marks,"pbd"):sceneGood().replace("</svg>",[[100,168],[236,312],[240,174],[150,134],[152,62]].map((b,i)=>`<g class="pbd" data-i="${i}" transform="translate(${b[0]} ${b[1]})">
+    <circle class="ring" r="18"/><circle class="bdg" r="17"/><text text-anchor="middle" y="7">${i+1}</text></g>`).join("")+"</svg>")}</div>
+  <div class="steps">`+s.steps.map((st,i)=>`<button class="stp" data-i="${i}"><span class="sn">${i+1}</span><span class="tx"><span class="k">${st.k}</span><span class="v">${st.v}</span></span></button>`).join("")+`</div>
+  </div></div>`,
+
+record:s=>head(s)+`<div class="body"><div class="rec">
+  <div class="r722">`+s.dgs.map(d=>`<div class="rd"><div class="dg">${d.d}</div><div class="dt"><span class="dk">${d.k}</span><span class="dv">${d.v}</span></div></div>`).join("")+`</div>
+  <div class="sheet"><div class="st">📒 我的血壓紀錄（範例）</div>
+  <table class="rtab"><thead><tr><th>日期</th><th>早/晚</th><th>第 1 遍</th><th>第 2 遍</th><th>備註</th></tr></thead><tbody>`+
+  s.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}<br><span class="p">♥ ${r[3]}</span></td><td>${r[4]}<br><span class="p">♥ ${r[5]}</span></td><td class="nt">${r[6]||"—"}</td></tr>`).join("")+
+  `</tbody></table></div>
+  </div></div>`+srcline(s),
+
+film:s=>head(s)+`<div class="body"><div class="fm">
+  <div class="fm-tasks ${s.poster?'has-poster':'tasks'}">${s.poster?`<img class="poster" src="${s.poster}" alt="${s.alt||""}"><div class="tasks">`:""}`+s.tasks.map((t,i)=>`<div class="card ${cardCls(i)}"><div class="k">${t.k}</div><div class="v">${t.v}</div></div>`).join("")+`${s.poster?'</div>':''}</div>
+  <div class="fm-film off">${s.video?`<div class="vbox"><video class="fvid" src="${s.video}" poster="${s.vposter||""}" preload="metadata" playsinline controls></video></div>`:`<div class="film"><div class="fstage"></div>
+    <div class="ftitle" data-full="${s.scenes.reduce((a,c)=>c.cap.length>a.length?c.cap:a,"").replace(/"/g,"&quot;")}"></div>
+    <div class="fscn"></div></div>`}</div>
+  <div class="fm-vote off" style="display:flex;flex-direction:column;gap:calc(14px*var(--s));flex:1 1 auto">
+    <div class="vote-q">🗳 ${s.vote.q}</div>
+    <div class="vote-opts">`+s.vote.opts.map((o,i)=>`<button class="vo" data-i="${i}"><span class="ltr2">${"①②③"[i]}</span><span>${o}</span><span class="cntn">0</span></button>`).join("")+`</div>
+  </div></div>
+  <div class="acts">
+    <button class="btn or go-film">🎬 開演！</button>${s.video?`
+    <button class="btn v-play off">⏸ 暫停</button>
+    <button class="btn gh v-re off">↺ 從頭播</button>`:`
+    <button class="btn gh f-prev off">◀ 上一幕</button>
+    <button class="btn f-next off">下一幕 ▶</button>
+    <button class="btn gh f-auto off">⏯ 自動播放</button>`}
+    <button class="btn or go-vote off">演完了，來投票 ▶</button>
+    <button class="btn gh go-task off">◀ 回到任務</button>
+    <button class="btn gh rsv off">票數歸零</button>
+  </div></div>`,
+
+move:s=>head(s)+`<div class="body"><div class="mvx">
+  <div class="figbox"><svg class="figsvg" viewBox="${s.vb||"40 20 340 310"}" style="height:calc(420px*var(--s))" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="beat"><span class="bn">0</span><span class="bl"></span></div></div>
+  <div class="mr">
+    <div class="cues">`+s.cues.map((c,i)=>`<div class="cue" data-i="${i}" style="margin-bottom:calc(10px*var(--s))"><span class="cn">${i+1}</span><span>${c}</span></div>`).join("")+`</div>
+    <div class="mchips"><span class="mchip r">🔁 ${s.reps}</span><span class="mchip">💪 ${s.gain}</span></div>
+    <div class="lvs"><div class="lv e"><b>🌱 輕鬆版</b>${s.easy}</div><div class="lv h"><b>🔥 加強版</b>${s.hard}</div></div>
+    <div class="safe">⚠️ ${s.safe}</div>
+  </div></div>`+acts(`<button class="btn or cnt-go">▶ 開始數</button><button class="btn gh spd">🐢 放慢</button><button class="btn gh cnt-rs">歸零</button>`)+`</div>`,
+
+game:s=>head(s)+`<div class="body"><div class="gm">
+  <div class="mon-wrap">${monitorSVG({sys:128,dia:82,pul:70,time:""},{h:400})}</div>
+  <div class="gr-side">
+    <div class="gcall">準備好了嗎？</div>
+    <div class="grules">`+s.rules.map((r,i)=>`<div class="gr" data-i="${i}"><div class="e">${r.e}</div><div class="k">${r.k}</div><div class="a">${r.a}</div></div>`).join("")+`</div>
+    <div class="rev-note"></div>
+  </div></div>`+acts(`<button class="btn or g-next">下一題 ▶</button><button class="btn gh g-auto">⏯ 自動出題</button><button class="btn gh g-rev">🔀 顛倒做</button>`)+`</div>`,
+
+breathe:s=>head(s)+`<div class="body"><div class="br">
+  <div class="bwrap"><div class="bcirc"><div class="bt">準備<small>按下開始</small></div></div></div>
+  <div class="mr">
+    <div class="cues">`+s.cues.map((c,i)=>`<div class="cue" data-i="${i}" style="margin-bottom:calc(10px*var(--s))"><span class="cn">${i+1}</span><span>${c}</span></div>`).join("")+`</div>
+    <div class="mchips"><span class="mchip r">🔁 ${s.reps}　已完成 <b class="rn">0</b> 回</span><span class="mchip">🌿 ${s.gain}</span></div>
+    <div class="safe">⏳ ${s.safe}</div>
+  </div></div>`+acts(`<button class="btn or b-go">▶ 開始</button>`)+`</div>`,
+
+stats:s=>head(s)+`<div class="body"><div class="grid g${s.items.length>3?4:s.items.length}">`+
+  s.items.map(it=>`<div class="stat"><div class="n" data-to="${it.n}">${it.n}</div><div class="u">${it.u}</div><div class="d">${it.d}</div></div>`).join("")+
+  `</div></div>`+srcline(s),
+
+fill:s=>head(s)+`<div class="body">
+  <div class="tiles bank">`+shuffle(s.bank).map(w=>`<button class="tile" data-w="${w}">${w}</button>`).join("")+`</div>
+  <div class="blanks"><div class="blanks-in">`+s.lines.map((l,i)=>
+    `<div>${i+1}. ${l.pre}<span class="bk" data-i="${i}" data-a="${l.ans}">＿＿＿</span>${l.post}</div>`).join("")+
+  `</div></div>`+acts(`<button class="btn ck">對答案</button><button class="btn gh rs">重來</button>`)+`</div>`+srcline(s),
+
+order:s=>head(s)+`<div class="body">
+  <div class="tiles ord">`+shuffle(s.items.map((x,i)=>({x,i}))).map(o=>`<button class="tile" data-i="${o.i}">${o.x}</button>`).join("")+`</div>
+  `+acts(`<span class="cnt">已排 <b class="c0">0</b> / ${s.items.length}</span><button class="btn ck">對答案</button><button class="btn gh rs">重來</button>`)+`</div>`,
+
+spot:s=>head(s)+`<div class="body">
+  <div class="grid ${s.cards.length%3===0?'g3':'g4'}">`+s.cards.map((g,i)=>`<button class="scard" data-i="${i}"><span class="no">${i+1}</span><span>${g.x}</span></button>`).join("")+`</div>
+  `+acts(`<span class="cnt">找到 <b class="c0">0</b> / ${s.need}</span><button class="btn gh sw">顯示答案</button>`)+
+  fbbox("","👆 點卡片作答，這裡會告訴你為什麼").replace("fb idle","fb why idle")+`</div>`,
+
+sort:s=>head(s)+`<div class="body">
+  <div class="tiles pool">`+shuffle(s.items.map((o,i)=>({...o,i}))).map(o=>`<button class="tile" data-i="${o.i}">${o.x}</button>`).join("")+`</div>
+  <div class="grid g3 bins">`+s.bins.map(b=>`<div class="bin" data-b="${b.id}"><div class="bt">${b.t}</div><div class="items"></div></div>`).join("")+`</div>
+  `+acts(`<button class="btn ck">對答案</button><button class="btn gh rs">重來</button>`)+`</div>`,
+
+pledge:s=>head(s)+`<div class="body"><div class="grid g4">`+
+  s.items.map(x=>`<div class="pl">${x}</div>`).join("")+
+  `</div><div class="plc-line">全部據點已點亮 <span class="plc">0</span> 個承諾</div></div>`,
+
+score:s=>head(s)+`<div class="body" style="text-align:center;justify-content:center">
+  <div class="sc-em">🏆</div>
+  <div class="sc-big">⭐ <span class="sc-n">0</span> / <span class="sc-m">0</span></div>
+  <div class="sc-t"></div>
+  <div class="sc-p">眼睛和頭腦，今天都動到了！<br>回家記得：<b>3010 讓眼睛休息、每天動一動、眼睛突然變了趕快看</b>。<br>各位據點的朋友，謝謝大家，下次見！👋</div>
+  </div>`
+};
+
+/* ---------- 建立投影片 ---------- */
+DECK.slides.forEach((s,i)=>{
+  const d=document.createElement("div");
+  d.className="slide"+(s.t==="cover"?" cover":"")+(s.t==="cover"&&s.img?" has-img":"");
+  d.dataset.i=i;
+  d.innerHTML=(R[s.t]||R.points)(s);
+  wrap.appendChild(d);
+  bind(d,s,i);
+});
+DECK.slides.forEach(s=>{
+  if(s.t==="choice")maxStar+=1;
+  if(s.t==="ox")maxStar+=s.items.length;
+  if(s.t==="pic")maxStar+=s.need;
+  if(s.t==="fill")maxStar+=s.lines.length;
+  if(s.t==="order")maxStar+=1;
+  if(s.t==="spot")maxStar+=s.need;
+  if(s.t==="sort")maxStar+=s.items.length;
+  if(s.t==="memo")maxStar+=1;
+  if(s.t==="diff")maxStar+=s.need;
+});
+
+/* ---------- 互動綁定 ---------- */
+function bind(d,s,i){
+  if(s.t==="eyes"){
+    const ball=$(".ball",d), hi=$(".ballhi",d), pl=$(".pl",d), pr=$(".pr",d), lab=$(".eylab",d), cues=$$(".cue",d), go=$(".e-go",d);
+    const CX=400,CY=240,AX=330,AY=180, PER={ud:4000,lr:4000,dg:4000,cw:6500,ccw:6500,nf:5000};
+    let st=0,cyc=0,t0=0,acc=0,raf=0,run=false,slow=1,rest=0,fin=false;
+    const put=(x,y,r)=>{ ball.setAttribute("cx",x);ball.setAttribute("cy",y);ball.setAttribute("r",r);
+      hi.setAttribute("cx",x-r*.32);hi.setAttribute("cy",y-r*.32);hi.setAttribute("r",r*.26); };
+    const look=(dx,dy,cv)=>{ pl.setAttribute("cx",86+dx*12+(cv||0));pl.setAttribute("cy",106+dy*8);
+      pr.setAttribute("cx",154+dx*12-(cv||0));pr.setAttribute("cy",106+dy*8); };
+    const paint=()=>cues.forEach((c,j)=>{c.classList.toggle("on",j===st&&!fin);c.classList.toggle("done",j<st||fin);
+      $(".ct",c).textContent=j===st&&!fin?`${Math.min(cyc+1,s.steps[j].n)} / ${s.steps[j].n}`:"× "+s.steps[j].n});
+    const pose=u=>{ const m=s.steps[st].m, sn=Math.sin(2*Math.PI*u), cs=Math.cos(2*Math.PI*u);
+      let x=CX,y=CY,r=38,L="",cv=0;
+      if(m==="ud"){y=CY-AY*sn;L=sn>.35?"看頂懸 ⬆":sn<-.35?"看下跤 ⬇":"…"}
+      else if(m==="lr"){x=CX-AX*sn;L=sn>.35?"⬅ 看左邊":sn<-.35?"看右邊 ➡":"…"}
+      else if(m==="dg"){const q=cyc%2?-1:1;x=CX-AX*sn;y=CY-AY*sn*q;L=sn>.35?(q>0?"↖ 看左上":"↙ 看左下"):sn<-.35?(q>0?"看右下 ↘":"看右上 ↗"):"…"}
+      else if(m==="cw"||m==="ccw"){x=CX+(m==="cw"?1:-1)*AX*sn;y=CY-AY*cs;L=m==="cw"?"順時鐘畫圓 ⟳":"逆時鐘畫圓 ⟲"}
+      else if(m==="nf"){const k=(1-cs)/2;r=26+110*k;cv=k*7;L=k>.6?"👍 看近：大拇指":k<.4?"🪟 看遠：窗外":"…"}
+      put(x,y,r); look((x-CX)/AX,(y-CY)/AY,cv); lab.textContent=L; };
+    const frame=ts=>{
+      if(!t0)t0=ts; const dt=ts-t0; t0=ts;
+      if(rest>0){ rest-=dt; if(rest<=0){ if(st>=s.steps.length-1){fin=true;run=false;lab.textContent="做完了！拍拍手 👏";go.textContent="▶ 再做一次";go.classList.remove("on");paint();ding(1);return}
+          st++;cyc=0;acc=0;paint();tick(); }
+        raf=requestAnimationFrame(frame); return; }
+      acc+=dt; const P=PER[s.steps[st].m]*slow;
+      if(acc>=P){ acc-=P; cyc++; tick();
+        if(cyc>=s.steps[st].n){ put(CX,CY,38); look(0,0); lab.textContent="眨眨眼，休息一下 😌"; rest=2600; acc=0; paint(); raf=requestAnimationFrame(frame); return; }
+        paint(); }
+      pose(acc/P); raf=requestAnimationFrame(frame); };
+    const start=()=>{ if(fin){fin=false;st=0;cyc=0;acc=0;rest=0} run=true;t0=0;go.textContent="⏸ 暫停";go.classList.add("on");paint();cancelAnimationFrame(raf);raf=requestAnimationFrame(frame) };
+    const stop=()=>{ run=false;cancelAnimationFrame(raf);go.textContent="▶ 繼續";go.classList.remove("on") };
+    go.onclick=()=>run?stop():start();
+    $(".e-slow",d).onclick=e=>{slow=slow===1?1.5:1;e.currentTarget.classList.toggle("on",slow>1);e.currentTarget.textContent=slow>1?"🐇 恢復速度":"🐢 放慢"};
+    $(".e-skip",d).onclick=()=>{ if(st<s.steps.length-1){st++;cyc=0;acc=0;rest=0;fin=false;paint();if(!run){pose(0);lab.textContent=s.steps[st].k}} };
+    $(".e-rs",d).onclick=()=>{ stop();st=0;cyc=0;acc=0;rest=0;fin=false;put(CX,CY,38);look(0,0);lab.textContent="按「▶ 開始」";go.textContent="▶ 開始";paint() };
+    d._stop=()=>{ if(run)stop() };
+    paint();
+  }
+
+  if(s.t==="amsler"){
+    const A=$(".ams",d), b=$(".a-tg",d), cap=$(".amscap",d);
+    b.onclick=()=>{ const on=A.classList.toggle("bad");
+      b.textContent=on?"✅ 回到正常的樣子":"👀 看看異常的樣子";
+      cap.textContent=on?"⚠️ 異常：線條彎曲、中間有黑影":"✅ 正常：每條線都是直的"; ding(!on); };
+    $$(".stp2",d).forEach(x=>x.onclick=()=>{ const k=+x.dataset.i; $$(".stp2",d).forEach((y,j)=>y.classList.toggle("on",j<=k)); ding(1) });
+  }
+
+  if(s.t==="stroop"){
+    let lv=1; const W=$(".stw",d), tiles=$$(".stt",d), md=$(".stmode",d);
+    const deal=()=>{ W.classList.remove("rev");
+      const ws=shuffle([0,1,2,3]); let cs;
+      do{cs=shuffle([0,1,2,3])}while(lv===2&&cs.some((c,k)=>c===ws[k]));
+      tiles.forEach((t,k)=>{ $(".w",t).textContent=s.words[ws[k]]; $(".w",t).style.color=s.colors[cs[k]];
+        $(".a",t).textContent=lv===1?s.tw[ws[k]]:s.tw[cs[k]]; }); tick(); };
+    const setLv=n=>{ lv=n; md.textContent=n===1?"第一關：唸出字！":"第二關：講出顏色！"; md.style.background=n===1?"var(--ink)":"var(--orange)";
+      $(".s-l1",d).classList.toggle("on",n===1); $(".s-l2",d).classList.toggle("on",n===2); deal(); };
+    $(".s-l1",d).onclick=()=>setLv(1); $(".s-l2",d).onclick=()=>setLv(2);
+    $(".s-nx",d).onclick=deal;
+    $(".s-rv",d).onclick=()=>{W.classList.add("rev");ding(1)};
+    deal();
+  }
+
+  if(s.t==="memo"){
+    const cv=$(".mcover",d), cd=$(".mcd",d), q=$(".mq",d); let tm=null;
+    const cover=(t)=>{ cv.innerHTML=`<span class="big">🙈</span><span>${t}</span>`; cv.classList.remove("off") };
+    const stop=()=>{clearInterval(tm);tm=null;cd.classList.remove("on")};
+    $(".m-go",d).onclick=()=>{ stop(); cv.classList.add("off"); let n=s.sec; cd.textContent=n; cd.classList.add("on"); q.classList.add("hide");
+      tm=setInterval(()=>{ n--; cd.textContent=n; tick();
+        if(n<=0){ stop(); cover("蓋起來了！"); q.classList.remove("hide"); $(".m-again",d).classList.remove("off"); ding(1); } },1000); };
+    $(".m-again",d).onclick=()=>{ stop(); if(cv.classList.contains("off"))cover("蓋起來了！"); else cv.classList.add("off") };
+    $$(".opt",d).forEach(b=>b.onclick=()=>{
+      if(d.dataset.done||q.classList.contains("hide"))return; d.dataset.done=1;
+      const k=+b.dataset.i, ok=k===s.ans;
+      $$(".opt",d).forEach(x=>{x.classList.add("lock"); if(+x.dataset.i===s.ans)x.classList.add("right"); else if(x===b)x.classList.add("wrong")});
+      if(ok)addStar(1); ding(ok);
+      setTimeout(()=>d.classList.contains("on")&&showAns(ok?"🎉":"💡", ok?"答對了！":"正確答案是第 "+"1234"[s.ans]+" 個", s.fb),800);
+    });
+    d._stop=stop;
+  }
+
+  if(s.t==="diff"){
+    let n=0; const cells=$$(".dc",d);
+    const pair=k=>cells.filter(c=>+c.dataset.k===k);
+    cells.forEach(c=>c.onclick=()=>{ const k=+c.dataset.k;
+      if(s.left[k]!==s.right[k]){
+        if(c.classList.contains("found"))return;
+        pair(k).forEach(x=>{x.classList.remove("show");x.classList.add("found")}); ding(1);
+        if(!d.dataset.done){ n++; addStar(1); $(".c0",d).textContent=n;
+          if(n>=s.need){ d.dataset.done=1; setTimeout(()=>d.classList.contains("on")&&showAns("🏆","三個都找到了！",s.fb),900) } }
+      } else { c.classList.remove("no"); void c.offsetWidth; c.classList.add("no"); ding(0) } });
+    $(".sw",d).onclick=()=>{ cells.forEach(c=>{const k=+c.dataset.k; if(s.left[k]!==s.right[k]&&!c.classList.contains("found"))c.classList.add("show")});
+      d.dataset.done=1; showAns("📖","答案在這裡",s.fb); };
+  }
+
+
+  if(s.t==="choice"){
+    $$(".opt",d).forEach(b=>b.onclick=()=>{
+      if(d.dataset.done)return; d.dataset.done=1;
+      const k=+b.dataset.i, ok=k===s.ans;
+      $$(".opt",d).forEach(x=>{x.classList.add("lock");
+        if(+x.dataset.i===s.ans)x.classList.add("right");
+        else if(x===b)x.classList.add("wrong")});
+      if(ok)addStar(1); ding(ok);
+      setTimeout(()=>d.classList.contains("on")&&showAns(ok?"🎉":"💡", ok?"答對了！":"正確答案是第 "+"1234"[s.ans]+" 個", s.fb),800);
+    });
+  }
+
+  if(s.t==="greet"){
+    const box=$(".sites",d), inp=$("input",d);
+    let list=s.sites.slice();
+    try{const sv=JSON.parse(localStorage.getItem("eye-taigi-sites")||"null"); if(Array.isArray(sv)&&sv.length)list=sv}catch(e){}
+    const save=()=>{try{localStorage.setItem("eye-taigi-sites",JSON.stringify(list))}catch(e){}};
+    const paint=()=>{ box.innerHTML=list.map((n,k)=>`<button class="site" data-k="${k}"><span class="hi">👋</span><span>${n.replace(/</g,"&lt;")}</span>${k>=s.sites.length?'<i class="del" title="移除">✕</i>':""}</button>`).join("");
+      $$(".site",box).forEach(b=>b.onclick=e=>{
+        if(e.target.classList.contains("del")){list.splice(+b.dataset.k,1);save();paint();fit(d);return}
+        b.classList.toggle("on"); if(b.classList.contains("on"))ding(1);
+      }); };
+    paint();
+    const add=()=>{const v=inp.value.trim(); if(!v)return; list.push(v); inp.value=""; save(); paint(); fit(d)};
+    $(".add",d).onclick=add;
+    inp.addEventListener("keydown",e=>{e.stopPropagation(); if(e.key==="Enter")add()});
+  }
+
+  if(s.t==="ox"){
+    let cur=0;
+    const qs=$$(".ox-q",d), dots=$$(".ox-prog i",d), bs=$$(".oxb",d), nx=$(".nx",d);
+    const show=()=>{ qs.forEach((q,k)=>q.classList.toggle("cur",k===cur));
+      dots.forEach((t,k)=>t.classList.toggle("cur",k===cur));
+      bs.forEach(b=>b.className="oxb"); nx.classList.add("off"); d.dataset.lock=""; };
+    show();
+    bs.forEach(b=>b.onclick=()=>{
+      if(d.dataset.lock)return; d.dataset.lock=1;
+      const it=s.items[cur], v=b.dataset.v==="1", ok=v===it.a;
+      bs.forEach(x=>{x.classList.add("lock"); if((x.dataset.v==="1")===it.a)x.classList.add("right"); else if(x===b)x.classList.add("wrong")});
+      dots[cur].classList.add(ok?"ok":"ng");
+      if(ok)addStar(1); ding(ok);
+      if(cur<s.items.length-1)nx.classList.remove("off");
+      setTimeout(()=>d.classList.contains("on")&&showAns(ok?"🎉":"💡", ok?"答對了！":"答案是 "+(it.a?"⭕ 對":"❌ 不對"), it.fb),750);
+    });
+    nx.onclick=()=>{ if(cur<s.items.length-1){cur++;show()} };
+    $(".rs",d).onclick=()=>{ cur=0; dots.forEach(t=>t.className=""); show(); };
+  }
+
+  if(s.t==="meter"){
+    const open=k=>{ $$(".mc",d)[k].classList.add("on"); $$(".mtag",d)[k].classList.add("on");
+      $$(".mrow",d).forEach((r,j)=>r.classList.toggle("hl",j===k)); ding(1);
+      const it=s.items[k]; showAns(String([s.read.sys,s.read.dia,s.read.pul][k]),it.k,"<b>"+it.tw+"</b><br>"+it.v,{num:1}); };
+    $$(".mrow",d).forEach(r=>r.onclick=()=>open(+r.dataset.k));
+    $$(".mc",d).forEach(c=>c.onclick=()=>open(+c.dataset.k));
+    $(".all",d).onclick=()=>[0,1,2].forEach(k=>{$$(".mc",d)[k].classList.add("on");$$(".mtag",d)[k].classList.add("on")});
+    $(".rs",d).onclick=()=>{ $$(".mc,.mtag",d).forEach(x=>x.classList.remove("on")); $$(".mrow",d).forEach(r=>r.classList.remove("hl")); };
+  }
+
+  if(s.t==="pic"){
+    const why=$(".why",d); let n=0;
+    const L=s.hs.reduce((a,g)=>(g.n+(g.why||g.ok)).length>(a.n+(a.why||a.ok)).length?g:a);
+    why.dataset.full='⚠️ <b>'+L.n+'</b>：'+(L.why||L.ok);
+    const slot=k=>$$(".slot",d)[k];
+    const summary=()=>d.classList.contains("on")&&showAns("🏆","太棒了，"+s.need+" 個錯誤全部找到！",s.fb);
+    const reveal=k=>{
+      const h=$$(".hs",d)[k], g=s.hs[k];
+      if(h.classList.contains("found")||h.classList.contains("safe"))return;
+      if(g.d){ h.classList.add("safe"); ding(1); slot(k).className="slot good"; $(".sl",slot(k)).textContent="👍 "+g.n;
+        why.innerHTML="👍 <b>"+g.n+"</b>：這樣做很好——"+g.ok; why.classList.remove("idle"); return; }
+      h.classList.remove("show"); h.classList.add("found"); slot(k).className="slot bad"; $(".sl",slot(k)).textContent="⚠ "+g.n;
+      why.innerHTML="⚠️ <b>"+g.n+"</b>："+g.why; why.classList.remove("idle");
+      if(!d.dataset.done){ n++; addStar(1); $(".c0",d).textContent=n; }
+      ding(1);
+      if(n>=s.need&&!d.dataset.done){ d.dataset.done=1; d.dataset.sum=1;
+        if(!ZM.classList.contains("on")){ d.dataset.sum=""; setTimeout(summary,1100) } }
+    };
+    $$(".hs",d).forEach(h=>h.onclick=()=>{
+      const k=+h.dataset.i, g=s.hs[k];
+      if(!s.img){ reveal(k); return; }
+      const done=h.classList.contains("found")||h.classList.contains("safe")||h.classList.contains("show");
+      openZoom({img:s.img,iw:s.iw,ih:s.ih,x:g.x,y:g.y,z:g.z,no:"第 "+(k+1)+" 號",hint:"請大家比 ⭕ 可以，或 ❌ 不行",
+        revealed:done, cls:g.w?"bad":"good",
+        t:g.w?"❌ 不行！"+g.n:"⭕ 可以！"+g.n, b:g.w?g.why:g.ok,
+        onReveal:()=>reveal(k),
+        onClose:()=>{ if(d.dataset.sum==="1"){ d.dataset.sum=""; setTimeout(summary,250) } }});
+    });
+    $(".sw",d).onclick=()=>{
+      $$(".hs",d).forEach(h=>{const k=+h.dataset.i,g=s.hs[k];
+        if(g.w&&!h.classList.contains("found")){h.classList.add("show");slot(k).className="slot show";$(".sl",slot(k)).textContent="⚠ "+g.n}});
+      d.dataset.done=1; showAns("📖","答案都在這裡",s.fb);
+    };
+  }
+
+  if(s.t==="pose"){
+    const on=k=>{ $$(".stp",d).forEach((b,j)=>b.classList.toggle("on",j<=k)); $$(".pbd",d).forEach((b,j)=>b.classList.toggle("on",j===k)); ding(1) };
+    $$(".stp",d).forEach(b=>b.onclick=()=>on(+b.dataset.i));
+    $$(".pbd",d).forEach(b=>b.onclick=()=>{ const k=+b.dataset.i; on(k);
+      if(s.img){ const m=s.marks[k]; openZoom({img:s.img,iw:s.iw,ih:s.ih,x:m.x,y:m.y,z:m.z,no:"口訣 "+(k+1),
+        q:s.steps[k].k, keepQ:true, revealed:true, cls:"good", t:"👍 這樣做就對了", b:s.steps[k].v}); } });
+  }
+
+  if(s.t==="film"&&s.video){                 /* 影片版電影法：開演就直接播放 */
+    const T=$(".fm-tasks",d), F=$(".fm-film",d), V=$(".fm-vote",d), v=$(".fvid",d), B=n=>$("."+n,d);
+    const label=()=>{ B("v-play").textContent=v.paused?"▶ 播放":"⏸ 暫停"; };
+    const mode=m=>{ d.dataset.mode=m;
+      T.classList.toggle("off",m!=="t"); F.classList.toggle("off",m!=="f"); V.classList.toggle("off",m!=="v");
+      B("go-film").classList.toggle("off",m!=="t");
+      ["v-play","v-re","go-vote"].forEach(n=>B(n).classList.toggle("off",m!=="f"));
+      B("go-task").classList.toggle("off",m==="t"); B("rsv").classList.toggle("off",m!=="v");
+      if(m!=="f")v.pause();
+      fit(d); if(idx===i&&noteOn){paintNote();noteSpace()} };
+    B("go-film").onclick=()=>{ mode("f"); B("go-vote").classList.remove("pulse"); try{v.currentTime=0}catch(e){} v.play().catch(()=>{}); };
+    B("v-play").onclick=()=>{ v.paused?v.play().catch(()=>{}):v.pause(); };
+    B("v-re").onclick=()=>{ try{v.currentTime=0}catch(e){} v.play().catch(()=>{}); B("go-vote").classList.remove("pulse"); };
+    v.addEventListener("play",label); v.addEventListener("pause",label);
+    v.addEventListener("ended",()=>{ label(); B("go-vote").classList.add("pulse"); });
+    B("go-vote").onclick=()=>{ B("go-vote").classList.remove("pulse"); mode("v"); };
+    B("go-task").onclick=()=>mode("t");
+    B("rsv").onclick=()=>$$(".vo",d).forEach(x=>{x.classList.remove("on");$(".cntn",x).textContent="0"});
+    $$(".vo",d).forEach(x=>x.onclick=()=>{ const c=$(".cntn",x); c.textContent=(+c.textContent)+1; x.classList.add("on"); ding(1); });
+    d._stop=()=>v.pause();
+    d.dataset.mode="t";
+  }
+
+  if(s.t==="film"&&!s.video){
+    const T=$(".fm-tasks",d), F=$(".fm-film",d), V=$(".fm-vote",d), st=$(".fstage",d), ti=$(".ftitle",d), sc=$(".fscn",d);
+    const B=n=>$("."+n,d);
+    let cur=0, auto=null;
+    const scene=()=>{ const c=s.scenes[cur];
+      st.innerHTML=c.it.map(t=>`<div class="it ${t[4]||""}" style="left:${t[1]}%;top:${t[2]}%;--fz:${t[3]}">${t[0]}</div>`).join("");
+      ti.innerHTML=c.cap; sc.textContent="第 "+(cur+1)+" / "+s.scenes.length+" 幕";
+      B("f-prev").disabled=cur===0; B("f-next").classList.toggle("off",cur===s.scenes.length-1||!F.offsetParent&&false);
+      B("go-vote").classList.toggle("off",cur!==s.scenes.length-1);
+      B("f-next").classList.toggle("off",cur===s.scenes.length-1);
+      if(idx===i&&noteOn)refreshNote(); };
+    const stopAuto=()=>{clearInterval(auto);auto=null;B("f-auto").classList.remove("on")};
+    d._film=()=>cur;
+    const mode=m=>{ stopAuto(); d.dataset.mode=m;
+      T.classList.toggle("off",m!=="t"); F.classList.toggle("off",m!=="f"); V.classList.toggle("off",m!=="v");
+      B("go-film").classList.toggle("off",m!=="t");
+      ["f-prev","f-auto"].forEach(n=>B(n).classList.toggle("off",m!=="f"));
+      B("f-next").classList.toggle("off",m!=="f"); B("go-vote").classList.toggle("off",m!=="f");
+      B("go-task").classList.toggle("off",m==="t"); B("rsv").classList.toggle("off",m!=="v");
+      if(m==="f")scene(); if(idx===i&&noteOn){paintNote();noteSpace()} fit(d); };
+    d._stop=stopAuto;
+    B("go-film").onclick=()=>{cur=0;mode("f")};
+    B("f-next").onclick=()=>{stopAuto(); if(cur<s.scenes.length-1){cur++;scene()}};
+    B("f-prev").onclick=()=>{stopAuto(); if(cur>0){cur--;scene()}};
+    B("f-auto").onclick=()=>{ if(auto){stopAuto();return}
+      B("f-auto").classList.add("on");
+      auto=setInterval(()=>{ if(cur<s.scenes.length-1){cur++;scene()} else stopAuto() },6500); };
+    B("go-vote").onclick=()=>mode("v");
+    B("go-task").onclick=()=>mode("t");
+    B("rsv").onclick=()=>$$(".vo",d).forEach(v=>{v.classList.remove("on");$(".cntn",v).textContent="0"});
+    $$(".vo",d).forEach(v=>v.onclick=()=>{ const c=$(".cntn",v); c.textContent=(+c.textContent)+1; v.classList.add("on"); ding(1); });
+    d.dataset.mode="t";
+  }
+
+  if(s.t==="move"){
+    const svg=$(".figsvg",d), bn=$(".bn",d), bl=$(".bl",d), beat=$(".beat",d), cues=$$(".cue",d);
+    const kf=s.kf.map(k=>({...k,p:P(k.p)}));
+    let seg=0,t0=0,raf=0,slow=1,counting=false,count=0,from=kf[kf.length-1].p;
+    const setCue=()=>{const k=kf[seg]; cues.forEach((c,j)=>c.classList.toggle("on",j===k.cue)); bl.textContent=k.lab||""};
+    const frame=ts=>{
+      if(!t0)t0=ts;
+      const k=kf[seg], u=Math.min(1,(ts-t0)/(k.d*slow)), e=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;
+      svg.innerHTML=figure(lerpPose(from,k.p,e));
+      if(u>=1){
+        if(k.cnt&&counting){count++;bn.textContent=count;beat.classList.remove("pop");void beat.offsetWidth;beat.classList.add("pop");tick()}
+        from=k.p; seg=(seg+1)%kf.length; t0=ts; setCue();
+      }
+      raf=requestAnimationFrame(frame);
+    };
+    svg.innerHTML=figure(from);
+    d._start=()=>{cancelAnimationFrame(raf);seg=0;t0=0;from=kf[kf.length-1].p;setCue();raf=requestAnimationFrame(frame)};
+    d._stop=()=>cancelAnimationFrame(raf);
+    const go=$(".cnt-go",d);
+    go.onclick=()=>{counting=!counting; go.textContent=counting?"⏸ 暫停數":"▶ 開始數"; go.classList.toggle("on",counting)};
+    $(".cnt-rs",d).onclick=()=>{count=0;bn.textContent=0};
+    $(".spd",d).onclick=e=>{slow=slow===1?1.5:1; e.currentTarget.classList.toggle("on",slow>1); e.currentTarget.textContent=slow>1?"🐇 恢復速度":"🐢 放慢"};
+  }
+
+  if(s.t==="game"){
+    const call=$(".gcall",d), grs=$$(".gr",d), rows=$$(".mrow",d), note=$(".rev-note",d);
+    let last=-1, auto=null, rev=false, hint=null;
+    const MAP=[0,1,2];
+    const next=()=>{
+      let k; do{k=Math.random()*3|0}while(k===last&&Math.random()<.8); last=k;
+      call.textContent=s.rules[k].k+"！"; call.classList.remove("pop"); void call.offsetWidth; call.classList.add("pop");
+      rows.forEach((r,j)=>r.classList.toggle("glow",j===k)); grs.forEach(g=>g.classList.remove("hit"));
+      clearTimeout(hint); hint=setTimeout(()=>grs[k].classList.add("hit"),1300);  /* 顛倒時卡片上的動作已對調，所以亮同一張 */
+      tick();
+    };
+    const stopAuto=()=>{clearInterval(auto);auto=null;$(".g-auto",d).classList.remove("on")};
+    $(".g-next",d).onclick=()=>{stopAuto();next()};
+    $(".g-auto",d).onclick=()=>{ if(auto){stopAuto();return} $(".g-auto",d).classList.add("on"); next(); auto=setInterval(next,4200) };
+    $(".g-rev",d).onclick=e=>{ rev=!rev; e.currentTarget.classList.toggle("on",rev);
+      note.textContent=rev?"🔀 顛倒挑戰：收縮壓 ⇄ 舒張壓 的動作交換！":"";
+      $$(".a",d)[0].textContent=rev?s.rules[1].a:s.rules[0].a; $$(".a",d)[1].textContent=rev?s.rules[0].a:s.rules[1].a;
+      $$(".e",d)[0].textContent=rev?s.rules[1].e:s.rules[0].e; $$(".e",d)[1].textContent=rev?s.rules[0].e:s.rules[1].e; };
+    d._stop=()=>{stopAuto();clearTimeout(hint)};
+  }
+
+  if(s.t==="breathe"){
+    const c=$(".bcirc",d), t=$(".bt",d), cues=$$(".cue",d), rn=$(".rn",d), go=$(".b-go",d);
+    let tm=null, sec=0, rounds=0;
+    const paint=()=>{ const inh=sec<4, n=inh?sec+1:sec-3;
+      cues.forEach((q,j)=>q.classList.toggle("on",j===(inh?0:1)));
+      t.innerHTML=(inh?"吸～":"吐～")+"<small>"+n+"</small>";
+      if(sec===0){c.style.transition="transform 4s linear";c.style.transform="scale(1)"}
+      if(sec===4){c.style.transition="transform 6s linear";c.style.transform="scale(.55)"} };
+    const step=()=>{ sec++; if(sec>=10){sec=0;rounds++;rn.textContent=rounds;tick()} paint(); };
+    const stop=()=>{clearInterval(tm);tm=null;go.textContent="▶ 開始";go.classList.remove("on")};
+    go.onclick=()=>{ if(tm){stop();return} go.textContent="⏸ 暫停";go.classList.add("on"); sec=0; paint(); tm=setInterval(step,1000) };
+    d._stop=()=>{stop(); c.style.transition="none"; c.style.transform="scale(.55)"; t.innerHTML="準備<small>按下開始</small>"; cues.forEach(q=>q.classList.remove("on"))};
+  }
+
+  if(s.t==="fill"){
+    let sel=null;
+    const clr=()=>{$$(".tile",d).forEach(t=>t.classList.remove("pick"));sel=null};
+    const put=b=>{ if(!sel)return;
+      if(b.dataset.v){const old=$$(".tile",d).find(x=>x.dataset.w===b.dataset.v); if(old)old.classList.remove("used")}
+      b.dataset.v=sel.dataset.w; b.textContent=sel.dataset.w; sel.classList.add("used"); clr(); };
+    $$(".tile",d).forEach(t=>t.onclick=()=>{ if(t.classList.contains("used")||d.dataset.done)return;
+      clr(); t.classList.add("pick"); sel=t; const bk=$$(".bk",d).find(b=>!b.dataset.v); if(bk)put(bk); });
+    $$(".bk",d).forEach(b=>b.onclick=()=>{ if(d.dataset.done)return; if(sel)put(b);
+      else if(b.dataset.v){ const t=$$(".tile",d).find(x=>x.dataset.w===b.dataset.v); if(t)t.classList.remove("used"); b.dataset.v=""; b.textContent="＿＿＿"; b.className="bk"; } });
+    $(".ck",d).onclick=()=>{ if(d.dataset.done)return;
+      let n=0; $$(".bk",d).forEach(b=>{const ok=b.dataset.v===b.dataset.a; b.classList.add(ok?"right":"wrong"); if(!ok)b.textContent=b.dataset.a; if(ok)n++});
+      d.dataset.done=1; addStar(n); ding(n===s.lines.length);
+      setTimeout(()=>d.classList.contains("on")&&showAns(n===s.lines.length?"🎉":"💪","答對 "+n+" / "+s.lines.length+" 格",s.fb),700); };
+    $(".rs",d).onclick=()=>{ d.dataset.done=""; $$(".bk",d).forEach(b=>{b.className="bk";b.dataset.v="";b.textContent="＿＿＿"}); $$(".tile",d).forEach(t=>t.className="tile"); };
+  }
+
+  if(s.t==="order"){
+    let seq=[];
+    const paint=()=>{ $$(".tile",d).forEach(t=>{ const p=seq.indexOf(+t.dataset.i); t.classList.toggle("pick",p>=0);
+        const o=$(".ord",t); if(o)o.remove(); if(p>=0)t.insertAdjacentHTML("beforeend",`<span class="ord">${p+1}</span>`); }); $(".c0",d).textContent=seq.length; };
+    $$(".tile",d).forEach(t=>t.onclick=()=>{ if(d.dataset.done)return; const k=+t.dataset.i, p=seq.indexOf(k); if(p>=0)seq.splice(p,1); else seq.push(k); paint(); });
+    $(".ck",d).onclick=()=>{ if(d.dataset.done)return; d.dataset.done=1;
+      const ok=seq.length===s.items.length&&seq.every((v,n)=>v===n);
+      $$(".tile",d).forEach(t=>{const k=+t.dataset.i; t.classList.remove("pick"); t.classList.add(seq.indexOf(k)===k?"right":"wrong");
+        const o=$(".ord",t); if(o)o.textContent=k+1; else t.insertAdjacentHTML("beforeend",`<span class="ord">${k+1}</span>`)});
+      if(ok)addStar(1); ding(ok);
+      setTimeout(()=>d.classList.contains("on")&&showAns(ok?"🎉":"💪", ok?"順序完全正確！":"正確順序，看卡片上的號碼", s.fb),700); };
+    $(".rs",d).onclick=()=>{ d.dataset.done=""; seq=[]; $$(".tile",d).forEach(t=>{t.className="tile";const o=$(".ord",t);if(o)o.remove()}); paint(); };
+  }
+
+  if(s.t==="spot"){
+    const why=$(".why",d); let n=0;
+    const L=s.cards.reduce((a,g)=>(g.x+(g.why||g.ok)).length>(a.x+(a.why||a.ok)).length?g:a);
+    why.dataset.full='⚠️ <b>'+L.x+'</b>：'+(L.why||L.ok);
+    $$(".scard",d).forEach(h=>h.onclick=()=>{
+      if(d.dataset.done||h.classList.contains("found")||h.classList.contains("safe"))return;
+      const g=s.cards[+h.dataset.i];
+      if(g.d){ h.classList.add("miss"); ding(0); setTimeout(()=>{h.classList.remove("miss");h.classList.add("safe")},350);
+        why.innerHTML="👍 <b>"+g.x+"</b>：這樣做很好——"+g.ok; why.classList.remove("idle");
+        showAns("👍",g.x,"<b>這樣做很好！</b>"+g.ok); return; }
+      h.classList.add("found"); n++; addStar(1); ding(1); $(".c0",d).textContent=n;
+      why.innerHTML="⚠️ <b>"+g.x+"</b>："+g.why; why.classList.remove("idle");
+      const sum=()=>d.classList.contains("on")&&showAns("🏆","太棒了，"+s.need+" 個全部找到！",s.fb);
+      if(n>=s.need)d.dataset.done=1;
+      showAns("⚠️",g.x,"<b>有問題！</b>"+g.why,{next:n>=s.need?sum:null});
+    });
+    $(".sw",d).onclick=()=>{ $$(".scard",d).forEach(h=>{const g=s.cards[+h.dataset.i]; if(g.w&&!h.classList.contains("found"))h.classList.add("show")});
+      d.dataset.done=1; showAns("📖","答案都在這裡",s.fb); };
+  }
+
+  if(s.t==="sort"){
+    let sel=null;
+    $$(".pool .tile",d).forEach(t=>t.onclick=()=>{ if(d.dataset.done||t.classList.contains("used"))return;
+      $$(".tile",d).forEach(x=>x.classList.remove("pick")); t.classList.add("pick"); sel=t; });
+    $$(".bin",d).forEach(b=>b.onclick=()=>{ if(d.dataset.done||!sel)return;
+      const k=+sel.dataset.i, c=document.createElement("span");
+      c.className="chip"; c.dataset.i=k; c.dataset.b=b.dataset.b;
+      c.innerHTML=`<span>${s.items[k].x}</span><i class="x" title="拿回來">✕</i>`;
+      $(".x",c).onclick=e=>{ if(d.dataset.done)return; e.stopPropagation(); c.remove(); $$(".pool .tile",d).find(x=>+x.dataset.i===k).classList.remove("used"); };
+      $(".items",b).appendChild(c); sel.classList.add("used"); sel.classList.remove("pick"); sel=null; });
+    $(".ck",d).onclick=()=>{ if(d.dataset.done)return; d.dataset.done=1;
+      let n=0; $$(".chip",d).forEach(c=>{const ok=s.items[+c.dataset.i].b===c.dataset.b; c.classList.add(ok?"right":"wrong"); if(ok)n++});
+      addStar(n); ding(n===s.items.length);
+      setTimeout(()=>d.classList.contains("on")&&showAns(n===s.items.length?"🎉":"💪","分對 "+n+" / "+s.items.length+" 張",s.fb),700); };
+    $(".rs",d).onclick=()=>{ d.dataset.done=""; sel=null; $$(".chip",d).forEach(c=>c.remove()); $$(".tile",d).forEach(t=>t.className="tile"); };
+  }
+
+  if(s.t==="pledge"){
+    $$(".pl",d).forEach(p=>p.onclick=()=>{
+      p.classList.toggle("on"); ding(1);
+      $(".plc",d).textContent=$$(".pl.on",d).length;
+    });
+  }
+}
+
+/* ---------- 自動縮放：把每一頁的內容撐滿畫面 ----------
+   量測時先「假裝」說明框已展開（用最長的一則），揭曉答案時字級才不會突然變。 */
+function isMob(){return innerWidth<=820||innerHeight<=500}
+function fit(d){
+  if(!d||d.classList.contains("cover")){if(d)d.style.setProperty("--s",1);return}
+  const fbs=$$("[data-full]",d);
+  if(document.body.classList.contains("mob")){             /* 手機：字級依寬度定，內容可以上下捲 */
+    fbs.forEach(f=>f.style.minHeight="");
+    let m=Math.max(.58,Math.min(1,innerWidth/560,innerHeight/470));
+    d.style.setProperty("--s",m);
+    let g=0; while(d.scrollWidth>d.clientWidth+1&&m>.5&&g++<12){m*=.95;d.style.setProperty("--s",m)}
+    return;
+  }
+  const oldHTML=fbs.map(f=>f.innerHTML), wasIdle=fbs.map(f=>f.classList.contains("idle"));
+  fbs.forEach(f=>{ f.style.minHeight=""; f.classList.remove("idle"); f.innerHTML=f.dataset.full });
+  let lo=.45, hi=2.3, best=.45;
+  for(let k=0;k<14;k++){
+    const m=(lo+hi)/2;
+    d.style.setProperty("--s",m);
+    if(d.scrollHeight<=d.clientHeight+1 && d.scrollWidth<=d.clientWidth+1){best=m;lo=m} else hi=m;
+  }
+  d.style.setProperty("--s",best);
+  fbs.forEach((f,k)=>{ f.style.minHeight=f.offsetHeight+"px"; f.innerHTML=oldHTML[k];
+    if(wasIdle[k])f.classList.add("idle") });
+  let g=0; while(d.scrollHeight>d.clientHeight+1 && best>.5 && g++<10){
+    best*=.97; d.style.setProperty("--s",best); }
+}
+document.addEventListener("click",()=>setTimeout(()=>{
+  const d=$(".slide.on"); if(!d||d.classList.contains("cover")||document.body.classList.contains("mob"))return;
+  if(d.scrollHeight>d.clientHeight+2)fit(d);
+},0));
+let _rz; addEventListener("resize",()=>{clearTimeout(_rz);_rz=setTimeout(()=>{noteSpace();fit($(".slide.on"))},140)});
+
+/* ---------- 答案彈窗 ---------- */
+const ANS=$("#ans");
+function showAns(ico,title,html,opt){
+  opt=opt||{}; ANS.classList.toggle("num",!!opt.num);
+  $(".ans-ico",ANS).textContent=ico; $(".ans-t",ANS).textContent=title;
+  const b=$(".ans-b",ANS); b.innerHTML=html||""; b.style.display=html?"":"none";
+  ANS._next=opt.next||null; ANS.classList.add("on"); fitAns();
+}
+/* 字太多時才縮小一點，避免視窗出現捲軸 */
+function fitAns(){ if(!ANS.classList.contains("on"))return;
+  const c=$(".ans-card",ANS), b=$(".ans-b",ANS); b.style.fontSize="";
+  let f=parseFloat(getComputedStyle(b).fontSize), g=0;
+  while(c.scrollHeight>c.clientHeight+2&&f>18&&g++<40){f-=2;b.style.fontSize=f+"px"} }
+function hideAns(){ if(!ANS.classList.contains("on"))return;
+  ANS.classList.remove("on"); const f=ANS._next; ANS._next=null; if(f)setTimeout(f,250) }
+addEventListener("resize",()=>setTimeout(fitAns,160));
+$(".ans-ok",ANS).onclick=hideAns;
+ANS.addEventListener("click",e=>{ if(e.target===ANS)hideAns() });
+
+/* ---------- 目錄 ---------- */
+const TOC=$("#toc");
+function buildToc(){
+  let h="", sec="";
+  DECK.slides.forEach((s,k)=>{
+    if(s.sec&&s.sec!==sec){sec=s.sec;h+=`<div class="toc-sec">${sec}</div>`}
+    h+=`<button class="toc-it ${k===idx?'cur':''}" data-k="${k}"><i>${k+1}</i>${strip(s.h)}</button>`;
+  });
+  $(".toc-list",TOC).innerHTML=h;
+  $$(".toc-it",TOC).forEach(b=>b.onclick=()=>{TOC.classList.remove("on");go(+b.dataset.k)});
+}
+$(".toc-x",TOC).onclick=()=>TOC.classList.remove("on");
+TOC.addEventListener("click",e=>{ if(e.target===TOC)TOC.classList.remove("on") });
+
+/* ---------- 講師提示 ---------- */
+function paintNote(){
+  const s=DECK.slides[idx], d=$$(".slide")[idx];
+  let h="";
+  if(s.t==="film"&&!s.video&&d.dataset.mode==="f"){const c=s.scenes[d._film()];
+    $("#note").innerHTML=`<span class="say">🎙 <b>辯士台詞（第 ${d._film()+1} 幕）</b>　${c.say}</span><span style="opacity:.75">（演完後回到任務、投票時，會再顯示完整講師提示）</span>`; return}
+  h+=s.note?("🎙 <b>講師提示</b>　"+s.note):"（本頁無提示）";
+  $("#note").innerHTML=h;
+}
+
+function noteSpace(){
+  document.body.classList.toggle("mob",isMob());
+  const n=$("#note"), h=noteOn?n.offsetHeight:0;
+  document.documentElement.style.setProperty("--nh",h+"px");
+  document.documentElement.style.setProperty("--ch",$("#chrome").offsetHeight+"px");
+  n.style.bottom=$("#chrome").offsetHeight+"px";
+}
+function refreshNote(){ paintNote(); $("#note").classList.toggle("on",noteOn); noteSpace(); fit($(".slide.on")); }
+
+/* ---------- 講師手冊（#notes：另開分頁或手機看） ---------- */
+function renderNotes(){
+  document.body.style.cssText="overflow:auto;background:#FBF7F0";
+  let h=`<div style="max-width:980px;margin:0 auto;padding:28px 20px 60px;font-size:19px;line-height:1.7;color:#12343B">
+  <h1 style="font-size:32px;margin-bottom:.2em">📄 講師手冊：${DECK.title}</h1>
+  <p style="color:#5D6E72;font-weight:700;margin-bottom:1.2em">每一頁的帶法與台語講法。可以用手機或第二個螢幕開著，對照簡報上課。</p>`;
+  DECK.slides.forEach((s,k)=>{
+    h+=`<section style="background:#fff;border:2px solid #E3D9C8;border-radius:16px;padding:16px 20px;margin:14px 0">
+    <div style="font-weight:900;font-size:22px"><span style="color:#028090">${k+1}.</span> ${strip(s.h)} <span style="font-size:15px;color:#B23A48">${s.tag||""}</span></div>
+    <div style="margin-top:.4em;font-weight:600">${s.note||""}</div>`;
+    if(s.scenes)h+=`<ol style="margin:.6em 0 0 1.4em;font-weight:600">`+s.scenes.map(c=>`<li><b>${strip(c.cap)}</b><br><span style="color:#9A4A12">🎙 辯士：${c.say}</span></li>`).join("")+`</ol>`;
+    if(s.t==="ox")h+=`<ul style="margin:.6em 0 0 1.4em;font-weight:600">`+s.items.map(it=>`<li>${it.q}　→ ${it.a?"⭕":"❌"}</li>`).join("")+`</ul>`;
+    if(s.t==="choice")h+=`<div style="margin-top:.4em;font-weight:700">✅ 答案：${s.opts[s.ans]}</div>`;
+    if(s.t==="fill")h+=`<div style="margin-top:.4em;font-weight:700">✅ 答案：${s.lines.map(l=>l.ans).join("、")}</div>`;
+    if(s.t==="order")h+=`<ol style="margin:.4em 0 0 1.4em;font-weight:700">${s.items.map(x=>`<li>${x}</li>`).join("")}</ol>`;
+    if(s.t==="spot")h+=`<div style="margin-top:.4em;font-weight:700">✅ 有問題的：${s.cards.map((c,j)=>c.w?(j+1)+" "+c.x:"").filter(Boolean).join("、")}</div>`;
+    if(s.t==="sort")h+=`<div style="margin-top:.4em;font-weight:700">${s.bins.map(b=>"✅ "+strip(b.t)+"："+s.items.filter(x=>x.b===b.id).map(x=>x.x).join("、")).join("<br>")}</div>`;
+    if(s.t==="pic")h+=`<div style="margin-top:.4em;font-weight:700">✅ 錯的是：${s.hs.map((x,j)=>x.w?(j+1)+" "+x.n:"").filter(Boolean).join("、")}</div>`;
+    h+=`</section>`;
+  });
+  document.body.innerHTML=h+`</div>`;
+  document.title="講師手冊｜"+DECK.title;
+}
+
+/* ---------- 導覽 ---------- */
+function go(n){
+  const prev=$$(".slide")[idx]; if(prev&&prev._stop)prev._stop();
+  idx=Math.max(0,Math.min(DECK.slides.length-1,n));
+  $$(".slide").forEach((d,k)=>d.classList.toggle("on",k===idx));
+  $$(".slide")[idx].scrollTop=0;
+  $("#barfill").style.width=((idx+1)/DECK.slides.length*100)+"%";
+  $("#pg").textContent=(idx+1)+" / "+DECK.slides.length;
+  const s=DECK.slides[idx], d=$$(".slide")[idx];
+  ANS._next=null; hideAns(); TOC.classList.remove("on"); ZM.classList.remove("on"); zmCtx=null;
+  paintNote(); $("#note").classList.toggle("on",noteOn); noteSpace();
+  if(s.t==="score"){
+    $(".sc-n",d).textContent=star; $(".sc-m",d).textContent=maxStar;
+    const r=maxStar?star/maxStar:0;
+    $(".sc-t",d).textContent = r>=.9?"太厲害了！您就是社區的「護眼小老師」🎖"
+      : r>=.6?"很棒！眼睛和頭腦都很靈活 👍" : "沒關係，記住一句就好：看 30 分鐘，休息 10 分鐘 👀";
+    $(".sc-em",d).textContent = r>=.9?"🏆":r>=.6?"🎉":"🌱";
+  }
+  fit(d); setTimeout(()=>{ if($(".slide.on")===d)fit(d) },90);
+  if(s.t==="stats")countUp(d);
+  if(d._start)d._start();
+  stopTimer();
+}
+$("#prev").onclick=()=>go(idx-1);
+$("#next").onclick=()=>go(idx+1);
+$("#nbtn").onclick=()=>{noteOn=!noteOn;$("#nbtn").classList.toggle("on",noteOn);refreshNote()};
+$("#fbtn").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}};
+$("#hbtn").onclick=()=>{buildToc();TOC.classList.add("on")};
+document.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT"||location.hash==="#notes")return;
+  if(ANS.classList.contains("on")){
+    if(["Escape","Enter"," ","ArrowRight","PageDown"].includes(e.key)){e.preventDefault();hideAns()}
+    return; }
+  if(TOC.classList.contains("on")){ if(e.key==="Escape")TOC.classList.remove("on"); return; }
+  if(ZM.classList.contains("on")){ e.preventDefault();
+    if(e.key==="Escape")closeZoom();
+    else if(["Enter"," ","ArrowRight"].includes(e.key)){ const g=$(".zm-go",ZM); if(!g.classList.contains("off"))g.click(); else closeZoom(); }
+    return; }
+  if(["ArrowRight","PageDown"," "].includes(e.key)){e.preventDefault();go(idx+1)}
+  else if(["ArrowLeft","PageUp"].includes(e.key)){e.preventDefault();go(idx-1)}
+  else if(e.key==="Home")go(0); else if(e.key==="End")go(DECK.slides.length-1);
+  else if(e.key==="n"||e.key==="N")$("#nbtn").click();
+  else if(e.key==="f"||e.key==="F")$("#fbtn").click();
+  else if(e.key==="t"||e.key==="T")$("#tbtn").click();
+});
+
+/* 手機左右滑動換頁（上下滑動留給捲動） */
+let tx=null,ty=0;
+wrap.addEventListener("touchstart",e=>{const t=e.touches[0];tx=t.clientX;ty=t.clientY},{passive:true});
+wrap.addEventListener("touchend",e=>{
+  if(tx===null)return; const t=e.changedTouches[0], dx=t.clientX-tx, dy=t.clientY-ty; tx=null;
+  if(ANS.classList.contains("on")||TOC.classList.contains("on")||ZM.classList.contains("on"))return;
+  if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.6)go(idx+(dx<0?1:-1));
+},{passive:true});
+
+/* 數字動畫 */
+function countUp(d){
+  $$(".n",d).forEach(el=>{ const to=parseFloat(el.dataset.to); if(isNaN(to))return;
+    const dec=((el.dataset.to.match(/\.(\d+)/)||[,""])[1]).length; let t0=null;
+    const stepf=ts=>{ if(!t0)t0=ts; const p=Math.min(1,(ts-t0)/900);
+      el.textContent=p<1?(to*(1-Math.pow(1-p,3))).toFixed(dec):el.dataset.to; if(p<1)requestAnimationFrame(stepf); };
+    requestAnimationFrame(stepf); setTimeout(()=>{el.textContent=el.dataset.to},1200); });
+}
+
+/* 搶答計時器（講師自行決定要不要用） */
+let tid=null;
+function stopTimer(){clearInterval(tid);tid=null;$("#timer").classList.remove("on","low")}
+$("#tbtn").onclick=()=>{
+  if(tid){stopTimer();return}
+  let n=30; const el=$("#timer"); el.textContent=n; el.classList.add("on");
+  tid=setInterval(()=>{ n--; el.textContent=n;
+    el.classList.toggle("low",n<=5);
+    if(n<=0){ding(0);stopTimer()} },1000);
+};
+
+addEventListener("hashchange",()=>location.reload());
+if(location.hash==="#notes")renderNotes(); else { go(0); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fit($(".slide.on"))); }
+</script>
+</body>
+</html>
