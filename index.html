@@ -739,6 +739,30 @@ body.mob .cv-photo{width:20vw;height:20vw;max-width:110px;max-height:110px;borde
 .mob .thx-qr img{width:min(56vw,240px);height:min(56vw,240px)}
 .mob .pimg.sq{width:100%;height:auto}
 .thx-b{white-space:nowrap}
+.fcbox{display:flex;flex-direction:column;align-items:center;background:linear-gradient(#FFF8EC,#F6E9D3);border-color:var(--line)}
+.fcnote{font-size:calc(21px*var(--s));font-weight:800;color:var(--bad);padding:calc(6px*var(--s)) 0 calc(10px*var(--s))}
+.fcx .eylab{font-size:calc(34px*var(--s))}
+/* 放大檢視 */
+.zbox{cursor:zoom-in;position:relative}
+.zhint{position:absolute;right:calc(10px*var(--s));top:calc(10px*var(--s));background:rgba(18,52,59,.75);color:#fff;border-radius:999px;
+  font-size:calc(17px*var(--s));font-weight:800;padding:.25em .8em;pointer-events:none}
+.bigcap{display:none}
+.slide.zoomfig .zbox{position:fixed;left:2vw;right:2vw;top:2vh;bottom:calc(var(--ch,64px) + 84px);z-index:45;cursor:zoom-out;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1vh;box-shadow:0 20px 80px rgba(0,0,0,.45);border-width:4px}
+.slide.zoomfig .zbox svg{flex:1 1 auto;min-height:0;height:auto!important;width:100%;max-width:100%}
+.slide.zoomfig .zbox .beat{transform:scale(1.6);transform-origin:top right}
+.slide.zoomfig .zhint{font-size:0;padding:.35em .9em}
+.slide.zoomfig .zhint::after{content:"✕ 再點一下縮小";font-size:clamp(14px,2.2vh,22px)}
+.slide.zoomfig .bigcap{display:flex;flex:0 0 auto;gap:1.2em;align-items:baseline;flex-wrap:wrap;justify-content:center;
+  font-size:clamp(20px,4.2vh,44px);font-weight:900;color:var(--ink);padding:0 1em .4em;text-align:center}
+.slide.zoomfig .bigcap span{color:var(--sdg)}
+.slide.zoomfig .bigcap i{font-style:normal;color:var(--orange)}
+.slide.zoomfig .fcnote{font-size:clamp(16px,2.6vh,26px)}
+.slide.zoomfig .acts{position:fixed;left:0;right:0;bottom:calc(var(--ch,64px) + 12px);z-index:46;justify-content:center}
+.slide.zoomfig::before{content:"";position:fixed;inset:0;background:rgba(8,24,28,.55);z-index:44}
+.slide.zoomfig .zhint{right:auto;left:1.2vw;top:1.2vh}
+.mob .slide.zoomfig .zbox{bottom:calc(var(--ch,64px) + 150px)}
+.mob .slide.zoomfig .acts{padding:8px 10px;background:transparent}
 </style>
 </head>
 <body>
@@ -1014,6 +1038,17 @@ const DECK = {
   reps:"做 3 回", gain:"放鬆眼睛和肩頸",
   safe:"<b>不用手也可以</b>。想用手心遮光，要<b>先洗手</b>，手放在<b>眉骨和臉頰骨</b>上，不碰眼皮；眼睛紅、癢、有分泌物或剛開過刀，<b>只閉眼、不用手</b>。",
   note:"這頁<b>預設不用手</b>：請大家輕輕閉上眼睛、肩膀放鬆，按「▶ 開始」，跟著圓圈<b>吸 4 秒、吐 6 秒</b>，做 3 回。<b>為什麼不搓手蓋眼睛？</b>手上有細菌，揉眼睛、摸眼皮容易把細菌帶進眼睛，引起結膜炎、針眼；剛開過白內障的人更要小心。若在家裡、<b>手剛洗乾淨</b>，可以把手心弓成碗狀遮光，手掌根放在<b>臉頰骨</b>、手指放在<b>眉骨</b>上，<b>手心不碰眼皮、不壓眼球</b>。口訣：<b>「眼睛閉起來，不要用手揉；要用手，先洗手，手放眉骨上，不要壓眼睛。」</b>做完慢慢張開眼睛、眨一眨，看看遠方。平常看電視、做手工 30 分鐘後，就可以這樣休息。"},
+
+/* 13b */ {t:"face", tag:"跟老師做・臉部按摩", h:"按摩眼睛周圍，讓眼睛放鬆",
+  lead:"<b>先洗手（或用乾洗手）</b>，閉上眼睛，用指腹<b>輕輕</b>按眼睛周圍的<b>骨頭</b>。",
+  steps:[
+    {k:"按眉頭", pt:"brow", n:5, v:"兩手食指指腹，放在<b>眉頭下方的小凹處</b>，輕壓 2 秒、放開。"},
+    {k:"推眉骨", pt:"line", n:5, v:"食指從眉頭<b>沿著眉毛的骨頭</b>，慢慢往外推到眉尾。"},
+    {k:"揉太陽穴", pt:"temple", n:8, v:"中指放在眉尾外側的<b>太陽穴</b>，輕輕畫小圈。"},
+    {k:"按眼下骨頭", pt:"under", n:5, v:"食指放在眼睛正下方<b>一指寬的臉頰骨</b>上，輕壓 2 秒、放開。<b>不碰下眼皮</b>。"},
+    {k:"推臉頰", pt:"cheek", n:5, v:"手指從太陽穴<b>沿著臉頰往下推</b>到下巴旁邊，臉放鬆。"}],
+  safe:"力氣要輕、舒服不痛；<b>不壓眼球、不摸眼皮、不揉眼睛</b>。眼睛紅、癢、有分泌物，臉上有傷口，或剛開過眼睛手術的人，今天<b>只閉眼休息</b>。",
+  note:"這頁接在閉眼休息後面。<b>先請大家洗手或用乾洗手</b>，據點可以先把乾洗手放在桌上；指甲長的用指腹，不要用指甲。按「▶ 開始」會一步一步帶：畫面上的<b>橘色圓點</b>就是手指要放的位置，圓點變大是「壓」、移動是「推」、繞圈是「揉」。口令：<b>「輕輕壓——放開」「慢慢推——」「畫小圈——」</b>。重點跟大家說清楚：<b>按的都是眼睛周圍的骨頭</b>（眉頭、眉骨、太陽穴、眼睛下方的臉頰骨），<b>不碰眼皮、不壓眼球</b>，這樣比較衛生、也不會傷到眼睛。這是讓眼睛周圍放鬆、舒服的方法，<b>不能治療眼疾或讓視力變好</b>。做完慢慢張開眼睛，看看遠方。平常看電視、做手工累了，在家洗完手也可以做。"},
 
 /* 15 */ {sec:"動腦遊戲", t:"web", tag:"互動・動腦遊戲", h:"視界猜謎：從最模糊開始，猜猜看是什麼？",
   lead:"畫面一開始<b>霧霧的</b>，老師每給一次提示就清楚一點——<b>誰先猜到</b>？",
@@ -1373,6 +1408,29 @@ function fbbox(t,idle){return `<div class="fb idle" data-idle="${idle}" data-ful
 const cardCls=i=>i%3===1?'teal':i%3===2?'amber':'';
 
 const R={
+face:s=>head(s)+`<div class="body"><div class="eyx fcx">
+  <div class="eybox fcbox"><svg class="fcsvg" viewBox="0 0 400 440" style="height:calc(470px*var(--s))" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="52" cy="230" rx="20" ry="36" fill="#F2C6A0" stroke="#D9A97F" stroke-width="3"/>
+    <ellipse cx="348" cy="230" rx="20" ry="36" fill="#F2C6A0" stroke="#D9A97F" stroke-width="3"/>
+    <ellipse cx="200" cy="225" rx="150" ry="182" fill="#F6D3B3" stroke="#D9A97F" stroke-width="4"/>
+    <path d="M52 190 Q60 40 200 36 Q340 40 348 190 Q320 100 200 96 Q80 100 52 190Z" fill="#D8D4CE"/>
+    <g fill="none" stroke-linecap="round">
+      <path d="M112 172 Q140 156 174 164" stroke="#8A7462" stroke-width="9"/>
+      <path d="M226 164 Q260 156 288 172" stroke="#8A7462" stroke-width="9"/>
+      <path d="M122 205 Q148 218 174 205" stroke="#5A4434" stroke-width="5"/>
+      <path d="M226 205 Q252 218 278 205" stroke="#5A4434" stroke-width="5"/>
+      <path d="M200 210 L192 268 Q200 276 210 268" stroke="#C98F66" stroke-width="4"/>
+      <path d="M164 318 Q200 338 236 318" stroke="#B05A45" stroke-width="6"/>
+    </g>
+    <circle cx="128" cy="268" r="16" fill="#F0A58A" opacity=".45"/><circle cx="272" cy="268" r="16" fill="#F0A58A" opacity=".45"/>
+    <g class="fpath"></g><g class="fdots"></g></svg>
+    <div class="fcnote">👀 閉上眼睛做｜只按骨頭，不碰眼皮</div></div>
+  <div class="eyside">
+    <div class="eytop"><div class="eylab">先洗手，再按「▶ 開始」</div></div>
+    <div class="fghow"></div>
+    <div class="cues">`+s.steps.map((c,i)=>`<div class="cue" data-i="${i}"><span class="cn">${i+1}</span><span>${c.k}</span><span class="ct">× ${c.n}</span></div>`).join("")+`</div>
+    <div class="safe">⚠️ ${s.safe}</div>
+  </div></div>`+acts(`<button class="btn or e-go">▶ 開始</button><button class="btn gh e-slow">🐢 放慢</button><button class="btn gh e-skip">下一節 ⏭</button><button class="btn gh e-rs">↺ 從頭</button>`)+`</div>`,
 thanks:s=>head(s)+`<div class="body"><div class="thx">`+s.qrs.map(q=>`<div class="thx-c">
     <a class="thx-qr" href="${q.url}" target="_blank" rel="noopener"><img src="${q.img}" alt="${q.k} QR code"></a>
     <div class="thx-t"><div class="k">${q.k}</div><div class="v">${q.v}</div>
@@ -1652,8 +1710,65 @@ DECK.slides.forEach(s=>{
   if(s.t==="diff")maxStar+=s.rounds.length;
 });
 
+/* ---------- 運動動畫：點一下放大到畫面中間 ---------- */
+let bigTm=null;
+function unbig(){ const d=$(".slide.zoomfig"); if(!d)return; d.classList.remove("zoomfig"); clearInterval(bigTm); bigTm=null; fit(d); }
+$$(".slide").forEach(d=>{
+  const box=$(".figbox,.eybox",d); if(!box)return;
+  box.classList.add("zbox");
+  box.insertAdjacentHTML("beforeend",`<div class="zhint">⛶ 點一下放大</div><div class="bigcap"></div>`);
+  const cap=$(".bigcap",box);
+  const upd=()=>{ const on=$(".cue.on",d), lab=$(".eylab",d)||$(".bl",d), ct=on&&$(".ct",on), bn=$(".bn",d);
+    cap.innerHTML=(on?`<b>${on.textContent.replace(ct?ct.textContent:"","").replace(/^\d+/,"").trim()}</b>`:"")+
+      (lab&&lab.textContent?`<span>${lab.textContent}</span>`:"")+(ct?`<i>${ct.textContent}</i>`:bn?`<i>${bn.textContent} 下</i>`:""); };
+  box.addEventListener("click",e=>{
+    if(e.target.closest("button,a"))return;
+    if(d.classList.contains("zoomfig")){ unbig(); return; }
+    d.classList.add("zoomfig"); upd(); clearInterval(bigTm); bigTm=setInterval(upd,200);
+  });
+});
 /* ---------- 互動綁定 ---------- */
 function bind(d,s,i){
+  if(s.t==="face"){
+    const dots=$(".fdots",d), path=$(".fpath",d), lab=$(".eylab",d), how=$(".fghow",d), cues=$$(".cue",d), go=$(".e-go",d);
+    const M=(a,b,u)=>[a[0]+(b[0]-a[0])*u,a[1]+(b[1]-a[1])*u];
+    const PT={
+      brow:{m:"press",L:[[171,176]],R:[[229,176]]},
+      line:{m:"push",L:[[170,168],[112,176]],R:[[230,168],[288,176]]},
+      temple:{m:"circle",L:[[86,196]],R:[[314,196]]},
+      under:{m:"press",L:[[148,240]],R:[[252,240]]},
+      cheek:{m:"push",L:[[84,212],[118,312]],R:[[316,212],[282,312]]}};
+    const PER={press:3000,push:2000,circle:1100};
+    let st=0,cnt=0,acc=0,t0=0,raf=0,run=false,slow=1,rest=0,fin=false;
+    const tip=(x,y,k)=>`<circle cx="${x}" cy="${y}" r="${20*k}" fill="#E8552D" opacity=".22"/><circle cx="${x}" cy="${y}" r="${11*k}" fill="#E8552D" stroke="#fff" stroke-width="3"/>`;
+    const guide=()=>{ const P=PT[s.steps[st].pt];
+      path.innerHTML=P.m==="push"?[P.L,P.R].map(a=>`<line x1="${a[0][0]}" y1="${a[0][1]}" x2="${a[1][0]}" y2="${a[1][1]}" stroke="#E8552D" stroke-width="4" stroke-dasharray="6 7" opacity=".55"/>`).join("")
+        :P.m==="circle"?[P.L[0],P.R[0]].map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="13" fill="none" stroke="#E8552D" stroke-width="3" stroke-dasharray="5 5" opacity=".6"/>`).join(""):""; };
+    const draw=u=>{ const P=PT[s.steps[st].pt]; let g="";
+      [P.L,P.R].forEach(a=>{ if(P.m==="press"){const k=1+.35*Math.sin(Math.PI*Math.min(1,u*1.5)); g+=tip(a[0][0],a[0][1],k)}
+        else if(P.m==="push"){const q=M(a[0],a[1],(1-Math.cos(Math.PI*u))/2); g+=tip(q[0],q[1],1)}
+        else {const an=2*Math.PI*u; g+=tip(a[0][0]+13*Math.cos(an),a[0][1]+13*Math.sin(an),1)} });
+      dots.innerHTML=g;
+      lab.textContent=P.m==="press"?(u<.66?"輕輕壓…":"放開"):P.m==="push"?"慢慢往外推":"輕輕畫小圈"; };
+    const paint=()=>{ cues.forEach((c,j)=>{c.classList.toggle("on",j===st&&!fin);c.classList.toggle("done",j<st||fin);
+        $(".ct",c).textContent=j===st&&!fin?`${Math.min(cnt+1,s.steps[j].n)} / ${s.steps[j].n}`:"× "+s.steps[j].n});
+      how.innerHTML="☝️ "+s.steps[st].v; guide(); };
+    const frame=ts=>{ if(!t0)t0=ts; const dt=Math.min(ts-t0,400); t0=ts;
+      if(rest>0){ rest-=dt; if(rest<=0){ if(st>=s.steps.length-1){fin=true;run=false;lab.textContent="完成！慢慢張開眼睛 😊";dots.innerHTML="";path.innerHTML="";go.textContent="▶ 再做一次";go.classList.remove("on");paint();ding(1);return}
+          st++;cnt=0;acc=0;paint();tick(); } raf=requestAnimationFrame(frame); return; }
+      const P=PER[PT[s.steps[st].pt].m]*slow; acc+=dt;
+      if(acc>=P){ acc-=P; cnt++; tick(); paint();
+        if(cnt>=s.steps[st].n){ dots.innerHTML=""; lab.textContent="手放下，深呼吸 😌"; rest=2500; acc=0; raf=requestAnimationFrame(frame); return; } }
+      draw(acc/P); raf=requestAnimationFrame(frame); };
+    const start=()=>{ if(fin){fin=false;st=0;cnt=0;acc=0;rest=0} run=true;t0=0;go.textContent="⏸ 暫停";go.classList.add("on");paint();cancelAnimationFrame(raf);raf=requestAnimationFrame(frame) };
+    const stop=()=>{ run=false;cancelAnimationFrame(raf);go.textContent="▶ 繼續";go.classList.remove("on") };
+    go.onclick=()=>run?stop():start();
+    $(".e-slow",d).onclick=e=>{slow=slow===1?1.5:1;e.currentTarget.classList.toggle("on",slow>1);e.currentTarget.textContent=slow>1?"🐇 恢復速度":"🐢 放慢"};
+    $(".e-skip",d).onclick=()=>{ if(st<s.steps.length-1){st++;cnt=0;acc=0;rest=0;fin=false;paint();draw(0)} };
+    $(".e-rs",d).onclick=()=>{ stop();st=0;cnt=0;acc=0;rest=0;fin=false;paint();draw(0);lab.textContent="先洗手，再按「▶ 開始」";go.textContent="▶ 開始" };
+    d._stop=()=>{ if(run)stop() };
+    paint(); draw(0);
+  }
   if(s.t==="finger"){
     const H=[$(".h1",d),$(".h2",d)], pl=$(".pl",d), pr=$(".pr",d), lab=$(".eylab",d), how=$(".fghow",d), tag=$(".fgtag",d), cues=$$(".cue",d), go=$(".e-go",d);
     const LAY={lr:[[170,150,1],[630,150,1]], ud:[[400,22,.62],[400,262,.62]], nf:[[330,70,.55],[470,150,1.32]], push:[[400,0,1],[400,0,1]]};
@@ -2229,6 +2344,7 @@ function renderNotes(){
 
 /* ---------- 導覽 ---------- */
 function go(n){
+  unbig();
   const prev=$$(".slide")[idx]; if(prev&&prev._stop)prev._stop();
   idx=Math.max(0,Math.min(DECK.slides.length-1,n));
   $$(".slide").forEach((d,k)=>d.classList.toggle("on",k===idx));
@@ -2265,6 +2381,9 @@ document.addEventListener("keydown",e=>{
     if(e.key==="Escape")closeZoom();
     else if(["Enter"," ","ArrowRight"].includes(e.key)){ const g=$(".zm-go",ZM); if(!g.classList.contains("off"))g.click(); else closeZoom(); }
     return; }
+  if($(".slide.zoomfig")){
+    if(e.key==="Escape"){e.preventDefault();unbig();return}
+    if(e.key===" "||e.key==="Enter"){e.preventDefault();const b=$(".slide.zoomfig .e-go,.slide.zoomfig .cnt-go");if(b)b.click();return} }
   if(["ArrowRight","PageDown"," "].includes(e.key)){e.preventDefault();go(idx+1)}
   else if(["ArrowLeft","PageUp"].includes(e.key)){e.preventDefault();go(idx-1)}
   else if(e.key==="Home")go(0); else if(e.key==="End")go(DECK.slides.length-1);
