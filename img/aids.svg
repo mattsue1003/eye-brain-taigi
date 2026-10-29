@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="'PingFang TC','Microsoft JhengHei','Noto Sans TC',sans-serif">
+  <rect width="600" height="420" rx="24" fill="#FFF8EC"/>
+  <g stroke="#E3D9C8" stroke-width="3"><line x1="300" y1="14" x2="300" y2="406"/><line x1="14" y1="210" x2="586" y2="210"/></g>
+  <!-- 手持放大鏡 -->
+  <g transform="translate(150 95)">
+    <rect x="-70" y="-50" width="140" height="96" rx="6" fill="#fff" stroke="#CFC6B4" stroke-width="2"/>
+    <g fill="#B8AFA0"><rect x="-58" y="-36" width="100" height="6" rx="3"/><rect x="-58" y="-20" width="116" height="6" rx="3"/><rect x="-58" y="-4" width="84" height="6" rx="3"/><rect x="-58" y="12" width="110" height="6" rx="3"/><rect x="-58" y="28" width="70" height="6" rx="3"/></g>
+    <line x1="34" y1="30" x2="86" y2="82" stroke="#12343B" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-2" r="46" fill="#DDF1F8" fill-opacity=".85" stroke="#12343B" stroke-width="9"/>
+    <text x="0" y="12" text-anchor="middle" font-size="40" font-weight="900" fill="#12343B">藥</text>
+  </g>
+  <text x="150" y="196" text-anchor="middle" font-size="24" font-weight="900" fill="#12343B">手持放大鏡</text>
+  <!-- 立式放大鏡 -->
+  <g transform="translate(450 105)">
+    <rect x="-90" y="34" width="180" height="40" rx="6" fill="#fff" stroke="#CFC6B4" stroke-width="2"/>
+    <g fill="#B8AFA0"><rect x="-78" y="44" width="150" height="5" rx="2"/><rect x="-78" y="58" width="120" height="5" rx="2"/></g>
+    <path d="M-52 54 L-40 -14 M52 54 L40 -14" stroke="#5D6E72" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-22" rx="62" ry="22" fill="#DDF1F8" fill-opacity=".9" stroke="#12343B" stroke-width="7"/>
+    <circle cx="0" cy="-52" r="9" fill="#F4A93C"/>
+    <path d="M-14 -66 L-22 -78 M0 -70 L0 -84 M14 -66 L22 -78" stroke="#F4A93C" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="450" y="196" text-anchor="middle" font-size="24" font-weight="900" fill="#12343B">立式放大鏡（附燈）</text>
+  <!-- 可攜式擴視機 -->
+  <g transform="translate(150 300)">
+    <rect x="-82" y="-62" width="164" height="112" rx="16" fill="#12343B"/>
+    <rect x="-70" y="-50" width="140" height="88" rx="6" fill="#111"/>
+    <text x="0" y="12" text-anchor="middle" font-size="58" font-weight="900" fill="#FFF36B">藥袋</text>
+    <circle cx="0" cy="44" r="4" fill="#5D6E72"/>
+    <rect x="-24" y="50" width="48" height="26" rx="8" fill="#5D6E72"/>
+  </g>
+  <text x="150" y="400" text-anchor="middle" font-size="24" font-weight="900" fill="#12343B">可攜式擴視機</text>
+  <!-- 桌上型擴視機 -->
+  <g transform="translate(450 290)">
+    <rect x="-92" y="-72" width="184" height="104" rx="10" fill="#12343B"/>
+    <rect x="-82" y="-62" width="164" height="84" rx="4" fill="#111"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="46" font-weight="900" fill="#fff">報紙</text>
+    <rect x="-8" y="32" width="16" height="22" fill="#5D6E72"/>
+    <rect x="-110" y="54" width="220" height="20" rx="6" fill="#B8AFA0"/>
+    <rect x="-70" y="44" width="80" height="12" rx="2" fill="#fff" stroke="#CFC6B4"/>
+    <path d="M86 52 L86 -4 L66 -4" stroke="#5D6E72" stroke-width="6" fill="none"/>
+    <circle cx="62" cy="-4" r="7" fill="#2F6FB0"/>
+  </g>
+  <text x="450" y="400" text-anchor="middle" font-size="24" font-weight="900" fill="#12343B">桌上型擴視機</text>
+</svg>

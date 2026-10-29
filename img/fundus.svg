@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" font-family="'PingFang TC','Microsoft JhengHei','Noto Sans TC',sans-serif">
+  <defs>
+    <radialGradient id="ret" cx="48%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#F4A25A"/><stop offset=".6" stop-color="#D9682F"/><stop offset="1" stop-color="#8A2C12"/>
+    </radialGradient>
+    <radialGradient id="mac" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7E2A12" stop-opacity=".75"/><stop offset="1" stop-color="#B9481F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="disc" cx="45%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#FFF6D6"/><stop offset=".55" stop-color="#FBDD95"/><stop offset="1" stop-color="#E9A95A"/>
+    </radialGradient>
+  </defs>
+  <rect width="520" height="520" rx="28" fill="#141414"/>
+  <circle cx="260" cy="250" r="218" fill="url(#ret)"/>
+  <circle cx="200" cy="255" r="62" fill="url(#mac)"/>
+  <circle cx="200" cy="255" r="6" fill="#6B200C"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M338 236 C300 170 250 135 150 110" stroke="#8E1B12" stroke-width="9"/>
+    <path d="M338 236 C300 330 250 365 150 392" stroke="#8E1B12" stroke-width="9"/>
+    <path d="M345 228 C320 150 300 110 290 52" stroke="#B5301F" stroke-width="6"/>
+    <path d="M345 266 C330 350 310 400 300 450" stroke="#B5301F" stroke-width="6"/>
+    <path d="M332 244 C290 200 260 190 210 200" stroke="#A3261A" stroke-width="5"/>
+    <path d="M332 254 C290 300 255 312 212 306" stroke="#A3261A" stroke-width="5"/>
+    <path d="M355 240 C400 200 430 190 465 186" stroke="#B5301F" stroke-width="5"/>
+    <path d="M355 258 C400 300 430 312 465 320" stroke="#8E1B12" stroke-width="6"/>
+    <path d="M150 110 C120 104 92 120 70 150" stroke="#8E1B12" stroke-width="5"/>
+    <path d="M150 392 C118 398 92 382 72 352" stroke="#8E1B12" stroke-width="5"/>
+  </g>
+  <circle cx="345" cy="247" r="36" fill="url(#disc)"/>
+  <circle cx="350" cy="244" r="13" fill="#FFFBEA"/>
+  <g font-weight="900" font-size="25">
+    <line x1="372" y1="225" x2="410" y2="118" stroke="#fff" stroke-width="3"/>
+    <rect x="356" y="76" width="152" height="44" rx="12" fill="#fff"/>
+    <text x="432" y="106" text-anchor="middle" fill="#12343B">視神經</text>
+    <line x1="200" y1="255" x2="120" y2="450" stroke="#fff" stroke-width="3"/>
+    <rect x="30" y="448" width="180" height="44" rx="12" fill="#fff"/>
+    <text x="120" y="478" text-anchor="middle" fill="#12343B">黃斑部</text>
+    <line x1="245" y1="140" x2="190" y2="58" stroke="#fff" stroke-width="3"/>
+    <rect x="96" y="16" width="166" height="44" rx="12" fill="#fff"/>
+    <text x="179" y="46" text-anchor="middle" fill="#12343B">血管</text>
+  </g>
+  <text x="500" y="505" text-anchor="end" font-size="18" font-weight="700" fill="#BBB">眼底照片（示意圖）</text>
+</svg>
